@@ -7,7 +7,14 @@ window.addEventListener('DOMContentLoaded', () => {
         serviceTabs=document.querySelectorAll('.service__button'),
         servicesTabsContent=document.querySelectorAll('.service'),
         servicesTabParent= document.querySelector('.services__list'),
-        upButton=document.querySelector('.up__button');
+        upButton=document.querySelector('.up__button'),
+        titleLink=document.querySelector('.title'),
+        modal = document.querySelector('.modal__container'),
+        modalTrigger = document.querySelectorAll('[data-modal]'),
+        modalClosebtn = document.querySelector('[data-close]');
+
+
+
 
         upButton.classList.add('hide');
         
@@ -83,15 +90,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
    window.onscroll = function () {
     if (window.pageYOffset > 300) {
-/*         titleLink.classList.add('left__slide');
- */        upButton.classList.remove('hide');
+        titleLink.classList.add('left__slide');
+        upButton.classList.remove('hide');
         upButton.classList.add('show','fade');
     }
     else if(window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight){
         
-    } else {
-/*         titleLink.classList.remove('left__slide');
- */        upButton.classList.add('hide');
+    } 
+    else {
+        titleLink.classList.remove('left__slide');
+        upButton.classList.add('hide');
         upButton.classList.remove('show','fade');
     }
 };
@@ -101,6 +109,52 @@ upButton.addEventListener('click', ()=>  {
 });
     
     
+
+    //MODAL
+
+    function openModal() {
+        modal.classList.add('show', 'fade'); //или modal.classList.toggle('show);
+        modal.classList.remove('hide');
+        document.body.style.overflow = 'hidden';
+        clearInterval(modalTimerId);
+    }
+
+    modalTrigger.forEach(btn => {
+        btn.addEventListener('click', openModal);
+    });
+
+    function closeModal() {
+        modal.classList.remove('show', 'fade'); //или modal.classList.toggle('show);
+        modal.classList.add('hide');
+        document.body.style.overflow = '';
+    }
+
+    modalClosebtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+    const modalTimerId = setTimeout(openModal, 3000);
+
+    
+
+    function showModalByScroll() {
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+            openModal();
+            window.removeEventListener('scroll', showModalByScroll);
+        }
+    }
+
+    window.addEventListener('scroll', showModalByScroll);
 
 
 
