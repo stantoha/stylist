@@ -2,8 +2,8 @@ body {
     margin: 0 auto;
     padding: 0;
     list-style: none;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size:1em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
     line-height: 1.5;
     width: 100%;
 }
@@ -12,11 +12,11 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Roboto, sans-serif
+
 }
 
 ul,
-li{
+li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -31,21 +31,21 @@ li{
 }
 
 .wrapper {
- /*    position: relative; */
+    /*    position: relative; */
     display: block;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.3);
     width: 100vw;
 }
 
-.left__slide{
+.left__slide {
     opacity: 0;
-   transform: translateX(-200%);
+    transform: translateX(-200%);
 }
 
-.right__slide{
+.right__slide {
     opacity: 0;
-   transform: translateX(200%);
+    transform: translateX(200%);
 }
 
 .container {
@@ -60,7 +60,7 @@ li{
     background-color: rgba(0, 0, 0, .5);
     display: block;
     margin: 0 10vw;
-    width:80vw;
+    width: 80vw;
     z-index: 100;
 }
 
@@ -91,23 +91,23 @@ li{
 
 /* TITLE */
 
-.title__container a{
+.title__container a {
     text-decoration: none;
 }
 
 .title {
     transition: all 1s;
     text-decoration: none;
-    color: rgba(230, 200,202, 1);
+    color: rgba(230, 200, 202, 1);
     font-family: 'Amatic SC';
     font-style: normal;
     font-weight: 900;
     letter-spacing: 0.5vh;
-    font-size:2.5em;
+    font-size: 2.5em;
     margin: 0 auto;
 }
 
-.sub__title{
+.sub__title {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.7);
     letter-spacing: 0.3vh;
@@ -138,7 +138,7 @@ li{
 .nav__button {
     text-decoration: none;
     transition: all 0.7s;
-    font-size:1em;
+    font-size: 1em;
     text-transform: capitalize;
     width: 9vw;
     height: auto;
@@ -153,7 +153,7 @@ li{
 }
 
 .active {
-    color:  rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
 }
 
@@ -174,30 +174,30 @@ li{
     width: 7vh;
     height: 1vh;
     border-radius: 15px/15px;
-    background-color: rgba(230, 200,202, 1);
+    background-color: rgba(230, 200, 202, 1);
     transition-duration: .3s;
 }
 
 .nav-btn>span::before {
     content: '';
     top: -2.5vh;
-    background-color: rgba(230, 200,202, 1);
+    background-color: rgba(230, 200, 202, 1);
 }
 
 .nav-btn>span::after {
     content: '';
     top: 2.5vh;
-    background-color: rgba(230, 200,202, 1);
+    background-color: rgba(230, 200, 202, 1);
 }
 
 
 .nav-btn:hover>span::before,
 .nav-btn:hover>span::after {
-    background-color: rgba(230, 200,202, 1);
+    background-color: rgba(230, 200, 202, 1);
 }
 
 .nav-btn:hover>span {
-    background-color: rgba(230, 200,202, 1);
+    background-color: rgba(230, 200, 202, 1);
 }
 
 .nav {
@@ -229,7 +229,7 @@ li{
 #nav-toggle:checked~.nav-btn>span::before {
     top: 0;
     transform: rotate(0);
-    background-color: rgba(230, 200,202, 1);
+    background-color: rgba(230, 200, 202, 1);
 }
 
 #nav-toggle:checked~.nav-btn>span::after {
@@ -265,17 +265,17 @@ label .nav-btn {
 /* SECTION */
 
 
-.section__name{
+.section__name {
     text-align: center;
     margin: 0;
     padding: 1vh;
-    font-size:1em;
- }
+    font-size: 1em;
+}
 
 /* TABCONTENT */
 
 
-.tabcontent{
+.tabcontent {
     min-height: 86vh;
     border: 1px solid black;
     padding: 2vh;
@@ -283,66 +283,70 @@ label .nav-btn {
 }
 
 
- .descr__card {
-     display: flex;
-     justify-content: space-evenly;
-     align-items: center;
-     margin: 0 auto;
-     flex-wrap: wrap;
-     padding: 2vh;
-     width: 100%;
- }
- 
- .content__picture {
-     display: inline-block;
-     text-align: center;
-     margin: 2vh ;
-     border-radius: 15px/15px;
-     padding: 2vh;
-     max-height: 65vh;
-     border: 1px solid black;
- 
- }
- 
- .descr__text {
-     display: inline-block;
-     width: auto;
-     border: 1px solid black;
-     text-align: justify;
-     padding: 2vh;
-     margin: 2vh ;
- }
- 
- .section__title,
- .text__block,
- .slogan {
-     display: inline-block;
-     border: 1px solid black;
-     padding: 2vh;
-     margin: 0 auto;
-     width: 100%;
- }
- 
- .section__title{
-     text-align: center;
-     text-transform: uppercase;
-     color: rgba(230, 200,202, 1);
+.descr__card {
+    /* display: block; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 2vh;
+    width: 100%;
+}
+
+.content__picture {
+    display: inline-block;
+    text-align: center;
+    margin: 2vh;
+    border-radius: 15px/15px;
+    padding: 2vh;
+    max-height: 70vh;
+    border: 1px solid black;
+
+}
+
+.descr__text {
+    flex: 50%;
+    display: inline-block;
+   /*  width: auto; */
+    border: 1px solid black;
+    text-align: justify;
+    padding: 2vh;
+    margin: 2vh;
+}
+
+.section__title,
+.text__block,
+.slogan {
+    display: inline-block;
+    border: 1px solid black;
+    word-wrap: break-word;
+    padding: 2vh;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section__title {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(230, 200, 202, 1);
     font-family: 'Amatic SC';
     font-style: normal;
     font-weight: 900;
     letter-spacing: 0.5vh;
-    font-size:2em;
-    text-shadow:0 0 1vh rgba(255, 255, 255, 0.7);
-    background-color:rgba(0, 0, 0, .2);
+    font-size: 2em;
+    text-shadow: 0 0 1vh rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, .2);
     transition: all 1s;
- }
- 
- .text__block {
-     font-size:1em;
-     font-weight: 400;
- }
+}
 
-.slogan{
+.text__block {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.slogan {
     text-align: center;
     font-size: 2em;
 }
@@ -353,22 +357,22 @@ label .nav-btn {
 /* ADVANTAGES */
 
 
- .advantages__list{
-     display: flex;
-     justify-content: space-around;
-     flex-wrap: wrap;
-     margin: 1vh;
-     padding: 1vh;
-     list-style: none;
- }
+.advantages__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 1vh;
+    padding: 1vh;
+    list-style: none;
+}
 
- .advantages__item{
-     flex: 30%;
-     display: inline-block;
-     margin: 1vh;
-     border: 1px solid black;
-     border-radius: 15px/15px;
- }
+.advantages__item {
+    flex: 30%;
+    display: inline-block;
+    margin: 1vh;
+    border: 1px solid black;
+    border-radius: 15px/15px;
+}
 
 
 
@@ -376,26 +380,26 @@ label .nav-btn {
 
 /* SERVICES */
 
-.service{
+.service {
     min-height: 86vh;
 }
 
 
 
 
- .services__list  {
-     position: fixed ;
-     display: block;
-     top: 12vh;
-     left: 90vw;
-     width: 10vw;
-     height: 100%;
-     margin: 0;
-     list-style: none;
-     transition-duration: .25s;
- }
- 
- .services__button {
+.services__list {
+    position: fixed;
+    display: block;
+    top: 12vh;
+    left: 90vw;
+    width: 10vw;
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    transition-duration: .25s;
+}
+
+.services__button {
     text-decoration: none;
     transition: all 0.7s;
     font-size: 1em;
@@ -412,16 +416,9 @@ label .nav-btn {
 }
 
 
-
-
-
-
-
-
-
 /* REVIEWS */
 
-.reviews__list{
+.reviews__list {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
@@ -433,20 +430,13 @@ label .nav-btn {
     height: auto;
 }
 
-.review__item{
+.review__item {
     flex: 45%;
     display: block;
     margin: 0 auto;
     border: 1px solid black;
     border-radius: 15px/15px;
 }
-
-
-
-
-
-
-
 
 /* 
 .section__descr{
@@ -471,33 +461,6 @@ label .nav-btn {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*contacts*/
 
 
@@ -516,7 +479,7 @@ label .nav-btn {
 }
 
 .contacts a:hover {
-    color: rgba(230, 200,202, 1);
+    color: rgba(230, 200, 202, 1);
     text-decoration: underline;
 }
 
@@ -642,14 +605,14 @@ a.social__link:hover {
     align-items: center;
     z-index: 10050;
     display: none;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     overflow: hidden;
     background-color: rgba(0, 0, 0, .5);
 }
 
 .modal__dialog {
-    width: 80vh;
+    width: 80%;
     /* height: 40vh; */
     margin: 25vh auto 35vh auto;
     box-shadow: 0 0 10px rgba(255, 255, 255, .6);
@@ -657,7 +620,7 @@ a.social__link:hover {
 
 .modal__content {
     position: relative;
-   /*  width: 100%; */
+    /*  width: 100%; */
     padding: 2vh;
     background-color: rgba(0, 0, 0, .7);
     border: 1px solid rgba(0, 0, 0, .2);
@@ -675,7 +638,7 @@ a.social__link:hover {
     color: rgba(0, 0, 0, .4);
     opacity: .5;
     font-weight: 700;
-    border:none;
+    border: none;
     background-color: transparent;
     cursor: pointer
 }
@@ -683,20 +646,20 @@ a.social__link:hover {
 .modal__title {
     text-align: center;
     text-transform: uppercase;
-    color: rgba(230, 200,202, 1);
-   font-family: 'Amatic SC';
-   font-style: normal;
-   font-weight: 900;
-   letter-spacing: 0.5vh;
-   font-size:2em;
-   text-shadow:0 0 1vh rgba(255, 255, 255, 0.7);
+    color: rgba(230, 200, 202, 1);
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0.5vh;
+    font-size: 2em;
+    text-shadow: 0 0 1vh rgba(255, 255, 255, 0.7);
 }
 
 .modal__input {
     display: block;
     margin: 2vh auto 2vh auto;
-    width: 180px;
-    height: 30px;
+    width: 28vw;
+    height: 5vh;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0 0 10px rgba(0, 0, 0, .4);
     border: none;
@@ -720,7 +683,7 @@ a.social__link:hover {
 
 .modal__btn {
     display: block;
-    width:30vh;
+    width: 30vh;
     border-radius: 15px/15px;
     text-align: center;
     text-transform: uppercase;
@@ -729,25 +692,26 @@ a.social__link:hover {
     font-style: normal;
     font-weight: 900;
     letter-spacing: 0.5vh;
-    font-size:2em;
-    background:rgba(230, 200,202, 1) ;
-    text-shadow:0 0 1vh rgba(255, 255, 255, 0.7);
+    font-size: 2em;
+    background: rgba(230, 200, 202, 1);
+    text-shadow: 0 0 1vh rgba(255, 255, 255, 0.7);
     padding: 1vh;
     margin: 1vh auto;
     transition: all 0.5s;
 }
 
 .modal__btn:hover {
-   transform: scale(1.1);
-   box-shadow: 0 0 10px rgba(255, 255, 255, .4);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .4);
 }
+
 /* UP__BUTTON */
 
 
 .up__button img {
     box-shadow: 0 0 10px rgba(0, 0, 0, .25);
     background-color: rgba(0, 0, 0, 1);
-    border: 1px solid rgba(230, 200,202, 1);
+    border: 1px solid rgba(230, 200, 202, 1);
     position: fixed;
     transform: scale(1.2);
     bottom: 10vh;
