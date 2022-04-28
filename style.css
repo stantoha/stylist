@@ -25,27 +25,27 @@ li{
 
 
 
-/* .hidden {
+.hidden {
     display: none;
     position: absolute;
-} */
+}
 
 .wrapper {
  /*    position: relative; */
     display: block;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     width: 100vw;
 }
 
 .left__slide{
     opacity: 0;
-   transform: translateX(-100vw);
+   transform: translateX(-200%);
 }
 
 .right__slide{
     opacity: 0;
-   transform: translateX(100vw);
+   transform: translateX(200%);
 }
 
 .container {
@@ -57,7 +57,7 @@ li{
 
 .header {
     position: fixed;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .5);
     display: block;
     margin: 0 10vw;
     width:80vw;
@@ -81,6 +81,7 @@ li{
     padding: 1vh;
     text-align: center;
     height: 10vh;
+    vertical-align: middle;
 }
 
 .logo img {
@@ -97,17 +98,22 @@ li{
 .title {
     transition: all 1s;
     text-decoration: none;
-    font-style: italic;
     color: rgba(230, 200,202, 1);
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 900;
     letter-spacing: 0.5vh;
-    font-size:2em;
-    margin: 0;
+    font-size:2.5em;
+    margin: 0 auto;
 }
 
-.title__container .section__title {
-    font-weight: 700;
-    letter-spacing: 2px;
+.sub__title{
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.3vh;
+    font-size: 0.6em;
 }
+
 
 
 
@@ -147,14 +153,14 @@ li{
 }
 
 .active {
-    color: rgba(255, 151, 82, 1);
+    color:  rgba(255, 255, 255, 0.7);
     font-weight: 500;
 }
 
 .nav-btn {
     position: relative;
-    width: 7vh;
-    height: 7vh;
+    width: 6vh;
+    height: 6vh;
     cursor: pointer;
     z-index: 1;
 }
@@ -164,7 +170,7 @@ li{
 .nav-btn>span::after {
     display: block;
     position: absolute;
-    top: 3vh;
+    top: 2.5vh;
     width: 7vh;
     height: 1vh;
     border-radius: 15px/15px;
@@ -174,13 +180,13 @@ li{
 
 .nav-btn>span::before {
     content: '';
-    top: -3vh;
+    top: -2.5vh;
     background-color: rgba(230, 200,202, 1);
 }
 
 .nav-btn>span::after {
     content: '';
-    top: 3vh;
+    top: 2.5vh;
     background-color: rgba(230, 200,202, 1);
 }
 
@@ -273,7 +279,7 @@ label .nav-btn {
     min-height: 86vh;
     border: 1px solid black;
     padding: 2vh;
-    width: 100%;
+    width: auto;
 }
 
 
@@ -300,7 +306,7 @@ label .nav-btn {
  
  .descr__text {
      display: inline-block;
-     max-width: 50%;
+     width: auto;
      border: 1px solid black;
      text-align: justify;
      padding: 2vh;
@@ -320,7 +326,15 @@ label .nav-btn {
  .section__title{
      text-align: center;
      text-transform: uppercase;
-     font-size:1em;
+     color: rgba(230, 200,202, 1);
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0.5vh;
+    font-size:2em;
+    text-shadow:0 0 1vh rgba(255, 255, 255, 0.7);
+    background-color:rgba(0, 0, 0, .2);
+    transition: all 1s;
  }
  
  .text__block {
@@ -632,23 +646,23 @@ a.social__link:hover {
     height: 100%;
     overflow: hidden;
     background-color: rgba(0, 0, 0, .5);
-
 }
 
 .modal__dialog {
     width: 80vh;
-    height: 100vh;
+    /* height: 40vh; */
     margin: 25vh auto 35vh auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, .6);
 }
 
 .modal__content {
     position: relative;
-    width: 100%;
+   /*  width: 100%; */
     padding: 2vh;
-    background-color: rgba(230, 200,202, 1);
+    background-color: rgba(0, 0, 0, .7);
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 15px/15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .4);
     max-height: 80vh;
     overflow-y: auto
 }
@@ -668,8 +682,14 @@ a.social__link:hover {
 
 .modal__title {
     text-align: center;
-    font-size: 1.5em;
-    text-transform: uppercase
+    text-transform: uppercase;
+    color: rgba(230, 200,202, 1);
+   font-family: 'Amatic SC';
+   font-style: normal;
+   font-weight: 900;
+   letter-spacing: 0.5vh;
+   font-size:2em;
+   text-shadow:0 0 1vh rgba(255, 255, 255, 0.7);
 }
 
 .modal__input {
@@ -700,16 +720,27 @@ a.social__link:hover {
 
 .modal__btn {
     display: block;
-    width:20vh;
+    width:30vh;
     border-radius: 15px/15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
     text-align: center;
     text-transform: uppercase;
-    color:rgba(230, 200,202, 1) ;
-    padding: 2vh;
-    margin: 0 auto
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0.5vh;
+    font-size:2em;
+    background:rgba(230, 200,202, 1) ;
+    text-shadow:0 0 1vh rgba(255, 255, 255, 0.7);
+    padding: 1vh;
+    margin: 1vh auto;
+    transition: all 0.5s;
 }
 
+.modal__btn:hover {
+   transform: scale(1.1);
+   box-shadow: 0 0 10px rgba(255, 255, 255, .4);
+}
 /* UP__BUTTON */
 
 

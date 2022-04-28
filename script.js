@@ -8,6 +8,8 @@ window.addEventListener('DOMContentLoaded', () => {
         servicesTabsContent=document.querySelectorAll('.service'),
         servicesTabParent= document.querySelector('.services__list'),
         upButton=document.querySelector('.up__button'),
+        sectionTitles=document.querySelectorAll('.section__title'),
+        subTitleLink=document.querySelector('.sub__title'),
         titleLink=document.querySelector('.title'),
         modal = document.querySelector('.modal__container'),
         modalTrigger = document.querySelectorAll('[data-modal]'),
@@ -17,6 +19,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
         upButton.classList.add('hide');
+        setTimeout(()=>{
+            titleLink.classList.remove('left__slide');
+            subTitleLink.classList.remove('hide');
+            subTitleLink.classList.add('show','fade');
+        },2000);
+        sectionTitles.forEach(item=>{
+            item.classList.add('right__slide');
+        });
         
 
     function hideTabContent() {
@@ -33,6 +43,13 @@ window.addEventListener('DOMContentLoaded', () => {
         tabsContent[i].classList.add('show', 'fade');
         tabsContent[i].classList.remove('hide');
         tabs[i].classList.add('active');
+        setTimeout(()=>{
+            sectionTitles.forEach(item=>{
+                if(item.classList.contains('right__slide')){
+                     item.classList.remove('right__slide');
+                }
+            })
+        },2000);
     }
 
     hideTabContent();
@@ -143,7 +160,7 @@ upButton.addEventListener('click', ()=>  {
         }
     });
 
-    const modalTimerId = setTimeout(openModal, 3000);
+    const modalTimerId = setTimeout(openModal, 5000);
 
     
 
