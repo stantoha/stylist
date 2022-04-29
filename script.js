@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     let tabs=document.querySelectorAll('.nav__button'),
         tabsContent = document.querySelectorAll('.tabcontent'),
-        tabParent= document.querySelector('.nav'),
+        tabParent= document.querySelector('.nav__menu'),
         serviceTabs=document.querySelectorAll('.service__button'),
         servicesTabsContent=document.querySelectorAll('.service'),
         servicesTabParent= document.querySelector('.services__list'),
@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     hideTabContent();
                     showTabContent(i);
    
-                    if(i=2){
+                    if(i=1){
                         showServiceTabContent();
                         servicesTabParent.addEventListener('click', (event) => {
                             let target = event.target;
@@ -106,7 +106,9 @@ window.addEventListener('DOMContentLoaded', () => {
    //UPBUTTON
 
    window.onscroll = function () {
-    if (window.pageYOffset > 300) {
+    if (window.pageYOffset > 300) { 
+        subTitleLink.classList.remove('show','fade');
+        subTitleLink.classList.add('hide');
         titleLink.classList.add('left__slide');
         upButton.classList.remove('hide');
         upButton.classList.add('show','fade');

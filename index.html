@@ -19,15 +19,14 @@
     margin: 0 auto;
     width: 100vw;
 }
-.nav-btn{ 
-transform:scale(0.5);
+
+.logo__container,
+.burger__container{
+    transform: scale(0.6);
 }
 .main {
     margin: 0 auto;
     width: 100vw;
-}
-.nav{
-width:100vw;
 }
 
 .title,
@@ -35,7 +34,27 @@ width:100vw;
 .descr__text,
 .text__block,
 .modal__container{
+    font-size: 1.5em;
+}
+
+.modal__close{
+    transform: scale(0.8);
+    height: 1vh;
+    top: 0;
+    right: 1vh;
+}
+
+.modal__title,
+.modal__content button{
     font-size: 1em;
+}
+
+.modal__content input{
+    font-size: 0.5em;
+}
+
+.modal__dialog{
+    width: 80vw;
 }
     }
 
@@ -72,13 +91,13 @@ width:100vw;
             <div class="container">
                 <div class="header__content ">
 
-                    <div class="logo__container col-1">
+                    <div class="logo__container col-2">
                         <a href="#" class="logo">
                             <img src="img/icons/logo.png" alt="#">
                         </a>
                     </div>
 
-                    <div class="title__container col-6">
+                    <div class="title__container col-8">
 
                         <a href="#">
                             <h1 class="title left__slide">Аліна Столярова</h1>
@@ -89,41 +108,42 @@ width:100vw;
 
                     </div>
 
-                    <div class="burger__container col-1">
+                    <div class="burger__container col-2">
                         <div class="burger">
                             <input id="nav-toggle" type="checkbox" />
                             <label class="nav-btn" for="nav-toggle">
                                 <span></span>
                             </label>
-                            <nav class="nav">
+                            <nav class="nav__menu">
                                 <div class="nav__item">
-                                    <button type="button" class="nav__button btn">Про мене</button>
+                                    <button type="button" class="nav__button">Про мене</button>
+                                </div>
+                                
+                                <div class="nav__item">
+                                    <button type="button" class="nav__button">Послуги стиліста</button>
                                 </div>
                                 <div class="nav__item">
-                                    <button type="button" class="nav__button btn">Переваги в роботі зі
-                                        стилістом</button>
+                                    <button type="button" class="nav__button">Персональний шоппінг</button>
                                 </div>
                                 <div class="nav__item">
-                                    <button type="button" class="nav__button btn">Послуги стиліста</button>
+                                    <button type="button" class="nav__button">Fashion-тури</button>
                                 </div>
                                 <div class="nav__item">
-                                    <button type="button" class="nav__button btn">Послуги персонального шоппера
-                                        (баєра)</button>
+                                    <button type="button" class="nav__button">Робота з клієнтами в Європі</button>
                                 </div>
                                 <div class="nav__item">
-                                    <button type="button" class="nav__button btn">Fashion-тури</button>
+                                    <button type="button" class="nav__button">Подарункові сертифікати</button>
+
+                                </div>
+                                
+                                <div class="nav__item">
+                                    <button type="button" class="nav__button">Переваги</button>
                                 </div>
                                 <div class="nav__item">
-                                    <button type="button" class="nav__button btn">Робота з клієнтами в Європі</button>
+                                    <button type="button" class="nav__button">Відгуки</button>
                                 </div>
                                 <div class="nav__item">
-                                    <button type="button" class="nav__button btn">Подарункові сертифікати</button>
-                                </div>
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button btn">Відгуки</button>
-                                </div>
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button btn">Контакти</button>
+                                    <button type="button" class="nav__button">Контакти</button>
                                 </div>
                             </nav>
                         </div>
@@ -136,10 +156,30 @@ width:100vw;
         <main class="main">
 
             <section class="tabcontent about__me container">
-
+            <!--     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <img  src="img/alinka4.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="img/B.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/alinka1.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div> -->
                 
 
-                <h3 class="section__title right__slide">
+                <h3 class="section__title  right__slide">
                     Привіт, мене звати Аліна і я персональний стиліст.
                 </h3>
                 <figure class="descr__card ">
@@ -183,53 +223,7 @@ width:100vw;
 
             </section>
 
-            <section class="tabcontent advantages container">
-
-                <h3 class="section__title right__slide">
-                    Переваги в роботі зі стилістом
-                </h3>
-                <p class="text__block">
-                    Які клієнт отримує переваги під час та в результаті нашої роботи?
-                </p>
-                <h3 class="slogan">
-                    Робота зі стилістом - це захоплюючий процес, в результаті якого ви знайдете свій унікальний стиль.
-                </h3>
-
-
-                <ul class="advantages__list">
-                    <li class="advantages__item">
-                        <p class="text__block">
-                            Розуміння свого типу фігури та методи як правильно підбирати речі саме під свою фігуру
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-
-                        <p class="text__block">
-                            Інформація про те, які кольори будуть найкраще працювати в гардеробі, а яких краще уникати
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <p class="text__block">
-                            Відсутність проблеми «багато речей, але немає, що вдягнути»
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <p class="text__block">
-                            Раціональний підхід до покупок та до гардеробу в цілому
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <p class="text__block">
-                            Збори на роботу, відпочинок, подію і т.д перетворяться у приємне проведення часу та насолоду
-                            від процесу
-                        </p>
-                    </li>
-                </ul>
-
-
-
-            </section>
-
+           
             <section class="tabcontent personal__stylist__services container">
                 <h3 class="section__name">
                     Мої послуги
@@ -238,7 +232,7 @@ width:100vw;
                 <div class="services__container">
 
                     <div class="service">
-                        <h3 class="section__title right__slide">
+                        <h3 class="section__title  right__slide">
                             КОНСУЛЬТАЦІЯ ПО СТИЛЮ
                         </h3>
                         <figure class="descr__card ">
@@ -285,7 +279,7 @@ width:100vw;
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title right__slide">
+                        <h3 class="section__title  right__slide">
                             РОЗБІР ГАРДЕРОБУ
                         </h3>
                         <figure class="descr__card ">
@@ -359,7 +353,7 @@ width:100vw;
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title right__slide">
+                        <h3 class="section__title  right__slide">
                             ШОПІНГ-СУПРОВІД
                         </h3>
                         <figure class="descr__card ">
@@ -407,7 +401,7 @@ width:100vw;
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title right__slide">
+                        <h3 class="section__title  right__slide">
                             КАПСУЛЬНИЙ ГАРДЕРОБ
                         </h3>
                         <figure class="descr__card ">
@@ -472,9 +466,8 @@ width:100vw;
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title right__slide">
-                            РОЗБІР ГАРДЕРОБУ ОНЛАЙН
-                        </h3>
+                        <h3 class="section__title  right__slide">РОЗБІР ГАРДЕРОБУ<span class="badge bg-secondary"> ОНЛАЙН </span></h3>
+
                         <figure class="descr__card ">
 
                             <img class="content__picture" src="img/al1.JPG" alt="#">
@@ -537,8 +530,10 @@ width:100vw;
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title right__slide">
-                            ШОПІНГ-СУПРОВІД ОНЛАЙН
+                        <h3 class="section__title  right__slide">
+                            <h3 class="section__title  right__slide">ШОПІНГ-СУПРОВІД<span class="badge bg-secondary"> ОНЛАЙН </span></h3>
+
+                            
                         </h3>
                         <figure class="descr__card ">
 
@@ -605,7 +600,7 @@ width:100vw;
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title right__slide">
+                        <h3 class="section__title  right__slide">
                             СТВОРЕННЯ ОБРАЗІВ ПІСЛЯ шопінгу
                         </h3>
                         <figure class="descr__card ">
@@ -643,9 +638,9 @@ width:100vw;
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title right__slide">
-                            СТИЛІСТ ОНЛАЙН
-                        </h3>
+                       
+                    <h3 class="section__title  right__slide">СТИЛІСТ<span class="badge bg-secondary"> ОНЛАЙН </span></h3>
+
                         <figure class="descr__card ">
 
                             <figcaption class="descr__text">
@@ -707,12 +702,12 @@ width:100vw;
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title right__slide">
+                        <h3 class="section__title  right__slide">
                             Індивідуальні, корпоративні послуги стиліста та співпраця
                         </h3>
                         <ul class="aditional__services__list">
                             <li class="aditional__services__item">
-                                <h3 class="section__title right__slide">
+                                <h3 class="section__title  right__slide">
                                     Створення образу на певну подію
                                 </h3>
                                 <p class="service__aim">
@@ -724,7 +719,7 @@ width:100vw;
                             </li>
 
                             <li class="aditional__services__item">
-                                <h3 class="section__title right__slide">
+                                <h3 class="section__title  right__slide">
                                     Робота з брендами
                                 </h3>
                                 <p class="service__aim">
@@ -737,7 +732,7 @@ width:100vw;
                             </li>
 
                             <li class="aditional__services__item">
-                                <h3 class="section__title right__slide">
+                                <h3 class="section__title  right__slide">
                                     Робота з корпоративними клієнтами
                                 </h3>
                                 <p class="service__aim">
@@ -750,7 +745,7 @@ width:100vw;
                             </li>
 
                             <li class="aditional__services__item">
-                                <h3 class="section__title right__slide">
+                                <h3 class="section__title  right__slide">
                                     Пакет на сезон
                                 </h3>
                                 <p class="service__aim">
@@ -809,6 +804,7 @@ width:100vw;
                         <div class="service__item">
                             <button type="button" class="service__button btn">ШОПІНГ-СУПРОВІД ОНЛАЙН</button>
                         </div>
+
                         <div class="service__item">
                             <button type="button" class="service__button btn">СТВОРЕННЯ ОБРАЗІВ ПІСЛЯ шопінгу</button>
                         </div>
@@ -1039,6 +1035,54 @@ width:100vw;
 
             </section>
 
+            <section class="tabcontent advantages container">
+
+                <h3 class="section__title right__slide">
+                    Переваги в роботі зі стилістом
+                </h3>
+                <p class="text__block">
+                    Які клієнт отримує переваги під час та в результаті нашої роботи?
+                </p>
+                <h3 class="slogan">
+                    Робота зі стилістом - це захоплюючий процес, в результаті якого ви знайдете свій унікальний стиль.
+                </h3>
+
+
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <p class="text__block">
+                            Розуміння свого типу фігури та методи як правильно підбирати речі саме під свою фігуру
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+
+                        <p class="text__block">
+                            Інформація про те, які кольори будуть найкраще працювати в гардеробі, а яких краще уникати
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <p class="text__block">
+                            Відсутність проблеми «багато речей, але немає, що вдягнути»
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <p class="text__block">
+                            Раціональний підхід до покупок та до гардеробу в цілому
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <p class="text__block">
+                            Збори на роботу, відпочинок, подію і т.д перетворяться у приємне проведення часу та насолоду
+                            від процесу
+                        </p>
+                    </li>
+                </ul>
+
+
+
+            </section>
+
+
             <section class="tabcontent reviews container">
                 <h3 class="section__name">
                     Відгуки
@@ -1226,15 +1270,15 @@ width:100vw;
                 <div class="modal__content">
                     <form action="post">
                         <div data-close class="modal__close">&times;</div>
-                        <div class="modal__title">Ми скоро передзвонимо!</div>
-                        <input required placeholder="Ваше ім'я" name="name" type="text" class="modal__input">
+                        <div class="modal__title">Ми Вам передзвонимо!</div>
+                        <input required placeholder="Ім'я" name="name" type="text" class="modal__input">
                         <div class="modal__input__container">
-                            <input required placeholder="Ваш номер телефона" name="phone" type="phone"
+                            <input required placeholder="Номер" name="phone" type="phone"
                                 class="modal__input">
                             <span>
                                 або
                             </span>
-                            <input required placeholder="Ваш e-mail" name="email" type="email" class="modal__input">
+                            <input required placeholder="e-mail" name="email" type="email" class="modal__input">
                         </div>
 
 
