@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Cormorant+Garamond:wght@300&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,73 +16,144 @@
 <style>
     @media screen and (orientation:portrait) {
         .header {
-    margin: 0 auto;
-    width: 100vw;
+            position: relative;
+            margin: 0 7vw;
+            width: 86vw;
+        }
+
+        .header__content {
+            flex-wrap: wrap;
+        }
+
+       
+
+        .logo__container,
+        .logo,
+.burger,
+.title{
+    transform: scale(0.9);
 }
 
-.logo__container,
-.burger__container{
-    transform: scale(0.6);
-}
-.main {
-    margin: 0 auto;
-    width: 100vw;
+.burger{
+    visibility: visible;
+    flex: 10%;
+    right: 3vh;
+    top: -4vh;
 }
 
-.title,
-.section__title,
-.descr__text,
-.text__block,
-.modal__container{
-    font-size: 1.5em;
-}
+        .logo__container {
+            flex: 10%;
+        }
 
-.modal__close{
-    transform: scale(0.8);
-    height: 1vh;
+        .navigation{
+            display: flex;
+            flex: 10%;
+            position: relative;
+        }
+
+        .sub__title {
+            display: none;
+        }
+
+       /*  .nav__menu {
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            align-items: center;
+            overflow: hidden;
+            margin: 0;
+            list-style: none;
+            box-shadow: inset 0 0px 10px rgba(0, 0, 0, .2);
+            border:1px solid black;
+            position: fixed;
+            visibility: hidden;
+            left: -100%;
+            width: 100vw;
+        } */
+
+        .nav__menu {
+    display: block;
+    position: fixed;
+    visibility: hidden;
     top: 0;
-    right: 1vh;
+    left: -100%;
+    width: 7vw;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0 0px 60px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
 }
 
-.modal__title,
-.modal__content button{
-    font-size: 1em;
-}
 
-.modal__content input{
-    font-size: 0.5em;
-}
+/* 
+#nav-toggle:checked~.nav__menu {
+    visibility: visible;
+    left: 0;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5)
+}  */
 
-.modal__dialog{
-    width: 80vw;
-}
+
+
+        .main {
+            margin: 0 7vw;
+            width: 86vw;
+        }
+
+        .title,
+        .section__title,
+        .service__title,
+        .descr__text,
+        .text__block,
+        .modal__container {
+            transform: scale(0.8);
+        }
+
+        .modal__close {
+            transform: scale(0.8);
+            height: 1vh;
+            top: 0;
+            right: 1vh;
+        }
+
+        .modal__title,
+        .modal__content button {
+            font-size: 1em;
+        }
+
+        .modal__content input {
+            font-size: 0.5em;
+        }
+
+        .modal__dialog {
+            width: 80vw;
+        }
     }
 
-    @media (min-width: 1440px) and (max-width:2560px) {
+    @media (min-width: 1440px) and (max-width:2560px) {}
 
-    }
+    @media (min-width: 1024px) and (max-width:1439px) {}
 
-    @media (min-width: 1024px) and (max-width:1439px) {
+    @media (min-width: 768px) and (max-width: 1023px) {}
 
-    }
+    @media (min-width:425px) and (max-width: 767px) {}
 
-    @media (min-width: 768px) and (max-width: 1023px) {
-     
-    }
+    @media (min-width:320px) and (max-width: 374px) {}
 
-    @media (min-width:425px) and (max-width: 767px) {
+    @media (max-width: 319px) {}
+</style>
 
-    }
-
-    @media (min-width:320px) and (max-width: 374px) {
-
-    }
-
-    @media (max-width: 319px) {
-
-      
-    }
-</style> 
 <body>
 
     <div class="wrapper">
@@ -91,13 +162,13 @@
             <div class="container">
                 <div class="header__content ">
 
-                    <div class="logo__container col-2">
+                    <div class="logo__container ">
                         <a href="#" class="logo">
                             <img src="img/icons/logo.png" alt="#">
                         </a>
                     </div>
 
-                    <div class="title__container col-8">
+                    <div class="title__container">
 
                         <a href="#">
                             <h1 class="title left__slide">Аліна Столярова</h1>
@@ -108,17 +179,18 @@
 
                     </div>
 
-                    <div class="burger__container col-2">
-                        <div class="burger">
-                            <input id="nav-toggle" type="checkbox" />
-                            <label class="nav-btn" for="nav-toggle">
-                                <span></span>
-                            </label>
-                            <nav class="nav__menu">
+                    <div class="navigation">
+                        
+                            <div class="burger">
+                                <input id="nav-toggle" type="checkbox" />
+                                <label class="nav-btn" for="nav-toggle">
+                                    <span></span>
+                                </label>
+                                
+                            <ul class="nav__menu">
                                 <div class="nav__item">
                                     <button type="button" class="nav__button">Про мене</button>
                                 </div>
-                                
                                 <div class="nav__item">
                                     <button type="button" class="nav__button">Послуги стиліста</button>
                                 </div>
@@ -129,13 +201,11 @@
                                     <button type="button" class="nav__button">Fashion-тури</button>
                                 </div>
                                 <div class="nav__item">
-                                    <button type="button" class="nav__button">Робота з клієнтами в Європі</button>
+                                    <button type="button" class="nav__button">Робота в Європі</button>
                                 </div>
                                 <div class="nav__item">
                                     <button type="button" class="nav__button">Подарункові сертифікати</button>
-
                                 </div>
-                                
                                 <div class="nav__item">
                                     <button type="button" class="nav__button">Переваги</button>
                                 </div>
@@ -145,46 +215,33 @@
                                 <div class="nav__item">
                                     <button type="button" class="nav__button">Контакти</button>
                                 </div>
-                            </nav>
-                        </div>
+                            </ul>
+                            </div>
+                            
+                      
+
+                        
+                        
                     </div>
+
 
                 </div>
             </div>
         </header>
 
-        <main class="main">
+       <main class="main">
 
             <section class="tabcontent about__me container">
-            <!--     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="10000">
-                        <img  src="img/alinka4.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="2000">
-                        <img src="img/B.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/alinka1.jpg" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div> -->
-                
+                <h3 class="section__name">
+                    Про мене
+                </h3>
 
                 <h3 class="section__title  right__slide">
                     Привіт, мене звати Аліна і я персональний стиліст.
                 </h3>
                 <figure class="descr__card ">
 
-                    <img class="content__picture" src="img/alinka4.jpg" alt="#">
+                    <img class="content__picture" src="img/B.jpg" alt="#">
 
                     <figcaption class="descr__text">
 
@@ -207,7 +264,7 @@
 
                     </figcaption>
 
-                    <img class="content__picture" src="img/B.jpg" alt="#">
+                    <img class="content__picture" src="img/alinka4.jpg" alt="#">
                 </figure>
 
                 <figure class="descr__card ">
@@ -223,7 +280,7 @@
 
             </section>
 
-           
+
             <section class="tabcontent personal__stylist__services container">
                 <h3 class="section__name">
                     Мої послуги
@@ -232,18 +289,20 @@
                 <div class="services__container">
 
                     <div class="service">
-                        <h3 class="section__title  right__slide">
+                        
+                        <h3 class="service__title">
                             КОНСУЛЬТАЦІЯ ПО СТИЛЮ
                         </h3>
+                        <p class="client__need">
+                            Перший крок на шляху до змін вашого стилю
+                        </p>
                         <figure class="descr__card ">
 
                             <img class="content__picture" src="img/al5.JPG" alt="">
 
                             <figcaption class="descr__text">
 
-                                <p class="slogan service__aim">
-                                    Перший крок на шляху до змін вашого стилю
-                                </p>
+                                
                                 <p class="text__block">
                                     Консультація по стилю включає:
                                     <ul class="service__components__list">
@@ -279,19 +338,20 @@
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title  right__slide">
+                        <h3 class="service__title">
                             РОЗБІР ГАРДЕРОБУ
                         </h3>
+                        <p class="client__need">
+                            Якщо ви втомились від свого гардеробу, постійно вдягаєте одне і те саме, не бачите
+                            ніяких
+                            цікавих комплектів в гардеробі, а деякі речі ще досі лежать з бірками, тоді ця
+                            послуга для вас!
+                        </p>
                         <figure class="descr__card ">
 
                             <figcaption class="descr__text">
 
-                                <p class="slogan">
-                                    Якщо ви втомились від свого гардеробу, постійно вдягаєте одне і те саме, не бачите
-                                    ніяких
-                                    цікавих комплектів в гардеробі, а деякі речі ще досі лежать з бірками, тоді ця
-                                    послуга для вас!
-                                </p>
+                                
                                 <p class="service__aim">
                                     Проаналізувати ситуацію на даний момент, зрозуміти які речі приносять вам позитивні
                                     емоції,а які просто займають місце в шафі, навчитись правильно працювати з речима,
@@ -353,9 +413,13 @@
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title  right__slide">
+                        <h3 class="service__title">
                             ШОПІНГ-СУПРОВІД
                         </h3>
+
+                        <p class="client__need">
+                            Перший крок на шляху до змін вашого стилю
+                        </p>
                         <figure class="descr__card ">
 
                             <img class="content__picture" src="img/al3.JPG" alt="#">
@@ -363,9 +427,7 @@
 
                             <figcaption class="descr__text">
 
-                                <p class="slogan">
-                                    Перший крок на шляху до змін вашого стилю
-                                </p>
+                                
                                 <p class="text__block">
                                     Консультація по стилю включає:
                                     <ul class="service__components__list">
@@ -401,18 +463,18 @@
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title  right__slide">
+                        <h3 class="service__title">
                             КАПСУЛЬНИЙ ГАРДЕРОБ
                         </h3>
+
+                        <p class="client__need">
+                            Капсульний гардероб – просто знахідка, для тих хто мріє бути зібраним за п’ять
+                            хвилин.
+                            Це гардероб, в якому всі і кожна річ поєднуються між собою.
+                        </p>
                         <figure class="descr__card ">
 
                             <figcaption class="descr__text">
-
-                                <p class="slogan">
-                                    Капсульний гардероб – просто знахідка, для тих хто мріє бути зібраним за п’ять
-                                    хвилин.
-                                    Це гардероб, в якому всі і кожна річ поєднуються між собою.
-                                </p>
 
                                 <p class="service__aim">
                                     Я з радістю допоможу вам сформувати капсульний гардероб в офіс з 10/15/20 речей, в
@@ -466,7 +528,14 @@
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title  right__slide">РОЗБІР ГАРДЕРОБУ<span class="badge bg-secondary"> ОНЛАЙН </span></h3>
+                        <h3 class="service__title">РОЗБІР ГАРДЕРОБУ<span class="badge bg-secondary">
+                                ОНЛАЙН </span></h3>
+
+
+                                <p class="client__need">
+                                    Для роботи зі стилістом немає меж на кордонів, а ефективність роботи така ж висока
+                                    як і при живому спілкуванні.
+                                </p>
 
                         <figure class="descr__card ">
 
@@ -476,10 +545,7 @@
                             <figcaption class="descr__text">
 
 
-                                <p class="slogan">
-                                    Для роботи зі стилістом немає меж на кордонів, а ефективність роботи така ж висока
-                                    як і при живому спілкуванні.
-                                </p>
+                                
 
                                 <p class="service__aim">
                                     При виборі онлайн розбору, крім заповненої анкети клієнта, вам потрібно буде
@@ -530,21 +596,19 @@
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title  right__slide">
-                            <h3 class="section__title  right__slide">ШОПІНГ-СУПРОВІД<span class="badge bg-secondary"> ОНЛАЙН </span></h3>
 
-                            
-                        </h3>
+                            <h3 class="service__title">ШОПІНГ-СУПРОВІД<span class="badge bg-secondary">
+                                    ОНЛАЙН </span></h3>
+                                    <p class="client__need">
+                                        Ви проживаєте в Європі, Америці, іншій точці світу і хотіли б поповнити гардероб
+                                        правильними речима? Шопінг зі стилістом можливий не лише в форматі особистої
+                                        зустрічі.
+                                    </p>
+
                         <figure class="descr__card ">
 
-
+                           
                             <figcaption class="descr__text">
-
-                                <p class="slogan">
-                                    Ви проживаєте в Європі, Америці, іншій точці світу і хотіли б поповнити гардероб
-                                    правильними речима? Шопінг зі стилістом можливий не лише в форматі особистої
-                                    зустрічі.
-                                </p>
 
                                 <p class="service__aim">
                                     Додавайте в свій гардероб унікальні, правильні речі, я обов‘язково допоможу!
@@ -600,20 +664,20 @@
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title  right__slide">
+                        <h3 class="service__title">
                             СТВОРЕННЯ ОБРАЗІВ ПІСЛЯ шопінгу
                         </h3>
+                        
+                        <p class="client__need">
+                            Після того як ми оновимо ваш гардероб пропоную створити образи з новими речима та з
+                            тими, що вже є в гардеробі
+                        </p>
                         <figure class="descr__card ">
 
                             <img class="content__picture" src="img/al6.JPG" alt="#">
 
 
                             <figcaption class="descr__text">
-
-                                <p class="slogan">
-                                    Після того як ми оновимо ваш гардероб пропоную створити образи з новими речима та з
-                                    тими, що вже є в гардеробі
-                                </p>
 
                                 <p class="text__block">
                                     Це дасть вам змогу повністю позбавитись проблеми вибору образу, який ідеально
@@ -638,8 +702,9 @@
                     </div>
 
                     <div class="service">
-                       
-                    <h3 class="section__title  right__slide">СТИЛІСТ<span class="badge bg-secondary"> ОНЛАЙН </span></h3>
+
+                        <h3 class="service__title">СТИЛІСТ<span class="badge bg-secondary"> ОНЛАЙН </span>
+                        </h3>
 
                         <figure class="descr__card ">
 
@@ -650,7 +715,7 @@
 
                                     <ul class="service__components__list">
                                         <li class="service__component">
-                                            <p class="slogan">
+                                            <p class="client__need">
                                                 Прокинулись зранку і немає можливості довго вибирати образ?
                                             </p>
                                             <p class="text__block">
@@ -658,7 +723,7 @@
                                             </p>
                                         </li>
                                         <li class="service__component">
-                                            <p class="slogan">
+                                            <p class="client__need">
                                                 Ввечері запланована важлива зустріч, а лук ще не сформований?
                                             </p>
                                             <p class="text__block">
@@ -666,7 +731,7 @@
                                             </p>
                                         </li>
                                         <li class="service__component">
-                                            <p class="slogan">
+                                            <p class="client__need">
                                                 Приймаєте участь у важливій конференції і хочете виглядати на всі сто?
                                             </p>
                                             <p class="text__block">
@@ -674,7 +739,7 @@
                                             </p>
                                         </li>
                                         <li class="service__component">
-                                            <p class="slogan">
+                                            <p class="client__need">
                                                 Забігли в магазин купити пальто і не знаєте, яке краще обрати?
                                             </p>
                                             <p class="text__block">
@@ -702,12 +767,12 @@
                     </div>
 
                     <div class="service">
-                        <h3 class="section__title  right__slide">
+                        <h3 class="service__title">
                             Індивідуальні, корпоративні послуги стиліста та співпраця
                         </h3>
                         <ul class="aditional__services__list">
                             <li class="aditional__services__item">
-                                <h3 class="section__title  right__slide">
+                                <h3 class="aditional__service__title">
                                     Створення образу на певну подію
                                 </h3>
                                 <p class="service__aim">
@@ -719,7 +784,7 @@
                             </li>
 
                             <li class="aditional__services__item">
-                                <h3 class="section__title  right__slide">
+                                <h3 class="aditional__service__title">
                                     Робота з брендами
                                 </h3>
                                 <p class="service__aim">
@@ -732,7 +797,7 @@
                             </li>
 
                             <li class="aditional__services__item">
-                                <h3 class="section__title  right__slide">
+                                <h3 class="aditional__service__title">
                                     Робота з корпоративними клієнтами
                                 </h3>
                                 <p class="service__aim">
@@ -745,7 +810,7 @@
                             </li>
 
                             <li class="aditional__services__item">
-                                <h3 class="section__title  right__slide">
+                                <h3 class="aditional__service__title">
                                     Пакет на сезон
                                 </h3>
                                 <p class="service__aim">
@@ -777,45 +842,46 @@
 
 
 
-
-
                     <div class="services__list">
 
                         <div class="service__item">
-                            <button type="button" class="service__button btn">КОНСУЛЬТАЦІЯ ПО СТИЛЮ</button>
+                            <button type="button" class="service__button">КОНСУЛЬТАЦІЯ</button>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button btn">РОЗБІР ГАРДЕРОБУ</button>
+                            <button type="button" class="service__button">РОЗБІР ГАРДЕРОБУ</button>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button btn">ШОПІНГ-СУПРОВІД</button>
+                            <button type="button" class="service__button">ШОППІНГ-СУПРОВІД</button>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button btn">КАПСУЛЬНИЙ ГАРДЕРОБ</button>
+                            <button type="button" class="service__button">КАПСУЛЬНИЙ ГАРДЕРОБ</button>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button btn">РОЗБІР ГАРДЕРОБУ ОНЛАЙН</button>
+                            <button type="button" class="service__button">РОЗБІР ГАРДЕРОБУ <span
+                                    class="badge badge-secondary">ОНЛАЙН</span></button>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button btn">ШОПІНГ-СУПРОВІД ОНЛАЙН</button>
+                            <button type="button" class="service__button">ШОПІНГ-СУПРОВІД <span
+                                    class="badge badge-secondary">ОНЛАЙН</span></button>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button btn">СТВОРЕННЯ ОБРАЗІВ ПІСЛЯ шопінгу</button>
+                            <button type="button" class="service__button">СТВОРЕННЯ ОБРАЗІВ ПІСЛЯ ШОПІНГУ</button>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button btn">СТИЛІСТ ОНЛАЙН</button>
+                            <button type="button" class="service__button">СТИЛІСТ<span
+                                    class="badge badge-secondary">ОНЛАЙН</span></button>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button btn">Індивідуальні, корпоративні послуги
-                                стиліста та співпраця</button>
+                            <button type="button" class="service__button">Індивідуальні, корпоративні послуги та
+                                співпраця</button>
                         </div>
                     </div>
 
@@ -947,7 +1013,7 @@
                     FASHION ТУРИ
                 </h3>
 
-                <p class="slogan">
+                <p class="client__need">
                     Подорожі та мода - моє суцільне натхнення, те без чого я не уявляю свого життя!
                 </p>
 
@@ -975,7 +1041,7 @@
                 </p>
 
 
-                <p class="slogan">
+                <p class="client__need">
                     Слідкуйте за оновленнями!
                 </p>
 
@@ -1043,7 +1109,7 @@
                 <p class="text__block">
                     Які клієнт отримує переваги під час та в результаті нашої роботи?
                 </p>
-                <h3 class="slogan">
+                <h3 class="client__need">
                     Робота зі стилістом - це захоплюючий процес, в результаті якого ви знайдете свій унікальний стиль.
                 </h3>
 
@@ -1262,10 +1328,10 @@
             </section>
 
 
-        </main>
+        </main> 
 
 
-        <div class="modal__container">
+        <!-- <div class="modal__container">
             <div class="modal__dialog">
                 <div class="modal__content">
                     <form action="post">
@@ -1273,8 +1339,7 @@
                         <div class="modal__title">Ми Вам передзвонимо!</div>
                         <input required placeholder="Ім'я" name="name" type="text" class="modal__input">
                         <div class="modal__input__container">
-                            <input required placeholder="Номер" name="phone" type="phone"
-                                class="modal__input">
+                            <input required placeholder="Номер" name="phone" type="phone" class="modal__input">
                             <span>
                                 або
                             </span>
@@ -1286,7 +1351,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <button class="up__button" type="button">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Up_arrow_white.svg" alt="Наверх">

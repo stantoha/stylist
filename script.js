@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
         servicesTabParent= document.querySelector('.services__list'),
         upButton=document.querySelector('.up__button'),
         sectionTitles=document.querySelectorAll('.section__title'),
+        serviceTitles=document.querySelectorAll('.service__title'),
         subTitleLink=document.querySelector('.sub__title'),
         titleLink=document.querySelector('.title'),
         modal = document.querySelector('.modal__container'),
@@ -69,6 +70,19 @@ window.addEventListener('DOMContentLoaded', () => {
         servicesTabsContent[j].classList.add('show', 'fade');
         servicesTabsContent[j].classList.remove('hide');
         serviceTabs[j].classList.add('active');
+        serviceTitles.forEach(item=>{
+            if(j%2!==0){
+                item.classList.add('right__slide');
+            }
+            else if(j%2===0){
+                item.classList.add('left__slide');
+            }
+            
+        });
+        setTimeout(()=>{
+            serviceTitles[j].classList.remove('right__slide');
+            serviceTitles[j].classList.remove('left__slide');
+        },500); 
     }
 
     hideServiceTabContent();
