@@ -17,8 +17,8 @@
     @media screen and (orientation:portrait) {
         .header {
             position: relative;
-            margin: 0 7vw;
-            width: 86vw;
+            margin: 0 auto;
+            width: 100%;
         }
 
         .header__content {
@@ -54,32 +54,22 @@
         .sub__title {
             display: none;
         }
+        .nav-btn>span,
+.nav-btn>span::before,
+.nav-btn>span::after {
+    visibility: visible;
+}
 
-       /*  .nav__menu {
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: nowrap;
-            align-items: center;
-            overflow: hidden;
-            margin: 0;
-            list-style: none;
-            box-shadow: inset 0 0px 10px rgba(0, 0, 0, .2);
-            border:1px solid black;
-            position: fixed;
-            visibility: hidden;
-            left: -100%;
-            width: 100vw;
-        } */
 
         .nav__menu {
-    display: block;
-    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
     visibility: hidden;
-    top: 0;
-    left: -100%;
-    width: 7vw;
-    height: 80%;
+    top: 12vh ;
+    left: 100%;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -88,27 +78,37 @@
 }
 
 
-/* 
+
 #nav-toggle:checked~.nav__menu {
     visibility: visible;
     left: 0;
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1050;
-    display: none;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, .5)
-}  */
+} 
 
 
+.nav__item {
+    display: inline-block;
+    margin: 1vh;
+    padding: 0;
+    text-align: center;
 
+}
+
+.nav__button {
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.7em;
+    text-transform: capitalize;
+    width: auto;
+    height:3vh;
+    margin: 0;
+    padding: 0;
+    background-color:transparent;
+    color:black;
+    border:none;
+}
         .main {
-            margin: 0 7vw;
-            width: 86vw;
+            margin: 0 auto;
+            width: 100%;
         }
 
         .title,
@@ -159,7 +159,7 @@
     <div class="wrapper">
 
         <header class="header">
-            <div class="container">
+          
                 <div class="header__content ">
 
                     <div class="logo__container ">
@@ -187,46 +187,41 @@
                                     <span></span>
                                 </label>
                                 
-                            <ul class="nav__menu">
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button">Про мене</button>
-                                </div>
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button">Послуги стиліста</button>
-                                </div>
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button">Персональний шоппінг</button>
-                                </div>
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button">Fashion-тури</button>
-                                </div>
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button">Робота в Європі</button>
-                                </div>
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button">Подарункові сертифікати</button>
-                                </div>
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button">Переваги</button>
-                                </div>
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button">Відгуки</button>
-                                </div>
-                                <div class="nav__item">
-                                    <button type="button" class="nav__button">Контакти</button>
-                                </div>
-                            </ul>
+                                <ul class="nav__menu">
+                                    <div class="nav__item">
+                                        <button type="button" class="nav__button">Про мене</button>
+                                    </div>
+                                    <div class="nav__item">
+                                        <button type="button" class="nav__button">Послуги стиліста</button>
+                                    </div>
+                                    <div class="nav__item">
+                                        <button type="button" class="nav__button">Персональний шоппінг</button>
+                                    </div>
+                                    <div class="nav__item">
+                                        <button type="button" class="nav__button">Fashion-тури</button>
+                                    </div>
+                                    <div class="nav__item">
+                                        <button type="button" class="nav__button">Робота в Європі</button>
+                                    </div>
+                                    <div class="nav__item">
+                                        <button type="button" class="nav__button">Подарункові сертифікати</button>
+                                    </div>
+                                    <div class="nav__item">
+                                        <button type="button" class="nav__button">Переваги</button>
+                                    </div>
+                                    <div class="nav__item">
+                                        <button type="button" class="nav__button">Відгуки</button>
+                                    </div>
+                                    <div class="nav__item">
+                                        <button type="button" class="nav__button">Контакти</button>
+                                    </div>
+                                </ul>
                             </div>
-                            
-                      
-
-                        
-                        
                     </div>
 
 
                 </div>
-            </div>
+          
         </header>
 
        <main class="main">
@@ -1331,7 +1326,7 @@
         </main> 
 
 
-        <!-- <div class="modal__container">
+        <div class="modal__container">
             <div class="modal__dialog">
                 <div class="modal__content">
                     <form action="post">
@@ -1351,7 +1346,7 @@
                     </form>
                 </div>
             </div>
-        </div> -->
+        </div> 
 
         <button class="up__button" type="button">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Up_arrow_white.svg" alt="Наверх">
