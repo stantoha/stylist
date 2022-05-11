@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     //SHOW-HIDE CONTENT
 
-    let tabs=document.querySelectorAll('.nav__button'),
+    let tabs=document.querySelectorAll('.menu__button'),
         tabsContent = document.querySelectorAll('.tabcontent'),
         tabParent= document.querySelector('.nav__menu'),
         serviceTabs=document.querySelectorAll('.service__button'),
@@ -25,9 +25,9 @@ window.addEventListener('DOMContentLoaded', () => {
             subTitleLink.classList.remove('hide');
             subTitleLink.classList.add('show','fade');
         },2000);
-        sectionTitles.forEach(item=>{
+        /* sectionTitles.forEach(item=>{
             item.classList.add('right__slide');
-        });
+        }); */
         
 
     function hideTabContent() {
@@ -43,18 +43,31 @@ window.addEventListener('DOMContentLoaded', () => {
     function showTabContent(i = 0) {
         tabsContent[i].classList.add('show', 'fade');
         tabsContent[i].classList.remove('hide');
-        tabs[i].classList.add('active');
-        setTimeout(()=>{
-            sectionTitles.forEach(item=>{
-                if(item.classList.contains('right__slide')){
-                     item.classList.remove('right__slide');
-                }
-            })
-        },2000);
+        tabs[i].classList.add('active');  
+        sectionTitles.forEach(item=>{
+            if(item.classList.contains('right__slide')){
+                setTimeout(()=>{item.classList.remove('right__slide')},1000);
+            }
+            if(item.classList.contains('left__slide')){
+                setTimeout(()=>{ item.classList.remove('left__slide')},1000);
+           }
+        });
     }
 
     hideTabContent();
     showTabContent();
+
+
+
+
+
+       
+            
+        
+
+
+
+
 
     function hideServiceTabContent() {
         servicesTabsContent.forEach(item => {
@@ -70,26 +83,14 @@ window.addEventListener('DOMContentLoaded', () => {
         servicesTabsContent[j].classList.add('show', 'fade');
         servicesTabsContent[j].classList.remove('hide');
         serviceTabs[j].classList.add('active');
-        serviceTitles.forEach(item=>{
-            if(j%2!==0){
-                item.classList.add('right__slide');
-            }
-            else if(j%2===0){
-                item.classList.add('left__slide');
-            }
-            
-        });
-        setTimeout(()=>{
-            serviceTitles[j].classList.remove('right__slide');
-            serviceTitles[j].classList.remove('left__slide');
-        },500); 
+        
     }
 
     hideServiceTabContent();
 
     tabParent.addEventListener('click', (event) => {
         let target = event.target;
-        if (target && target.classList.contains('nav__button')) {
+        if (target && target.classList.contains('menu__button')) {
             tabs.forEach((item, i) => {
                 if (target == item) {
                     hideTabContent();
@@ -104,7 +105,14 @@ window.addEventListener('DOMContentLoaded', () => {
                                     if (target == item) {
                                         hideServiceTabContent();
                                         showServiceTabContent(j);
-                       
+                                       
+                                            if(serviceTitles[j].classList.contains('right__slide')){
+                                                setTimeout(()=>{serviceTitles[j].classList.remove('right__slide')},1000);
+                                            }
+                                            if(serviceTitles[j].classList.contains('left__slide')){
+                                                setTimeout(()=>{ serviceTitles[j].classList.remove('left__slide')},1000);
+                                           }
+                                       
                                         
                                     }
                                 });
@@ -131,6 +139,8 @@ window.addEventListener('DOMContentLoaded', () => {
         
     } 
     else {
+        subTitleLink.classList.add('show','fade');
+        subTitleLink.classList.remove('hide');
         titleLink.classList.remove('left__slide');
         upButton.classList.add('hide');
         upButton.classList.remove('show','fade');

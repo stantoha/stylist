@@ -9,8 +9,8 @@ body {
 /*
 #fff9ef
 #fce6d1     
-#e1bfb3
-#e7a17d
+rgba(225, 191, 179, 1)
+rgba(231, 161, 125, 1)
 #aa7354  
 */
 
@@ -51,32 +51,27 @@ li {
     transform: translateX(200%);
 }
 
-.container {
-   /*  border: 1px solid black; */
-}
-
 
 /* HEADER */
 
 .header {
     position: fixed;
-    background-color:#e1bfb3 ;
+    background-color:rgba(225, 191, 179, 0.7) ;
     display: block;
     top: 0;
     left: 0;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0;
+    margin: 0 5vw;
+    width: 90vw;
+    padding: 0 2vh;
     z-index: 100;
 }
 
 .header__content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     height: 12vh;
     padding: 1vh;
-
 }
 
 
@@ -168,14 +163,13 @@ li {
     margin: 0;
     padding: 1vh;
     padding-left: 50%;
-    padding-right: 5%;
+    padding-right: 15%;
     list-style: none;
-    
     transition-duration: .25s;
 }
 
 .active {
-    color: #e7a17d;
+    color: rgba(231, 161, 125, 1);
     font-weight: 600;
 }
 
@@ -197,43 +191,50 @@ li {
     width: 6vh;
     height: 0.7vh;
     border-radius: 15px/15px;
-    background-color:black;
+    background-color:#fff9ef;
     transition-duration: .3s;
 }
+/*
+  rgba(255, 249, 239, 1)
+rgba(252, 230, 209, 1)    
+rgba(225, 191, 179, 1)
+ rgba(231, 161, 125, 1)
+ rgba(170, 115, 84, 1) 
+*/
 
 .nav-btn>span::before {
     content: '';
     top: -2.5vh;
-    background-color:black;
+    background-color:#fff9ef;
 }
 
 .nav-btn>span::after {
     content: '';
     top: 2.5vh;
-    background-color:black;
+    background-color:#fff9ef;
 }
 
 
 .nav-btn:hover>span::before,
 .nav-btn:hover>span::after {
-    background-color:black;
+    background-color:#fff9ef;
 }
 
 .nav-btn:hover>span {
-    background-color: black;
+    background-color: #fff9ef;
 }
 
-.nav__item {
+.menu__item {
     display: inline-block;
     margin:0 ;
     padding: 0;
     text-align:start;
-vertical-align: middle;
+    vertical-align: middle;
     line-height: 1;
    
 }
 
-.nav__button {
+.menu__button {
     text-decoration: none;
     transition: all 0.3s;
     font-size: 0.7em;
@@ -245,13 +246,11 @@ vertical-align: middle;
     background-color:transparent;
     color:#fff9ef;
     width: 10vh;
-    /*  border:1px solid black; */
 }
 
-.nav__button:hover {
+.menu__item a:hover {
     transform: scale(1.2);
-    color:white;
-
+    color:rgba(231, 161, 125, 1);
 }
 
 #nav-toggle {
@@ -311,7 +310,8 @@ label .nav-btn {
     vertical-align: middle;
     font-family:'Cormorant Garamond', serif;
     margin: 0;
-    padding: 1vh;
+    padding: 0;
+    padding-bottom: 1vh;
     font-size: 0.8em;
     text-transform: uppercase;
 }
@@ -359,6 +359,7 @@ label .nav-btn {
     margin: 2vh;
 }
 
+
 .service__title,
 .section__title,
 .text__block,
@@ -372,6 +373,7 @@ label .nav-btn {
     letter-spacing: 0.2vh;
 }
 
+.question,
 h3.section__title,
 .service__title {
     text-align: center;
@@ -381,22 +383,23 @@ h3.section__title,
     font-size: 1.5em;
     font-weight: 900;
     text-shadow: 0 0 1vh rgba(255, 255, 255, 0.9);
-    background-color: #e1bfb3;
+    background-color: rgba(225, 191, 179, 1);
     transition: all 1s;
 }
 
 .text__block {
     font-size: 1.5em;
-    color:#e7a17d;;
+    color:rgba(231, 161, 125, 1);;
     font-family: 'Bebas Neue';
 }
+
 
 .client__need {
     flex: 100%;
     text-align: center;
     font-size: 2em;
     font-family: 'Bebas Neue';
-    color:#e7a17d;
+    color:rgba(231, 161, 125, 1);
 }
 
 .badge{
@@ -436,9 +439,6 @@ h3.section__title,
     min-height: 86vh;
 }
 
-
-
-
 .services__list {
     position: fixed;
     display: flex;
@@ -454,8 +454,6 @@ h3.section__title,
     transition-duration: .25s;
 }
 
-
-
 .service__item {
     display: block;
     font-family: 'Bebas Neue';
@@ -464,27 +462,34 @@ h3.section__title,
     margin:1vh;
     padding: 0;
    align-content:center;
-   background-color: rgba(0, 0, 0, .2);
-   
+   border-radius: 15px/15px;
+   transition:all 0.3s
 }
 
  .service__button {
     text-decoration: none;
     transition: all 0.7s;
     text-align: center;
-    color:#fff9ef ;
+    color:rgba(231, 161, 125, 1) ;
     height: 7vh;
     width: 9vw;
     padding: 1vh;
     border:1px solid rgba(255, 255, 255, 0.7);
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(252, 230, 209, 1) ;
     border-radius: 15px/15px;
 }
+/*
+  rgba(255, 249, 239, 1)
+rgba(252, 230, 209, 1)    
+rgba(225, 191, 179, 1)
+ rgba(231, 161, 125, 1)
+ rgba(170, 115, 84, 1) 
+*/
 
-
-.service__button:hover {
+.service__item:hover {
     transform: scale(1.1);
-    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+    text-shadow:rgba(255, 255, 255, 0.9) ;
 }
 
 
@@ -510,26 +515,7 @@ h3.section__title,
     border-radius: 15px/15px;
 }
 
-/* 
-.section__descr{
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    height: auto;
-}
 
-.section__descr__item{
-    display: block;
-    margin: 0 auto;
-    border: 1px solid black;
-    border-radius: 15px/15px;
-}
- */
 
 
 
@@ -667,6 +653,14 @@ a.social__link:hover {
 
 /* MODAL */
 
+/*
+#fff9ef
+#fce6d1     
+rgba(225, 191, 179, 1)
+rgba(231, 161, 125, 1)
+#aa7354  
+*/
+
 
 .modal__container {
     position: fixed;
@@ -680,15 +674,15 @@ a.social__link:hover {
     width: 100vw;
     height: 100%;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .5)  ;
 }
 
 .modal__dialog {
     width: 40%;
     height: 35vh;
     margin: 25vh auto 35vh auto;
-    box-shadow: 0 0 10px rgba(255, 255, 255, .6);
-    border-radius: 15px/15px;
+/*     box-shadow: 0 0 10px rgba(255, 255, 255, .6);
+ */    border-radius: 15px/15px;
 }
 
 .modal__content {
@@ -698,7 +692,7 @@ a.social__link:hover {
     background-color: rgba(0, 0, 0, .7);
     border-radius: 15px/15px;
     box-shadow: 0 0 10px rgba(255, 255, 255, .4);
-    max-height: 80vh;
+    height: auto;
     overflow-y: auto
 }
 
@@ -716,11 +710,10 @@ a.social__link:hover {
 
 .modal__title {
     text-align: center;
-    text-transform: uppercase;
-    color: #fff9ef;
+    color: rgba(255, 255, 255, 0.9);
     font-family: 'Comfortaa', cursive;
-    font-size: 1.5em;
-    text-shadow: 0 0 1vh rgba(255, 255, 255, 0.7);
+    font-size: 1em;
+    text-shadow: 0 0 1vh rgba(255, 255, 255, 0.9);
 }
 
 .modal__input {
@@ -728,8 +721,8 @@ a.social__link:hover {
     margin: 2vh auto 2vh auto;
     width: 12vw;
     height: 5vh;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow:inset 0 0 10px rgba(255, 255, 255, .7);
+    background-color: rgba(231, 161, 125, 1);
+    box-shadow:inset 0 0 1vh rgba(0, 0, 0, .7);
     border: none;
     border-radius: 15px/15px;
     font-size: 0.8em;
@@ -737,6 +730,7 @@ a.social__link:hover {
     padding: 0 2vh;
     outline: 0
 }
+
 
 .modal__input__container {
     display: flex;
@@ -751,15 +745,15 @@ a.social__link:hover {
 
 .modal__btn {
     display: block;
-    width: 25vh;
+    width: 35vh;
     border-radius: 15px/15px;
     text-align: center;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, .9);
     font-family: 'Comfortaa', cursive;
-    font-size: 1em;
-    background: #fff9ef;
+    font-size: 1.5em;   
     text-shadow: 0 0 1vh rgba(255, 255, 255, 0.7);
+    box-shadow:inset 0 0 1vh rgba(0, 0, 0, .7);
+    background-color:rgba(225, 191, 179, 1) ;
     padding: 1vh;
     margin: 1vh auto;
     transition: all 0.5s;
