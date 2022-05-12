@@ -44,14 +44,14 @@ window.addEventListener('DOMContentLoaded', () => {
         tabsContent[i].classList.add('show', 'fade');
         tabsContent[i].classList.remove('hide');
         tabs[i].classList.add('active');  
-        sectionTitles.forEach(item=>{
-            if(item.classList.contains('right__slide')){
-                setTimeout(()=>{item.classList.remove('right__slide')},1000);
+        
+            if(sectionTitles[i].classList.contains('right__slide')){
+                setTimeout(()=>{sectionTitles[i].classList.remove('right__slide')},1000);
             }
-            if(item.classList.contains('left__slide')){
-                setTimeout(()=>{ item.classList.remove('left__slide')},1000);
+            if(sectionTitles[i].classList.contains('left__slide')){
+                setTimeout(()=>{ sectionTitles[i].classList.remove('left__slide')},1000);
            }
-        });
+       
     }
 
     hideTabContent();

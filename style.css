@@ -226,7 +226,7 @@ rgba(225, 191, 179, 1)
 
 .menu__item {
     display: inline-block;
-    margin:0 ;
+    margin:0 1vh;
     padding: 0;
     text-align:start;
     vertical-align: middle;
