@@ -17,15 +17,15 @@
     @media (min-width: 768px) and (max-width: 1023px) {
         .header {
             position: fixed;
-    margin: 0 auto;
-    width: 100vw;
+            margin: 0 auto;
+            width: 100vw;
 
         }
 
         .header__content {
             flex-wrap: wrap;
             height: 5%;
-             
+
         }
 
         .logo__container,
@@ -63,7 +63,7 @@
         } */
 
         #nav-toggle,
-        label.nav-btn{
+        label.nav-btn {
             display: none;
         }
 
@@ -92,11 +92,11 @@
             height: 9%;
             margin: 0;
             padding: 1vh;
-           /*  padding-left: 50%;
+            /*  padding-left: 50%;
             padding-right: 15%; */
             list-style: none;
-         
-            transition-duration: .25s;   
+
+            transition-duration: .25s;
             position: fixed;
             visibility: visible;
         }
@@ -134,13 +134,14 @@
         .section__title,
         .service__title,
         .descr__text,
-        .text__block{
+        .text__block {
             transform: scale(0.8);
         }
 
-        .modal__container{
-            border-radius:15px/15px;
+        .modal__container {
+            border-radius: 15px/15px;
         }
+
         .modal__close {
             transform: scale(0.8);
             height: 1vh;
@@ -213,7 +214,7 @@
                                 <a class="menu__button">Про мене</a>
                             </div>
                             <div class="menu__item">
-                                <a class="menu__button">Послуги стиліста</a>
+                                <a class="menu__button">Послуги</a>
                             </div>
                             <div class="menu__item">
                                 <a class="menu__button">Персональний шоппінг</a>
@@ -307,45 +308,57 @@
                     <div class="service">
 
                         <h3 class="service__title right__slide">
-                            КОНСУЛЬТАЦІЯ ПО СТИЛЮ
+                            Консультація по стилю
                         </h3>
                         <p class="client__need">
                             Перший крок на шляху до змін вашого стилю
                         </p>
+
                         <figure class="descr__card ">
 
                             <img class="content__picture" src="img/al5.JPG" alt="">
 
                             <figcaption class="descr__text">
 
+                                <ul class="service__components__list">
+                                    <li class="service__components__list__title">
+                                        Консультація по стилю включає:
+                                    </li>
+                                    <li class="service__component">
+                                        аналіз теперішнього стилю і визначення правильного напряму його
+                                        покращення;
+                                    </li>
+                                    <li class="service__component">
+                                        інформацію про те, як можна підкреслити достоїнства фігури і сховати
+                                        недоліки;
+                                    </li>
+                                    <li class="service__component">
+                                        поради щодо кольорів, фасонів, тканин та текстур, які підходять саме вам;
+                                    </li>
+                                </ul>
 
-                                <p class="text__block">
-                                    Консультація по стилю включає:
-                                    <ul class="service__components__list">
-                                        <li class="service__component">
-                                            • аналіз теперішнього стилю і визначення правильного напряму його
-                                            покращення;
-                                        </li>
-                                        <li class="service__component">
-                                            • інформацію про те, як можна підкреслити достоїнства фігури і сховати
-                                            недоліки;
-                                        </li>
-                                        <li class="service__component">
-                                            • поради щодо кольорів, фасонів, тканин та текстур, які підходять саме вам;
-                                        </li>
-                                    </ul>
-                                </p>
-                                <p class="text__block">
-                                    Також під час консультації ви зможете задати усі питання, які вас цікавлять.
-                                </p>
 
-                                <span class="service__duration">
-                                    Тривалість надання послуги- 1,5/2 год.
-                                </span>
+                                <div class="service__details">
+                                    <p class="text__block">
+                                        Також під час консультації ви зможете задати усі питання, які вас цікавлять.
+                                    </p>
 
-                                <span class="service__online__possibility">
-                                    Чи можливе надання послуги онлайн:
-                                </span>
+                                    <table>
+                                        <tr class="service__duration">
+                                            <td>Тривалість надання послуги</td>
+                                            <td>1,5-2 <span>год</span> </td>
+                                        </tr>
+                                        <tr class="service__online__possibility">
+                                            <td>Чи можливе онлайн:</td>
+                                            <td><span>+</span></td>
+                                        </tr>
+                                    </table>
+
+                                    <a class="order__link" href="#">
+                                        Замовити
+                                    </a>
+                                </div>
+
 
                             </figcaption>
 
@@ -355,7 +368,7 @@
 
                     <div class="service">
                         <h3 class="service__title left__slide">
-                            РОЗБІР ГАРДЕРОБУ
+                           Розбір гардеробу
                         </h3>
                         <p class="client__need">
                             Якщо ви втомились від свого гардеробу, постійно вдягаєте одне і те саме, не бачите
@@ -372,9 +385,12 @@
                                     Проаналізувати ситуацію на даний момент, зрозуміти які речі приносять вам позитивні
                                     емоції,а які просто займають місце в шафі, навчитись правильно працювати з речима,
                                     створювати цікаві образи-це все можливо за допомогою розбору гардеробу.</p>
-                                <p class="text__block">
-                                    Як відбувається розбір гардеробу?
+
+                                    
                                     <ul class="service__components__list">
+                                        <li class="service__components__list__title">
+                                            Як відбувається розбір гардеробу?
+                                        </li>
                                         <li class="service__component">
                                             Процес розбору гардеробу відбувається у клієнта вдома.
                                         </li>
@@ -407,19 +423,27 @@
                                             шопінг-лист.
                                         </li>
                                     </ul>
-                                </p>
-                                <p class="text__block">
-                                    Розбір гардеробу проводиться по сезонах: весна/літо або осінь/зима.
-                                </p>
 
-                                <span class="service__duration">
-                                    Тривалість надання послуги- 3/4 год.
-                                </span>
+                                <div class="service__details">
+                                    <p class="text__block">
+                                        Розбір гардеробу проводиться по сезонах: весна/літо або осінь/зима.
+                                    </p>
 
-                                <span class="service__online__possibility">
-                                    Чи можливе надання послуги онлайн:
-                                </span>
+                                    <table>
+                                        <tr class="service__duration">
+                                            <td>Тривалість надання послуги</td>
+                                            <td>3-4 <span>год</span> </td>
+                                        </tr>
+                                        <tr class="service__online__possibility">
+                                            <td>Чи можливе онлайн:</td>
+                                            <td><span>+</span></td>
+                                        </tr>
+                                    </table>
 
+                                    <a class="order__link" href="#">
+                                        Замовити
+                                    </a>
+                                </div>
                             </figcaption>
 
                             <img class="content__picture" src="img/al4.JPG" alt="#">
@@ -430,11 +454,13 @@
 
                     <div class="service">
                         <h3 class="service__title right__slide">
-                            ШОПІНГ-СУПРОВІД
+                            Шопінг-супровід
                         </h3>
 
                         <p class="client__need">
-                            Перший крок на шляху до змін вашого стилю
+                            Шопінг-супровід допоможе позбавитись проблеми імпульсивних і непотрібних покупок і зібрати гардероб, який буде працювати на всі 100%.
+
+
                         </p>
                         <figure class="descr__card ">
 
@@ -444,33 +470,41 @@
                             <figcaption class="descr__text">
 
 
-                                <p class="text__block">
-                                    Консультація по стилю включає:
+                            
                                     <ul class="service__components__list">
                                         <li class="service__component">
-                                            • аналіз теперішнього стилю і визначення правильного напряму його
-                                            покращення;
+                                            Речі в процесі шопінгу підбираються функціональні: щоб відповідали обраному напряму стилю і пасували до того, що є в гардеробі.
+ 
                                         </li>
                                         <li class="service__component">
-                                            • інформацію про те, як можна підкреслити достоїнства фігури і сховати
-                                            недоліки;
+                                            Перед наданням послуги, ми обов’язково проговорюємо бюджет та цілі шопінгу. 
+
                                         </li>
                                         <li class="service__component">
-                                            • поради щодо кольорів, фасонів, тканин та текстур, які підходять саме вам;
+                                            Також я складаю шопінг-маршрут індивідуально для кожного клієнта та роблю попередній самостійний прешопінг для максимальної економії вашого часу. 
+                                        </li>
+                                        <li class="service__component">
+                                            В процесі шопінгу розповідаю яким чином обирати правильні речі, на що акцентувати увагу, як знайти те, що буде ідеально пасувати вам.
                                         </li>
                                     </ul>
-                                </p>
-                                <p class="text__block">
-                                    Також під час консультації ви зможете задати усі питання, які вас цікавлять.
-                                </p>
-
-                                <span class="service__duration">
-                                    Тривалість надання послуги- 1,5/2 год.
-                                </span>
-
-                                <span class="service__online__possibility">
-                                    Чи можливе надання послуги онлайн:
-                                </span>
+                                    <div class="service__details">
+    
+                                        <table>
+                                            <!-- <tr class="service__duration">
+                                                <td>Тривалість надання послуги</td>
+                                                <td>3-4 <span>год</span> </td>
+                                            </tr> -->
+                                            <tr class="service__online__possibility">
+                                                <td>Чи можливе онлайн:</td>
+                                                <td><span>+</span></td>
+                                            </tr>
+                                        </table>
+    
+                                        <a class="order__link" href="#">
+                                            Замовити
+                                        </a>
+                                    </div>
+                              
 
                             </figcaption>
 
@@ -480,7 +514,7 @@
 
                     <div class="service">
                         <h3 class="service__title left__slide">
-                            КАПСУЛЬНИЙ ГАРДЕРОБ
+                            Капсульний гардероб
                         </h3>
 
                         <p class="client__need">
@@ -495,16 +529,19 @@
                                 <p class="service__aim">
                                     Я з радістю допоможу вам сформувати капсульний гардероб в офіс з 10/15/20 речей, в
                                     якому будуть десятки комплектів.
-                                    Або ж ви відправляєтесь в поїздку і хочете взяти мінімум речей, при тому, щоб вони
-                                    всі поєднувались між собою, найкращий варіант – скласти капсулу.
+                                    <!-- Або ж ви відправляєтесь в поїздку і хочете взяти мінімум речей, при тому, щоб вони
+                                    всі поєднувались між собою, найкращий варіант – скласти капсулу. -->
                                     Капсульний гардероб можна сформувати як на сезон, так і на певні події, поїздки.
                                     Гардероб у вигляді капсули створюється відповідно до ваших потреб, вподобань, типу
                                     фігури.
                                 </p>
 
-                                <p class="text__block">
-                                    Що ви отримаєте в результаті?
+                                
+                                    
                                     <ul class="service__components__list">
+                                        <li class="service__components__list__title">
+                                            Що ви отримаєте в результаті?
+                                        </li>
                                         <li class="service__component">
                                             Результатом буде презентація, де зібрана інформація про ваш тип фігури,
                                             методи роботи з нею, важливі поради по фасонах, силуетах, кольорах, принтах,
@@ -522,19 +559,26 @@
                                             До кожної речі я додаю посилання і 3-5 альтернативних варіанта.
                                         </li>
                                     </ul>
-                                </p>
-                                <p class="text__block">
+                                
+                               
+                                <div class="service__details">
+                                  
 
-                                </p>
+                                    <table>
+                                        <tr class="service__duration">
+                                            <td>Термін виконання </td>
+                                            <td>5-7 робочих днів після отримання всіх необхідних даних </td>
+                                        </tr>
+                                        <tr class="service__online__possibility">
+                                            <td>Чи можливе онлайн:</td>
+                                            <td><span>+</span></td>
+                                        </tr>
+                                    </table>
 
-                                <span class="service__duration">
-                                    Термін виконання - 5/7 робочих днів після отримання всіх необхідних даних
-                                </span>
-
-                                <span class="service__online__possibility">
-                                    Чи можливе надання послуги онлайн:
-                                </span>
-
+                                    <a class="order__link" href="#">
+                                        Замовити
+                                    </a>
+                                </div>
                             </figcaption>
 
                             <img class="content__picture" src="img/al2.JPG" alt="#">
@@ -544,7 +588,9 @@
                     </div>
 
                     <div class="service">
-                        <h3 class="service__title right__slide">РОЗБІР ГАРДЕРОБУ<span class="badge bg-secondary">
+                        <h3 class="service__title right__slide">
+                            Розбір гардеробу
+                        <span class="badge bg-secondary">
                                 ОНЛАЙН </span></h3>
 
 
@@ -613,7 +659,7 @@
 
                     <div class="service">
 
-                        <h3 class="service__title left__slide">ШОПІНГ-СУПРОВІД<span class="badge bg-secondary">
+                        <h3 class="service__title left__slide">Шопінг-супровід<span class="badge bg-secondary">
                                 ОНЛАЙН </span></h3>
                         <p class="client__need">
                             Ви проживаєте в Європі, Америці, іншій точці світу і хотіли б поповнити гардероб
@@ -681,7 +727,7 @@
 
                     <div class="service">
                         <h3 class="service__title right__slide">
-                            СТВОРЕННЯ ОБРАЗІВ ПІСЛЯ шопінгу
+                            Створення образів після шопінгу
                         </h3>
 
                         <p class="client__need">

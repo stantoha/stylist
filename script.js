@@ -51,6 +51,10 @@ window.addEventListener('DOMContentLoaded', () => {
             if(sectionTitles[i].classList.contains('left__slide')){
                 setTimeout(()=>{ sectionTitles[i].classList.remove('left__slide')},1000);
            }
+
+           if(tabsContent[i].classList.contains('personal__stylist__services')){
+            setTimeout(()=>{ serviceTitles[0].classList.remove('right__slide')},1000);
+           }
        
     }
 

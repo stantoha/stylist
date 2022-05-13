@@ -1,7 +1,6 @@
 body {
     margin: 0 auto;
     padding: 0;
-    list-style: none;
     font-size: 1em;
     line-height: 1.5;
     width: 100%;
@@ -23,7 +22,6 @@ rgba(231, 161, 125, 1)
 
 ul,
 li {
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -70,7 +68,7 @@ li {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 12vh;
+    height: 10vh;
     padding: 1vh;
 }
 
@@ -96,7 +94,7 @@ li {
 
 /* TITLE */
 .title__container{
-    flex: 30%;
+    flex: 20%;
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -133,7 +131,7 @@ li {
 
 /*NAV*/
 .navigation{
-    flex: 45%;
+    flex: 60%;
    display: flex;
    justify-content: flex-end;
    align-items:center;
@@ -152,17 +150,17 @@ li {
 .nav__menu {
     display:flex;
     justify-content: flex-start;
-    align-items:center;
+    align-items:baseline    ;
     flex-wrap: wrap;
     position: fixed;
     visibility:hidden;
     top: 1%;
     left: -100%;
     width: 100%;
-    height: 10vh;
+    height: 8vh;
     margin: 0;
-    padding: 1vh;
-    padding-left: 50%;
+    padding: 0;
+    padding-left: 40%;
     padding-right: 15%;
     list-style: none;
     transition-duration: .25s;
@@ -226,30 +224,33 @@ rgba(225, 191, 179, 1)
 
 .menu__item {
     display: inline-block;
-    margin:0 1vh;
+    margin:1vh;
     padding: 0;
     text-align:start;
     vertical-align: middle;
-    line-height: 1;
-   
+    height:auto;
+    line-height: 0.7;
+    border-radius:15px/15px;
+
 }
 
 .menu__button {
+    display: flex;
+    justify-content: center;
+    align-items:center;
     text-decoration: none;
     transition: all 0.3s;
     font-size: 0.7em;
-    font-weight: 700;
+    font-weight: 500;
+    text-shadow: 0 0 1vh rgba(231, 161, 125, 1);
     text-transform: capitalize;
-    height:4vh;
-    margin: 0;
-    padding: 1vh;
+letter-spacing: 0.1vh;
     background-color:transparent;
-    color:#fff9ef;
-    width: 10vh;
+   color:rgba(255, 255, 255, 1);
+    width: auto;
 }
 
 .menu__item a:hover {
-    transform: scale(1.2);
     color:rgba(231, 161, 125, 1);
 }
 
@@ -330,7 +331,6 @@ label .nav-btn {
 .descr__card {
     /* display: block; */
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -365,41 +365,51 @@ label .nav-btn {
 .text__block,
 .client__need {
     display: inline-block;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     word-wrap: break-word;
     padding: 2vh;
     margin: 0 auto;
     width: 100%;
-    letter-spacing: 0.2vh;
+    /* letter-spacing: 0.2vh; */
 }
 
 .question,
 h3.section__title,
-.service__title {
+.service__title,
+.service__components__list__title {
     text-align: center;
     flex: 100%;
     color: #fff9ef;
     font-family: 'Comfortaa', cursive;
-    font-size: 1.5em;
-    font-weight: 900;
+    font-size: 1.7em;
+    font-weight: 500;
     text-shadow: 0 0 1vh rgba(255, 255, 255, 0.9);
     background-color: rgba(225, 191, 179, 1);
     transition: all 1s;
 }
 
+
+.service__aim,
 .text__block {
     font-size: 1.5em;
+    letter-spacing: 0.1vh;
     color:rgba(231, 161, 125, 1);;
     font-family: 'Bebas Neue';
 }
 
 
 .client__need {
+   /*  box-sizing:padding-box; */
+    text-transform: uppercase;
     flex: 100%;
+    height: auto;
+    max-width: 80%;
     text-align: center;
-    font-size: 2em;
-    font-family: 'Bebas Neue';
+    letter-spacing: 0.1vh;
+    font-size: 1em;
+    font-family: 'bebas neue';
     color:rgba(231, 161, 125, 1);
+    margin: 0 10%;
 }
 
 .badge{
@@ -439,17 +449,22 @@ h3.section__title,
     min-height: 86vh;
 }
 
+h3.service__title{
+   text-transform:none;
+}
+
 .services__list {
     position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: column;
     top: 13vh;
     left: 90vw;
-    width: 10vw;
+    width: 8vw;
     height: 87vh;
     margin: 0;
+    padding: 0;
     list-style: none;
     transition-duration: .25s;
 }
@@ -457,9 +472,8 @@ h3.section__title,
 .service__item {
     display: block;
     font-family: 'Bebas Neue';
-    font-size: 0.7em;    
-    width:auto;
-    margin:1vh;
+    font-size: 0.6em;    
+    margin: 0.5vh;
     padding: 0;
    align-content:center;
    border-radius: 15px/15px;
@@ -468,12 +482,11 @@ h3.section__title,
 
  .service__button {
     text-decoration: none;
-    transition: all 0.7s;
     text-align: center;
     color:rgba(231, 161, 125, 1) ;
-    height: 7vh;
-    width: 9vw;
-    padding: 1vh;
+    height: 6vh;
+    width: 8vw;
+    padding: 0.5vh;
     border:1px solid rgba(255, 255, 255, 0.7);
     background-color: rgba(252, 230, 209, 1) ;
     border-radius: 15px/15px;
@@ -492,6 +505,59 @@ rgba(225, 191, 179, 1)
     text-shadow:rgba(255, 255, 255, 0.9) ;
 }
 
+.service__aim{
+    font-size: 1em;
+    color: rgba(170, 115, 84, 1) ;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.service__components__list__title{
+    margin: 2% auto;
+    padding: 1vh;
+}
+
+.service__component{
+    color: rgba(170, 115, 84, 1) ;
+}
+
+.service__details{
+    display: flex;
+    align-items:center;
+    flex-wrap: wrap;
+
+}
+
+.service__details .text__block{
+    flex: 100%;
+}
+
+.service__details table{
+    flex: 45%;
+    font-size: 0.7em;
+    border:1px solid black;
+    margin: 1vh 2vh;
+    padding: 0;
+    text-align: center;
+}
+.service__duration td,
+.service__online__possibility td{
+    border:1px solid black;
+    padding: 1vh;
+}
+
+.order__link{
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    flex: 30%;
+    text-decoration: none;
+    color:rgba(255, 255, 255, 1);
+    background-color:rgba(231, 161, 125, 1);
+    border-radius: 15px/15px;
+    padding: 1vh;
+    margin: 0;
+}
 
 /* REVIEWS */
 
