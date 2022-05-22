@@ -8,12 +8,13 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Cormorant+Garamond:wght@300&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>stylist</title>
 </head>
-<style>
+<!-- <style>
     @media (min-width: 768px) and (max-width: 1023px) {
         .header {
             position: fixed;
@@ -54,14 +55,6 @@
             box-shadow: 0 0px 60px rgba(0, 0, 0, .2);
         }
 
-        /* .burger  {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            width: 55px;
-            height: 55px;
-        } */
-
         #nav-toggle,
         label.nav-btn {
             display: none;
@@ -92,10 +85,7 @@
             height: 9%;
             margin: 0;
             padding: 1vh;
-            /*  padding-left: 50%;
-            padding-right: 15%; */
             list-style: none;
-
             transition-duration: .25s;
             position: fixed;
             visibility: visible;
@@ -128,14 +118,6 @@
             margin: 0 auto;
             width: 100%;
             padding-top: 22%;
-        }
-
-        .title,
-        .section__title,
-        .service__title,
-        .descr__text,
-        .text__block {
-            transform: scale(0.8);
         }
 
         .modal__container {
@@ -171,10 +153,25 @@
 
     @media (min-width:425px) and (max-width: 767px) {}
 
-    @media (min-width:320px) and (max-width: 374px) {}
+    @media (min-width:375px) and (max-width: 424px) {
+      
+        *{
+            font-size: 90%;
+        }
+        .content__picture {
+    max-height: 60vh;
+}
+    }
+
+    @media (min-width:320px) and (max-width: 374px) {
+        
+
+
+        
+    }
 
     @media (max-width: 319px) {}
-</style>
+</style> -->
 
 <body>
 
@@ -247,6 +244,7 @@
         </header>
 
         <main class="main">
+
 
             <section class="tabcontent about__me container">
                 <h3 class="section__name">
@@ -325,15 +323,15 @@
                                         Консультація по стилю включає:
                                     </li>
                                     <li class="service__component">
-                                        аналіз теперішнього стилю і визначення правильного напряму його
+                                        Аналіз теперішнього стилю і визначення правильного напряму його
                                         покращення;
                                     </li>
                                     <li class="service__component">
-                                        інформацію про те, як можна підкреслити достоїнства фігури і сховати
+                                        Інформацію про те, як можна підкреслити достоїнства фігури і сховати
                                         недоліки;
                                     </li>
                                     <li class="service__component">
-                                        поради щодо кольорів, фасонів, тканин та текстур, які підходять саме вам;
+                                        Поради щодо кольорів, фасонів, тканин та текстур, які підходять саме вам;
                                     </li>
                                 </ul>
 
@@ -490,10 +488,7 @@
                                     <div class="service__details">
     
                                         <table>
-                                            <!-- <tr class="service__duration">
-                                                <td>Тривалість надання послуги</td>
-                                                <td>3-4 <span>год</span> </td>
-                                            </tr> -->
+                                           
                                             <tr class="service__online__possibility">
                                                 <td>Чи можливе онлайн:</td>
                                                 <td><span>+</span></td>
@@ -529,8 +524,6 @@
                                 <p class="service__aim">
                                     Я з радістю допоможу вам сформувати капсульний гардероб в офіс з 10/15/20 речей, в
                                     якому будуть десятки комплектів.
-                                    <!-- Або ж ви відправляєтесь в поїздку і хочете взяти мінімум речей, при тому, щоб вони
-                                    всі поєднувались між собою, найкращий варіант – скласти капсулу. -->
                                     Капсульний гардероб можна сформувати як на сезон, так і на певні події, поїздки.
                                     Гардероб у вигляді капсули створюється відповідно до ваших потреб, вподобань, типу
                                     фігури.
@@ -614,42 +607,54 @@
                                     додатково відправити фото речей відповідного сезону.
                                 </p>
 
-                                <p class="text__block">
-                                    Що буде у вас в результаті:
+                                
+                                    
                                     <ul class="service__components__list">
+                                        <li class="service__components__list__title">
+                                            Що буде у вас в результаті:
+                                        </li>
                                         <li class="service__component">
-                                            • презентація з описом речей, які залишаємо в гардеробі і від яких
+                                             Презентація з описом речей, які залишаємо в гардеробі і від яких
                                             рекомендую позбавитись (з поясненням причин);
                                         </li>
                                         <li class="service__component">
-                                            • десятки комплектів з тих речей, які залишаємо;
+                                             Десятки комплектів з тих речей, які залишаємо;
                                         </li>
                                         <li class="service__component">
-                                            • шопінг - лист;
+                                             Шопінг - лист;
                                         </li>
                                         <li class="service__component">
-                                            • поради по кольорах/фасонах/текстурах, які вам пасують;
+                                             Поради по кольорах/фасонах/текстурах, які вам пасують;
                                         </li>
                                         <li class="service__component">
-                                            • поради по організації речей в шафі та ще багато всього цікавого;
+                                             Поради по організації речей в шафі та ще багато всього цікавого;
                                         </li>
                                         <li class="service__component">
-                                            • консультація та відповіді на всі питання;
+                                             Консультація та відповіді на всі питання;
                                         </li>
                                     </ul>
-                                </p>
-                                <p class="text__block">
-                                    При бажанні можливий варіант онлайн розбору за допомогою Skype/Zoom.
-                                    В такому випадку немає необхідності фотографувати речі.
-                                </p>
+                               
+                                    <div class="service__details">
+                                  
 
-                                <span class="service__duration">
-                                    Термін виконання - 5/7 робочих днів після отримання усіх даних.
-                                </span>
+                                        <table>
+                                            <tr class="service__duration">
+                                                <td>Термін виконання </td>
+                                                <td>5-7 робочих днів після отримання всіх необхідних даних </td>
+                                            </tr>
+                                            <tr class="service__online__possibility">
+                                                <td>Чи можливе онлайн:</td>
+                                                <td>При бажанні можливий варіант онлайн розбору за допомогою Skype/Zoom.
+                                                    В такому випадку немає необхідності фотографувати речі.</td>
+                                            </tr>
+                                        </table>
+    
+                                        <a class="order__link" href="#">
+                                            Замовити
+                                        </a>
+                                    </div>
 
-                                <span class="service__online__possibility">
-                                    Чи можливе надання послуги онлайн:
-                                </span>
+                              
 
                             </figcaption>
 
@@ -745,18 +750,25 @@
                                     Це дасть вам змогу повністю позбавитись проблеми вибору образу, який ідеально
                                     підійде для тої чи іншої потреби.
                                 </p>
-                                <p class="text__block">
+                                
+                                <div class="service__details">
+                                  
 
-                                </p>
+                                    <table>
+                                        <tr class="service__duration">
+                                            <td>Термін виконання </td>
+                                            <td>5-7 робочих днів після отримання всіх необхідних даних </td>
+                                        </tr>
+                                        <tr class="service__online__possibility">
+                                            <td>Чи можливе онлайн:</td>
+                                            <td> Можливий офлайн та онлайн формат.</td>
+                                        </tr>
+                                    </table>
 
-                                <span class="service__duration">
-
-                                </span>
-
-                                <span class="service__online__possibility">
-                                    Чи можливе надання послуги онлайн: Можливий офлайн та онлайн формат.
-                                </span>
-
+                                    <a class="order__link" href="#">
+                                        Замовити
+                                    </a>
+                                </div>
                             </figcaption>
 
                         </figure>
@@ -772,10 +784,10 @@
 
                             <figcaption class="descr__text">
 
-                                <p class="text__block">
-                                    Ця послуга дозволяє економити дуже багато вашого часу.
-
                                     <ul class="service__components__list">
+                                        <li class="service__components__list__title">
+                                            Ця послуга дозволяє економити дуже багато вашого часу.
+                                        </li>
                                         <li class="service__component">
                                             <p class="client__need">
                                                 Прокинулись зранку і немає можливості довго вибирати образ?
@@ -809,16 +821,25 @@
                                             </p>
                                         </li>
                                     </ul>
-                                </p>
-
-                                <p class="text__block">
-                                    Моя онлайн підтримка допоможе вам завжди знати, що вдягнути!
-                                </p>
-
-                                <span class="service__online__possibility">
-                                    Спілкування проходить у зручному для вас месенджері.
-                                </span>
-
+                                
+                                    <div class="service__details">
+                                        <p class="text__block">
+                                            Моя онлайн підтримка допоможе вам завжди знати, що вдягнути!
+                                        </p>
+        
+                                        <table>
+                                            <tr class="service__online__possibility">
+                                                <td>Чи можливе онлайн:</td>
+                                                <td>Спілкування проходить у зручному для вас месенджері</td>
+                                            </tr>
+                                        </table>
+        
+                                        <a class="order__link" href="#">
+                                            Замовити
+                                        </a>
+                                    </div>
+                                
+                                
                             </figcaption>
 
                             <img class="content__picture" src="img/alinka2.jpg" alt="#">
@@ -866,9 +887,7 @@
                                     Створення дрес-коду для працівників компанії, лекції по стилю, оформлення брендбуку,
                                     стилізація зйомок та ін.
                                 </p>
-                                <p class="text__block">
-
-                                </p>
+                              
                             </li>
 
                             <li class="aditional__services__item">
@@ -878,75 +897,74 @@
                                 <p class="service__aim">
                                     Комплексна робота дає найкращий результат
                                 </p>
-                                <p class="text__block">
-                                    Пакет стилістичних послуг включає в себе:
 
                                     <ul class="service__components__list">
-                                        <li class="service__component">консультацію по стилю;</li>
-                                        <li class="service__component">розбір гардеробу;</li>
-                                        <li class="service__component">шопінг-супровід;</li>
-                                        <li class="service__component">онлайн-підтримку протягом 3-х місяців;</li>
+                                        <li class="service__components__list__title">Пакет стилістичних послуг включає в себе:</li>
+                                        <li class="service__component">Консультацію по стилю;</li>
+                                        <li class="service__component">Розбір гардеробу;</li>
+                                        <li class="service__component">Шопінг-супровід;</li>
+                                        <li class="service__component">Онлайн-підтримку протягом 3-х місяців;</li>
                                     </ul>
 
                                     Такий варіант співпраці дозволить вам ефективно підготувати свій гардероб до нового
                                     сезону, завжди бути зі мною на зв'язку і позбавитись від проблеми "немає, що
                                     одягнути".
-                                </p>
                             </li>
 
                         </ul>
 
-                        <span>
-                            Вартість та деталі обговорюються додатково
-                        </span>
+                      
+                        <div class="service__details">
+                            <p class="text__block">Вартість та деталі обговорюються додатково</p>
 
+                            <a class="order__link" href="#">
+                                Замовити
+                            </a>
+                        </div>
                     </div>
-
-
 
                     <div class="services__list">
 
                         <div class="service__item">
-                            <button type="button" class="service__button">КОНСУЛЬТАЦІЯ</button>
+                            <a class="service__button">Консультація</a>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button">РОЗБІР ГАРДЕРОБУ</button>
+                            <a class="service__button">Розбір гардеробу</a>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button">ШОППІНГ-СУПРОВІД</button>
+                            <a class="service__button">Шопінг-супровід</a>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button">КАПСУЛЬНИЙ ГАРДЕРОБ</button>
+                            <a class="service__button">Капсульний гардероб</a>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button">РОЗБІР ГАРДЕРОБУ <span
-                                    class="badge badge-secondary">ОНЛАЙН</span></button>
+                            <a class="service__button">Розбір гардеробу<span
+                                    class="badge badge-secondary">онлайн</span></a>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button">ШОПІНГ-СУПРОВІД <span
-                                    class="badge badge-secondary">ОНЛАЙН</span></button>
+                            <a class="service__button">Шопінг-супровід<span
+                                    class="badge badge-secondary">онлайн</span></a>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button">СТВОРЕННЯ ОБРАЗІВ ПІСЛЯ ШОПІНГУ</button>
+                            <a class="service__button">Створення образів після шопінгу</a>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button">СТИЛІСТ<span
-                                    class="badge badge-secondary">ОНЛАЙН</span></button>
+                            <a class="service__button">Стиліст<span
+                                    class="badge badge-secondary">онлайн</span></a>
                         </div>
 
                         <div class="service__item">
-                            <button type="button" class="service__button">Індивідуальні, корпоративні послуги та
-                                співпраця</button>
+                            <a class="service__button">Індивідуальні, корпоративні послуги та
+                                співпраця</a>
                         </div>
                     </div>
-
 
                 </div>
 
@@ -1072,10 +1090,52 @@
             <section class="tabcontent fashion__tours container">
 
                 <h3 class="section__name">
-                    FASHION ТУРИ
+                    Fashion-тури
                 </h3>
+             <a class="travel">
+                    <div class="image-container plane">
 
-                <h3 class="section__title left__slide">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="1280.000000pt"
+                            height="640.000000pt" viewBox="0 0 1280.000000 640.000000"
+                            preserveAspectRatio="xMidYMid meet">
+                            <metadata>
+                                Created by potrace 1.15, written by Peter Selinger 2001-2017
+                            </metadata>
+                            <g transform="translate(0.000000,640.000000) scale(0.100000,-0.100000)" fill="#000000"
+                                stroke="none">
+                                <path d="M8433 5748 c3 -7 55 -138 116 -291 61 -152 111 -281 111 -287 0 -8
+                    -959 -1240 -994 -1278 -8 -8 -402 -48 -1251 -127 -1486 -137 -1478 -136 -1826
+                    -136 -293 0 -394 7 -716 47 -218 27 -319 49 -428 95 -110 46 -103 31 -77 166
+                    13 65 26 128 29 141 5 22 5 22 -125 22 l-131 0 -38 -55 c-21 -30 -41 -55 -44
+                    -55 -10 0 -223 174 -384 314 -285 247 -794 713 -1097 1004 -64 61 -124 112
+                    -133 112 -22 0 -407 -89 -414 -96 -3 -3 -1 -13 5 -22 30 -49 1154 -2061 1160
+                    -2075 5 -13 0 -17 -17 -17 -41 0 -99 -20 -99 -34 0 -7 9 -42 20 -76 11 -34 20
+                    -64 20 -65 0 -8 -130 -43 -535 -145 -768 -194 -1376 -354 -1480 -390 -99 -34
+                    -128 -78 -86 -132 33 -41 86 -56 251 -71 l155 -14 245 59 c368 89 474 115
+                    1118 272 l592 145 53 -23 c187 -83 873 -325 1207 -425 149 -45 152 -46 630
+                    -99 306 -34 356 -37 580 -35 135 1 274 4 310 7 84 7 74 3 -190 -83 -250 -81
+                    -1036 -337 -1387 -452 -134 -43 -353 -115 -488 -159 -135 -44 -355 -116 -490
+                    -160 -135 -44 -354 -116 -487 -159 -134 -44 -301 -98 -371 -121 l-128 -42 -32
+                    25 c-18 14 -104 82 -192 151 -136 107 -165 126 -195 126 -40 0 -393 -30 -397
+                    -34 -2 -1 71 -68 160 -149 178 -159 281 -263 347 -351 81 -107 155 -131 405
+                    -130 166 0 173 1 290 36 66 20 305 91 530 158 226 67 583 173 795 236 212 64
+                    552 165 755 226 298 89 1882 564 2040 612 39 12 41 12 91 -31 53 -44 74 -53
+                    74 -30 0 37 85 76 164 77 l29 0 -46 -48 c-72 -78 -94 -135 -62 -162 14 -12 34
+                    -11 96 5 21 5 27 -1 48 -45 30 -64 106 -133 174 -158 61 -23 368 -48 455 -37
+                    30 4 170 10 311 15 165 5 268 12 291 21 61 22 209 120 244 160 41 48 96 176
+                    105 244 8 59 0 110 -35 223 -30 101 -80 158 -162 187 -29 11 -52 22 -52 25 0
+                    3 75 13 168 23 92 9 298 30 457 47 160 16 477 43 705 60 954 69 2031 170 2470
+                    231 336 46 560 131 847 321 170 113 274 213 293 281 17 61 8 112 -28 156 -40
+                    50 -195 153 -360 239 -77 40 -146 79 -153 88 -46 56 -243 137 -479 197 -462
+                    118 -553 131 -895 123 -351 -7 -1125 -58 -1795 -116 -124 -11 -237 -20 -252
+                    -20 -27 0 -27 1 -14 33 8 17 103 281 211 586 173 483 196 557 185 574 -7 11
+                    -106 146 -221 299 l-209 278 -176 0 c-137 0 -175 -3 -171 -12z" />
+                            </g>
+                        </svg>
+
+                    </div>
+                </a>
+              <h3 class="section__title left__slide">
                     Подорожі та мода - моє суцільне натхнення, те без чого я не уявляю свого життя!
                 </h3>
 
@@ -1106,6 +1166,229 @@
                 <h3 class="section__title right__slide">
                     Слідкуйте за оновленнями!
                 </h3>
+
+
+                    <ul class="shopping__tours__list">
+                        <li class="shopping__tour__item">
+                            <h3 class="shopping__tour__name">
+                                Париж
+                            </h3>
+
+                            <figure class="descr__card">
+                                <img class="content__picture" src="img/paris.jpg" alt="#">
+                                <figcaption>
+                                    <p class="text__block">
+                                        Весна в Парижі прокидається під мелодію Джо Дассена. Тут француженки
+                                        граціозно кудись поспішають, а месьє галантні як у фільмах. У звуках, рухах,
+                                        ароматах відчувається краса, яку хочеться запам’ятати.
+                                    </p>
+                                        
+                                        <p class="text__block">
+                                            А що найкраще зберігає спогади? – Звичайно ж, речі й подарунки, які ми
+                                        привозимо з подорожі. В Парижі важко купити щось некрасиве, але наш шопінг
+                                        буде особливо вдалим, бо список покупок ми складемо ще до туру разом зі
+                                        стилістом Аліною Столяровою.
+                                        </p>
+                                        
+                                        <p class="text__block">
+                                            Франція стала улюбленим напрямком Аліни ще 10 років тому, коли вона
+                                        працювала керівником туристичних груп. А потім, коли період частих
+                                        відряджень закінчився, з’явилась можливість зосередитись на навчальних
+                                        програмах по стилю і моді.
+                                        </p>
+                                        
+                                        <p class="text__block">
+                                            Так Аліна Столярова стала одним з кращих
+                                        персональних стилістів, надаючи онлайн та офлайн консультації, послуги
+                                        «розбір гардеробу» та шопінг-супровід і працює з клієнтами з усього світу.
+                                        (інстаграм: <a href="@stoliarova_alinka">@stoliarova_alinka</a> )
+                                        </p> 
+                                        <p class="text__block">
+                                        А любов до Парижу, французької елегантності і смаку нікуди не ділась. Вона
+                                        залишилась в серці, вона надихає Аліну вивчати французьку і створювати
+                                        красиві програми турів, в одну з яких ми Вас запрошуємо.
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                            
+                                <ul class="shopping__tour__program column">
+                                    <li class="day__descr__item">
+                                        <h5>
+                                            День 1
+                                        </h5>
+                                        <p class="day__descr column">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+                                            fugit
+                                            unde aliquam? Optio, beatae esse numquam libero illum delectus amet
+                                            laborum
+                                            tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
+                                        </p>
+                                    </li>
+                                    <li class="day__descr__item">
+                                        <h5>
+                                            День 2
+                                        </h5>
+                                        <p class="day__descr">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+                                            fugit
+                                            unde aliquam? Optio, beatae esse numquam libero illum delectus amet
+                                            laborum
+                                            tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
+                                        </p>
+                                    </li>
+                                    <li class="day__descr__item">
+                                        <h5>
+                                            День 3
+                                        </h5>
+                                        <p class="day__descr">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+                                            fugit
+                                            unde aliquam? Optio, beatae esse numquam libero illum delectus amet
+                                            laborum
+                                            tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
+                                        </p>
+                                    </li>
+                                    <li class="day__descr__item">
+                                        <h5>
+                                            День 4
+                                        </h5>
+                                        <p class="day__descr">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+                                            fugit
+                                            unde aliquam? Optio, beatae esse numquam libero illum delectus amet
+                                            laborum
+                                            tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
+                                        </p>
+                                    </li>
+                                    <li class="day__descr__item">
+                                        <h5>
+                                            День 5
+                                        </h5>
+                                        <p class="day__descr">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+                                            fugit
+                                            unde aliquam? Optio, beatae esse numquam libero illum delectus amet
+                                            laborum
+                                            tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
+                                        </p>
+                                    </li>
+
+                                </ul>
+                            
+
+                                <div class="order__block">
+                                    <a class="order__link" href="#">
+                                        Замовити
+                                    </a>
+                                    <div class="tour__price">
+                                        <span>Вартість:</span>
+                                        <span>10000</span>
+                                        <span>UAH</span>
+                                    </div>
+                                    
+                                </div>
+
+                        </li>
+
+                        <div class="divider"></div>
+
+                        <li class="shopping__tour__item">
+                            <h3 class="shopping__tour__name">
+                                Мілан
+                            </h3>
+                            <figure class="descr__card">
+                                <img class="content__picture" src="img/Milan.jpg" alt="#">
+                                <figcaption class="text__block">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nesciunt
+                                        aliquid,
+                                        dolorem officia laudantium dolore in omnis impedit corporis? In, ipsa
+                                        blanditiis.
+                                        Corporis, excepturi. Tempora tenetur sequi ipsum praesentium necessitatibus.
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                                <ul class="shopping__tour__program column">
+                                    <li class="day__descr__item">
+                                        <h5>
+                                            День 1
+                                        </h5>
+                                        <p class="day__descr">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+                                            fugit
+                                            unde aliquam? Optio, beatae esse numquam libero illum delectus amet
+                                            laborum
+                                            tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
+                                        </p>
+                                    </li>
+                                    <li class="day__descr__item">
+                                        <h5>
+                                            День 2
+                                        </h5>
+                                        <p class="day__descr">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+                                            fugit
+                                            unde aliquam? Optio, beatae esse numquam libero illum delectus amet
+                                            laborum
+                                            tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
+                                        </p>
+                                    </li>
+                                    <li class="day__descr__item">
+                                        <h5>
+                                            День 3
+                                        </h5>
+                                        <p class="day__descr">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+                                            fugit
+                                            unde aliquam? Optio, beatae esse numquam libero illum delectus amet
+                                            laborum
+                                            tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
+                                        </p>
+                                    </li>
+                                    <li class="day__descr__item">
+                                        <h5>
+                                            День 4
+                                        </h5>
+                                        <p class="day__descr">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+                                            fugit
+                                            unde aliquam? Optio, beatae esse numquam libero illum delectus amet
+                                            laborum
+                                            tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
+                                        </p>
+                                    </li>
+                                    <li class="day__descr__item">
+                                        <h5>
+                                            День 5
+                                        </h5>
+                                        <p class="day__descr">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+                                            fugit
+                                            unde aliquam? Optio, beatae esse numquam libero illum delectus amet
+                                            laborum
+                                            tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
+                                        </p>
+                                    </li>
+
+                                </ul>
+                            
+
+                                <div class="order__block">
+                                    <a class="order__link" href="#">
+                                        Замовити
+                                    </a>
+                                    <div class="tour__price">
+                                        <span>Вартість:</span>
+                                        <span>10000</span>
+                                        <span>UAH</span>
+                                    </div>
+                                    
+                                </div>
+
+                        </li>
+                    </ul>
 
             </section>
 

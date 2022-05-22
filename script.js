@@ -190,7 +190,7 @@ upButton.addEventListener('click', ()=>  {
         }
     });
 
-    const modalTimerId = setTimeout(openModal, 5000);
+    const modalTimerId = setTimeout(openModal, 500000);
 
     
 
