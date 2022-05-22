@@ -14,22 +14,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>stylist</title>
 </head>
-<!-- <style>
-    @media (min-width: 768px) and (max-width: 1023px) {
-        .header {
-            position: fixed;
-            margin: 0 auto;
-            width: 100vw;
+ <style>
+   @media (orientation: portrait) {
+       header{
+        margin: 0 auto;
+        width: 100%;
+       }
+       
+     .title__container{
+         flex: 70%;
+         
+     }
+     .navigation{
+         flex: 20%;
+         justify-content: center;
+     }
+  
+     .nav__menu {
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    position: fixed;
+    visibility:hidden;
+top: 0;
+    right: -100%;
+    width: 50vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color:rgba(231, 161, 125, 0.5);
+    transition-duration: .25s;
+}
 
-        }
+.menu__item{
+    flex: 100%;
+    width: auto;
+}
 
-        .header__content {
-            flex-wrap: wrap;
-            height: 5%;
+.menu__button {
+    font-size: 2em;
+    line-height: 1.5;
+    font-weight: 900;
+    text-shadow: 0 0 1vh rgba(231, 161, 125, 1);
+    width: auto;
+}
 
-        }
+     .nav-btn>span,
+.nav-btn>span::before,
+.nav-btn>span::after {
+    top:3.5vh;
+}
 
-        .logo__container,
+.nav-btn>span::before {
+    content: '';
+    top: -2.5vh;
+    background-color:#fff9ef;
+}
+
+.nav-btn>span::after {
+    content: '';
+    top: 2.5vh;
+    background-color:#fff9ef;
+}
+
+.main {
+    width: 100vw;
+}
+
+.service__item{
+   font-size: 1.5em;
+}
+
+.modal__dialog {
+    width: 75%;
+    height: 35vh;
+    margin: 0 auto;
+  border-radius: 15px/15px;
+}
+}
+
+      /*   .logo__container,
         .logo,
         .title {
             transform: scale(0.8);
@@ -113,8 +179,8 @@
 
             border: none;
         }
-
-        .main {
+ */
+      /*   .main {
             margin: 0 auto;
             width: 100%;
             padding-top: 22%;
@@ -142,8 +208,8 @@
 
         .modal__dialog {
             width: 80vw;
-        }
-    }
+        } */
+    
 
     @media (min-width: 1440px) and (max-width:2560px) {}
 
@@ -171,7 +237,7 @@
     }
 
     @media (max-width: 319px) {}
-</style> -->
+</style> 
 
 <body>
 

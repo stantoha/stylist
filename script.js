@@ -14,7 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
         titleLink=document.querySelector('.title'),
         modal = document.querySelector('.modal__container'),
         modalTrigger = document.querySelectorAll('[data-modal]'),
-        modalClosebtn = document.querySelector('[data-close]');
+        modalClosebtn = document.querySelector('[data-close]'),
+        navMenuButton=document.getElementById('#nav-toggle:checked');
 
 
 
@@ -44,6 +45,8 @@ window.addEventListener('DOMContentLoaded', () => {
         tabsContent[i].classList.add('show', 'fade');
         tabsContent[i].classList.remove('hide');
         tabs[i].classList.add('active');  
+
+           
         
             if(sectionTitles[i].classList.contains('right__slide')){
                 setTimeout(()=>{sectionTitles[i].classList.remove('right__slide')},1000);
@@ -69,7 +72,10 @@ window.addEventListener('DOMContentLoaded', () => {
             
         
 
-
+/* function unCheck(){
+    navMenuButton.classList.remove('#nav-toggle:checked');
+    navMenuButton.classList.add('#nav-toggle');
+} */
 
 
 
@@ -82,7 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
             item.classList.remove('active');
         });
     }
-
+    
     function showServiceTabContent(j = 0) {
         servicesTabsContent[j].classList.add('show', 'fade');
         servicesTabsContent[j].classList.remove('hide');
@@ -99,7 +105,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (target == item) {
                     hideTabContent();
                     showTabContent(i);
-   
+                    /* unCheck(); */
+
                     if(i=1){
                         showServiceTabContent();
                         servicesTabParent.addEventListener('click', (event) => {
