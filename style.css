@@ -229,7 +229,7 @@ rgba(225, 191, 179, 1)
     margin:1vh;
     padding: 0;
     text-align:start;
-    height:auto;
+    height:5vh;
     line-height: 0.7;
     border-radius:15px/15px;
 
@@ -241,7 +241,7 @@ rgba(225, 191, 179, 1)
     align-items:center;
     text-decoration: none;
     transition: all 0.3s;
-    font-size: 0.9em;
+    font-size:2em;
     font-weight: 500;
     text-shadow: 0 0 1vh rgba(231, 161, 125, 1);
     text-transform: capitalize;
