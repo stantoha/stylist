@@ -15,10 +15,9 @@ window.addEventListener('DOMContentLoaded', () => {
         modal = document.querySelector('.modal__container'),
         modalTrigger = document.querySelectorAll('[data-modal]'),
         modalClosebtn = document.querySelector('[data-close]'),
-        navMenuButton=document.getElementById('#nav-toggle:checked');
+        navMenuButton=document.getElementById('nav-toggle');
 
-
-
+console.log(navMenuButton);
 
         upButton.classList.add('hide');
         setTimeout(()=>{
@@ -67,18 +66,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-       
-            
-        
-
-/* function unCheck(){
-    navMenuButton.classList.remove('#nav-toggle:checked');
-    navMenuButton.classList.add('#nav-toggle');
-} */
-
-
-
     function hideServiceTabContent() {
         servicesTabsContent.forEach(item => {
             item.classList.add('hide');
@@ -105,8 +92,9 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (target == item) {
                     hideTabContent();
                     showTabContent(i);
-                    /* unCheck(); */
 
+                        navMenuButton.unCheck;
+                    
                     if(i=1){
                         showServiceTabContent();
                         servicesTabParent.addEventListener('click', (event) => {
@@ -197,7 +185,7 @@ upButton.addEventListener('click', ()=>  {
         }
     });
 
-    const modalTimerId = setTimeout(openModal, 500000);
+    const modalTimerId = setTimeout(openModal,30000);
 
     
 
