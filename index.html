@@ -18,7 +18,7 @@
     @media (orientation: portrait) {
 
 
-        header {
+        .header{
             margin: 0 auto;
             width: 100vw;
         }
@@ -30,7 +30,15 @@
 
         .title__container {
             flex: 60%;
+        }
 
+        .title{
+            font-size: 1.5em;
+        }
+        
+        .sub__title{
+            font-size:0.7em;
+letter-spacing: 0;
         }
 
         .navigation {
@@ -40,7 +48,8 @@
 
         .nav__menu {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-content:space-around;
             position: fixed;
             visibility: hidden;
             top: 0;
@@ -56,7 +65,6 @@
         }
 
         .menu__item {
-            flex: 100%;
             width: auto;
         }
 
@@ -67,178 +75,74 @@
             width: auto;
         }
 
-        .nav-btn>span,
-        .nav-btn>span::before,
-        .nav-btn>span::after {
-            top: 4.5vh;
-        }
-
-        .nav-btn>span::before {
-            content: '';
-            top: -3vh;
-            background-color: #fff9ef;
-        }
-
-        .nav-btn>span::after {
-            content: '';
-            top: 3vh;
-            background-color: #fff9ef;
-        }
-
+       
         .main {
             width: 100vw;
-            /* font-size: 150%; */
+            padding-top: 11vh;
         }
 
         .service {
-            flex: 85%;
-            margin-right: 15%;
+            flex: 75%;
+            margin-right: 20%;
         }
 
         .services__list {
             flex: 10%;
+            margin-right: 5%;
         }
 
-        .modal{
-            
+        .service__aim,
+        .text__block,
+        .service__details table,
+        .service__component{
+            font-size: 0.8em;
         }
+
+        .service__details table{
+            flex: 100%;
+        }
+
+        .order__link{
+            width: 50%;
+        }
+
+        .contacts__center{
+            flex: 100%;
+        justify-content: space-around;
+    font-size: 0.6em;
+}
+        .modal {}
 
         .modal__dialog {
-            width: 75%;
+            width: 90%;
             height: 35vh;
             margin: 30vh auto 35vh auto;
             border-radius: 15px/15px;
-            
+
         }
-        .modal__input{
+
+        .modal__input {
             width: 30%;
-            font-size: 200%;
+            font-size: 80%;
         }
     }
-
-    /*   .logo__container,
-        .logo,
-        .title {
-            transform: scale(0.8);
-        }
-
-        .title__container {
-            flex: 70%;
-        }
-
-        .logo__container {
-            flex: 30%;
-        }
-
-        .navigation {
-            display: flex;
-            flex: 100%;
-            width: 100%;
-            flex-direction: row;
-            padding: 1% 8%;
-            margin: 0 auto;
-            justify-content: space-around;
-            align-items: center;
-            box-shadow: 0 0px 60px rgba(0, 0, 0, .2);
-        }
-
-        #nav-toggle,
-        label.nav-btn {
-            display: none;
-        }
-
-        .sub__title {
-            display: none;
-        }
-
-        .nav-btn>span,
-        .nav-btn>span::before,
-        .nav-btn>span::after {
-            visibility: hidden;
-            position: absolute;
-        }
-
-
-        .nav__menu {
-            flex: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-wrap: wrap;
-            left: 0%;
-            top: 10%;
-            margin: 0 auto;
-            height: 9%;
-            margin: 0;
-            padding: 1vh;
-            list-style: none;
-            transition-duration: .25s;
-            position: fixed;
-            visibility: visible;
-        }
-
-
-        .menu__item {
-            display: block;
-            margin: 1vh 2vh;
-            padding: 0;
-            text-align: center;
-
-        }
-
-        .menu__button {
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 0.7em;
-            text-transform: capitalize;
-            width: auto;
-            height: 3vh;
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
-
-            border: none;
-        }
- */
-    /*   .main {
-            margin: 0 auto;
-            width: 100%;
-            padding-top: 22%;
-        }
-
-        .modal__container {
-            border-radius: 15px/15px;
-        }
-
-        .modal__close {
-            transform: scale(0.8);
-            height: 1vh;
-            top: 0;
-            right: 1vh;
-        }
-
-        .modal__title,
-        .modal__content button {
-            font-size: 1em;
-        }
-
-        .modal__content input {
-            font-size: 0.5em;
-        }
-
-        .modal__dialog {
-            width: 80vw;
-        } */
 
 
     @media (min-width: 1440px) and (max-width:2560px) {}
 
-    @media (min-width: 1024px) and (max-width:1439px) {}
+    @media (min-width: 1024px) and (max-width:1439px) {
+        .menu__item{
+            font-size: 0.7em;
+        }
+    }
 
     @media (min-width: 768px) and (max-width: 1023px) {}
 
-    @media (min-width:425px) and (max-width: 767px) {}
+    @media (min-width:425px) and (max-width: 767px) {
+        .service__item{
+            border-radius:5px/5px;
+        }
+    }
 
     @media (min-width:375px) and (max-width: 424px) {}
 
@@ -341,7 +245,7 @@
                     </figcaption>
 
                 </figure>
-
+                
                 <figure class="descr__card">
 
                     <figcaption class="descr__text">
@@ -355,17 +259,33 @@
 
                     <img class="content__picture" src="img/alinka4.jpg" alt="#">
                 </figure>
-
+                
                 <figure class="descr__card ">
                     <img class="content__picture" src="img/alinka1.jpg" alt="#">
                     <figcaption class="descr__text">
 
                         <p class="text__block">
                             Вже більш ніж п’ять років я працюю стилістом та допомагаю людям з усіх куточків світу.
-                            Буду рада допомогти і вам ❤️</p>
+                            Буду рада допомогти і вам</p>
 
                     </figcaption>
                 </figure>
+
+                <div class="CTA__container">
+                    <h3 class="CTA">
+                        Підпишися, щоб бути в курсі останніх новин стилю та моди
+                    </h3>
+                    <br>
+                    <form class="sign__up" action="get">
+    
+                        <input type="text" name="name" class="name" id="name" value="Ваше ім'я">
+                        <button type="submit" name="subscribe" class="subscribe btn" id="subscribe"
+                            value="Підписатися">Підписатися</button>
+    
+                        <input type="text" name="email" class="email" id="email" value="Ваш email ">
+    
+                    </form>
+                </div>
 
             </section>
 
@@ -426,9 +346,17 @@
                                         </tr>
                                     </table>
 
-                                    <a class="order__link" href="#">
-                                        Замовити
-                                    </a>
+                                    <div class="CTA__container">
+                                        <h3 class="CTA">
+                                            Готова до змін?:)
+                                        </h3>
+                                        <form class="sign__up" action="get">
+                                            <button type="submit" name="subscribe" class="subscribe btn" id="subscribe"
+                            value="Запишися до мене на консультацію!">Запишися до мене на консультацію!</button>
+                                        </form>
+                                        
+                                        
+                                    </div>
                                 </div>
 
 
@@ -653,7 +581,7 @@
                         <h3 class="service__title right__slide">
                             Розбір гардеробу
                             <span class="badge bg-secondary">
-                                ОНЛАЙН </span></h3>
+                                онлайн</span></h3>
 
 
                         <p class="client__need">
@@ -735,8 +663,8 @@
 
                         <h3 class="service__title left__slide">
                             Шопінг-супровід<span class="badge bg-secondary">
-                                ОНЛАЙН</span>
-                            </h3>
+                                онлайн</span>
+                        </h3>
 
                         <p class="client__need">
                             Ви проживаєте в Європі, Америці, іншій точці світу і хотіли б поповнити гардероб
@@ -753,49 +681,49 @@
                                     Додавайте в свій гардероб унікальні, правильні речі, я обов‘язково допоможу!
                                 </p>
 
-                                    <ul class="service__components__list">
-                                        <li class="service__components__list__title">
-                                            Як ми готуємось до шопінг в онлайн форматі?
-                                        </li>
-                                        <li class="service__component">
-                                            Перед початком шопінгу ми проговорюємо бюджет, список покупок.
-                                        </li>
-                                        <li class="service__component">
-                                            Також буде відправлений рекомендований шопінг-маршрут у вашому місті.
-                                        </li>
+                                <ul class="service__components__list">
+                                    <li class="service__components__list__title">
+                                        Як ми готуємось до шопінг в онлайн форматі?
+                                    </li>
+                                    <li class="service__component">
+                                        Перед початком шопінгу ми проговорюємо бюджет, список покупок.
+                                    </li>
+                                    <li class="service__component">
+                                        Також буде відправлений рекомендований шопінг-маршрут у вашому місті.
+                                    </li>
 
-                                        <li class="service__component">
-                                            Все, що потрібно у день шопінгу - телефон та інтернет.
-                                        </li>
-                                    </ul>
+                                    <li class="service__component">
+                                        Все, що потрібно у день шопінгу - телефон та інтернет.
+                                    </li>
+                                </ul>
 
-                                    
 
-                                    <ul class="service__components__list">
-                                        <li class="service__components__list__title">
-                                            Як відбувається сам процес?
-                                        </li>
-                                        <li class="service__component">
-                                            Ви відвідуєте магазини, відправляєте мені фото/відео речей і я одразу даю
-                                            рекомендації та поради по вибору речей.
-                                        </li>
-                                        <li class="service__component">
-                                            В процесі надання послуги орієнтую вас по кольорах, фасонах, посадці і т.д.
-                                        </li>
-                                    </ul>
-                                    <div class="service__details">
-                                        <table>
-                                            <tr class="service__online__possibility">
-                                                <td>Чи можливе онлайн:</td>
-                                                <td><span>+</span></td>
-                                            </tr>
-                                        </table>
-    
-                                        <a class="order__link" href="#">
-                                            Замовити
-                                        </a>
-                                    </div>
-  
+
+                                <ul class="service__components__list">
+                                    <li class="service__components__list__title">
+                                        Як відбувається сам процес?
+                                    </li>
+                                    <li class="service__component">
+                                        Ви відвідуєте магазини, відправляєте мені фото/відео речей і я одразу даю
+                                        рекомендації та поради по вибору речей.
+                                    </li>
+                                    <li class="service__component">
+                                        В процесі надання послуги орієнтую вас по кольорах, фасонах, посадці і т.д.
+                                    </li>
+                                </ul>
+                                <div class="service__details">
+                                    <table>
+                                        <tr class="service__online__possibility">
+                                            <td>Чи можливе онлайн:</td>
+                                            <td><span>+</span></td>
+                                        </tr>
+                                    </table>
+
+                                    <a class="order__link" href="#">
+                                        Замовити
+                                    </a>
+                                </div>
+
                             </figcaption>
                         </figure>
 
@@ -846,7 +774,7 @@
                     <div class="service">
 
                         <h3 class="service__title left__slide">
-                            СТИЛІСТ<span class="badge bg-secondary">ОНЛАЙН</span>
+                            Стиліст<span class="badge bg-secondary">онлайн</span>
                         </h3>
 
                         <figure class="descr__card ">
@@ -938,7 +866,7 @@
                                     Огляд колекцій шоу-румів, стилізація нової колекції для брендів, стилізація зйомок
                                     лукбуку та ін.
                                 </p>
-                             <!--    <div class="service__details">
+                                <!--    <div class="service__details">
                                     Буду рада співпрацювати з вами та вашим брендом.
                                 </div> -->
                             </li>
@@ -972,20 +900,21 @@
                                 </ul>
                                 <div class="service__details">
                                     <p class="text__block">
-                                        Такий варіант співпраці дозволить вам ефективно підготувати свій гардероб до нового
+                                        Такий варіант співпраці дозволить вам ефективно підготувати свій гардероб до
+                                        нового
                                         сезону, завжди бути зі мною на зв'язку і позбавитись від проблеми "немає, що
                                         одягнути".
                                     </p>
-                                    
+
                                 </div>
-                                
+
                             </li>
 
                         </ul>
 
 
                         <div class="service__details">
-                            
+
                             <form action="post">
                                 <input type="text">
                             </form>
@@ -1084,74 +1013,87 @@
                     </li>
 
                 </ul>
+                <div class="CTA__container">
+                    <h1 class="CTA">
+                        Telegram-канал
+                    </h1>
+                    <p class="telegram__chanel__desc">
+                        Хочеш побачити актуальний ассортимент?
+                    </p>
+                    <a class="btn" href="https://t.me/stoliarova_alina">
+                        Підпишися на мій канал
+                    </a>
+                </div>
 
-                <p class="text__block">
-                    Процес вибору та замовлення речі ❤️
-                    <ul class="service__components__list">
-                        <li class="service__component">
-                            <p class="text__block question">
-                                📍Як вибрати річ?
-                            </p>
-                            <p class="text__block answer">
-                                Ви можете вибирати з того, що я показую тут або ж надсилати фото бажаної речі в приватні
-                                повідомлення @alinastoliarova і я постараюсь знайти її якнайшвидше для вас.
-                            </p>
-                        </li>
+                <ul class="service__components__list">
+                    <li class="service__components__list__title">
+                        Процес вибору та замовлення речі
+                    </li>
+                    <li class="service__component">
+                        <p class="text__block question">
+                            Як вибрати річ?
+                        </p>
+                        <p class="text__block answer">
+                            Ви можете вибирати з того, що я показую тут або ж надсилати фото бажаної речі в приватні
+                            повідомлення @alinastoliarova і я постараюсь знайти її якнайшвидше для вас.
+                        </p>
+                    </li>
 
-                        <li class="service__component">
-                            <p class="text__block question">
-                                📍Як дізнатись ціну?
-                            </p>
-                            <p class="text__block answer">
-                                Ви можете дізнатись ціну в моєму телеграм каналі або написавши особисто.
-                                Співпраця з бутіками дає мені можливість пропонувати ціни такі ж як ви бачите на
-                                офіційному сайті бренду, а інколи і дешевше.
-                            </p>
-                        </li>
-                        <li class="service__component">
-                            <p class="text__block question">
-                                📍Оплата/Передоплата
-                            </p>
-                            <p class="text__block answer">
-                                Річ викупляється лише зі 100% передоплатою.
-                            </p>
-                        </li>
-                        <li class="service__component">
-                            <p class="text__block question">
-                                📍Комісія
-                            </p>
-                            <p class="text__block answer">
-                                На товари брендів LV, Chanel, Hermès буде додаткова комісія в розмірі 10% від ціни
-                                товару.
-                            </p>
-                        </li>
-                        <li class="service__component">
-                            <p class="text__block question">
-                                📍Доставка
-                            </p>
-                            <p class="text__block answer">
-                                Доставка в Україну ~ 25Є.
-                                Термін доставки з Європи в Україну 10-14 робочих днів.
-                                Інколи бувають довші терміни через форс-мажорні обставини (наприклад, затримки на
-                                кордонах), на які ми не можемо вплинути.
-                            </p>
-                        </li>
-                        <li class="service__component">
-                            <p class="text__block question">
-                                📍Податок
-                            </p>
-                            <p class="text__block answer">
-                                Додатково нічого оплачувати НЕ ПОТРІБНО.
-                            </p>
-                        </li>
+                    <li class="service__component">
+                        <p class="text__block question">
+                            Як дізнатись ціну?
+                        </p>
+                        <p class="text__block answer">
+                            Ви можете дізнатись ціну в моєму телеграм каналі або написавши особисто.
+                            Співпраця з бутіками дає мені можливість пропонувати ціни такі ж як ви бачите на
+                            офіційному сайті бренду, а інколи і дешевше.
+                        </p>
+                    </li>
+                    <li class="service__component">
+                        <p class="text__block question">
+                            Оплата/Передоплата
+                        </p>
+                        <p class="text__block answer">
+                            Річ викупляється лише зі 100% передоплатою.
+                        </p>
+                    </li>
+                    <li class="service__component">
+                        <p class="text__block question">
+                            Комісія
+                        </p>
+                        <p class="text__block answer">
+                            На товари брендів LV, Chanel, Hermès буде додаткова комісія в розмірі 10% від ціни
+                            товару.
+                        </p>
+                    </li>
+                    <li class="service__component">
+                        <p class="text__block question">
+                            Доставка
+                        </p>
+                        <p class="text__block answer">
+                            Доставка в Україну ~ 25Є.
+                            Термін доставки з Європи в Україну 10-14 робочих днів.
+                            Інколи бувають довші терміни через форс-мажорні обставини (наприклад, затримки на
+                            кордонах), на які ми не можемо вплинути.
+                        </p>
+                    </li>
+                    <li class="service__component">
+                        <p class="text__block question">
+                            Податок
+                        </p>
+                        <p class="text__block answer">
+                            Додатково нічого оплачувати НЕ ПОТРІБНО.
+                        </p>
+                    </li>
 
-                    </ul>
-                </p>
+                </ul>
 
-                <span>
-                    Також, я з радістю створю для вас підбірку речей за заданими параметрами (форма, колір, ціна, розмір
-                    і т.д.)
-                </span>
+
+                <div class="service__details">
+                    <p class="client__need">Також, я з радістю створю для вас підбірку речей за заданими параметрами
+                        (форма, колір, ціна, розмір
+                        і т.д.)</p>
+                </div>
 
             </section>
 
@@ -1159,6 +1101,9 @@
 
                 <h3 class="section__name">
                     Fashion-тури
+                </h3>
+                <h3 class="section__title left__slide">
+                    Подорожі та мода - моє суцільне натхнення, те без чого я не уявляю свого життя!
                 </h3>
                 <a class="travel">
                     <div class="image-container plane">
@@ -1203,9 +1148,7 @@
 
                     </div>
                 </a>
-                <h3 class="section__title left__slide">
-                    Подорожі та мода - моє суцільне натхнення, те без чого я не уявляю свого життя!
-                </h3>
+               
 
                 <p class="text__block">
                     Перед тим як поринути у сферу моди, я працювала в туризмі керівником груп в автобусних турах.
@@ -1486,15 +1429,13 @@
                 <h3 class="section__name">
                     Подарункові сертифікати
                 </h3>
-
+                <h3 class="section__title right__slide">
+                    Хочете зробити приємний подарунок мамі/подрузі/колезі?
+                </h3>
                 <figure class="descr__card">
 
-
-
                     <figcaption class="descr__text">
-                        <h3 class="section__title right__slide">
-                            Хочете зробити приємний подарунок мамі/подрузі/колезі?
-                        </h3>
+                        
                         <p class="text__block">
                             Подарунковий сертифікат вам в цьому допоможе!
                         </p>
@@ -1567,6 +1508,10 @@
             <section class="tabcontent reviews container">
                 <h3 class="section__name">
                     Відгуки
+                </h3>
+
+                <h3 class="section__title left__slide">
+                    ваші відгуки
                 </h3>
 
                 <ul class="reviews__list">
@@ -1643,6 +1588,9 @@
                 <h3 class="section__name">
                     Контакти
                 </h3>
+                <h3 class="section__title right__slide">
+                    Мої соцмережі
+                </h3>
                 <div class="contacts__top">
                     <ul class="socials">
                         <li>
@@ -1685,7 +1633,7 @@
                 </div>
                 <div class="contacts__center">
 
-                    <div class="contacts__container nav__block">
+                    <div class="contacts__container">
                         <p>Alina Stoliarova</p>
                         <br>
 
@@ -1701,7 +1649,7 @@
 
                     <div class="contacts__logo__container ">
                         <a class="contacts__logo" href="#">
-                            <img src="img/icons/logo.png" alt="logo">
+                            <img src="img/icons/log.png" alt="logo">
                         </a>
                     </div>
 

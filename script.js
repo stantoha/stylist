@@ -44,19 +44,17 @@ console.log(navMenuButton);
         tabsContent[i].classList.add('show', 'fade');
         tabsContent[i].classList.remove('hide');
         tabs[i].classList.add('active');  
-
-           
         
             if(sectionTitles[i].classList.contains('right__slide')){
                 setTimeout(()=>{sectionTitles[i].classList.remove('right__slide')},1000);
             }
-            if(sectionTitles[i].classList.contains('left__slide')){
+           else if(sectionTitles[i].classList.contains('left__slide')){
                 setTimeout(()=>{ sectionTitles[i].classList.remove('left__slide')},1000);
            }
 
-           if(tabsContent[i].classList.contains('personal__stylist__services')){
+         /*  else if(i==1){
             setTimeout(()=>{ serviceTitles[0].classList.remove('right__slide')},1000);
-           }
+           } */
        
     }
 
@@ -93,9 +91,9 @@ console.log(navMenuButton);
                     hideTabContent();
                     showTabContent(i);
 
-                        navMenuButton.unCheck;
                     
                     if(i=1){
+                        setTimeout(()=>{ serviceTitles[0].classList.remove('right__slide')},1000);
                         showServiceTabContent();
                         servicesTabParent.addEventListener('click', (event) => {
                             let target = event.target;
@@ -105,14 +103,16 @@ console.log(navMenuButton);
                                         hideServiceTabContent();
                                         showServiceTabContent(j);
                                        
+                                        serviceTitles.forEach(item=>{
                                             if(serviceTitles[j].classList.contains('right__slide')){
                                                 setTimeout(()=>{serviceTitles[j].classList.remove('right__slide')},1000);
                                             }
-                                            if(serviceTitles[j].classList.contains('left__slide')){
-                                                setTimeout(()=>{ serviceTitles[j].classList.remove('left__slide')},1000);
+                                            else if(serviceTitles[j].classList.contains('left__slide')){
+                                                setTimeout(()=>{
+                                                    serviceTitles[j].classList.remove('left__slide')},1000);
                                            }
-                                       
-                                        
+                                        });
+                          
                                     }
                                 });
                             }      
@@ -134,9 +134,7 @@ console.log(navMenuButton);
         upButton.classList.remove('hide');
         upButton.classList.add('show','fade');
     }
-    else if(window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight){
-        
-    } 
+
     else {
         subTitleLink.classList.add('show','fade');
         subTitleLink.classList.remove('hide');
