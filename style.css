@@ -1079,10 +1079,11 @@ rgba(231, 161, 125, 1)
 }
 
 .plane {
-    animation-name: plane;
-    animation-duration: 3s;
+    animation: plane 4s linear 1 forwards;
+/*     animation-name: plane;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
 }
 
 .travel {
@@ -1099,87 +1100,87 @@ rgba(231, 161, 125, 1)
 
 @keyframes plane {
     0% {
-        transform: translate(-700px, 50px) scale(0.01);
+        transform: translate(-70%, 5%) scale(0.01);
     }
 
     5% {
-        transform: translate(-660px, 45px) scale(0.015);
+        transform: translate(-66%, 4%) scale(0.015);
     }
 
     10% {
-        transform: translate(-620px, 40px) scale(0.02);
+        transform: translate(-62%, 4%) scale(0.02);
     }
 
     15% {
-        transform: translate(-580px, 35px) scale(0.025);
+        transform: translate(-58%, 3%) scale(0.025);
     }
 
     20% {
-        transform: translate(-540px, 30px) scale(0.03);
+        transform: translate(-54%, 3%) scale(0.03);
     }
 
     25% {
-        transform: translate(-500px, 25px) scale(0.035);
+        transform: translate(-50%, 2%) scale(0.035);
     }
 
     30% {
-        transform: translate(-460px, 20px) scale(0.04);
+        transform: translate(-46%, 2%) scale(0.04);
     }
 
     35% {
-        transform: translate(-420px, 15px) scale(0.045);
+        transform: translate(-42%, 1%) scale(0.045);
     }
 
     40% {
-        transform: translate(-380px, 10px) scale(0.05);
+        transform: translate(-38%, 1%) scale(0.05);
     }
 
     45% {
-        transform: translate(-340px, 5px) scale(0.055);
+        transform: translate(-34%, 0) scale(0.055);
     }
 
     50% {
-        transform: translate(-300px, 0) scale(0.06);
+        transform: translate(-30%, 0) scale(0.06);
     }
 
     55% {
-        transform: translate(-260px, -5px) scale(0.065);
+        transform: translate(-26%, 0.5%) scale(0.065);
     }
 
     60% {
-        transform: translate(-220px, -10px) scale(0.07);
+        transform: translate(-22%, -1%) scale(0.07);
     }
 
     65% {
-        transform: translate(-180px, -15px) scale(0.075);
+        transform: translate(-18%, -1%) scale(0.075);
     }
 
     70% {
-        transform: translate(-140px, -20px) scale(0.08);
+        transform: translate(-14%, -2%) scale(0.08);
     }
 
     75% {
-        transform: translate(-100px, -25px) scale(0.085);
+        transform: translate(-10%, -2%) scale(0.085);
     }
 
     80% {
-        transform: translate(-60px, -30px) scale(0.09);
+        transform: translate(-6%, -3%) scale(0.09);
     }
 
     85% {
-        transform: translate(-20px, -35px) scale(0.095);
+        transform: translate(-2%, -3%) scale(0.095);
     }
 
     90% {
-        transform: translate(20px, -40px) scale(0.1);
+        transform: translate(2%, -4%) scale(0.1);
     }
 
     95% {
-        transform: translate(60px, -45px) scale(0.105);
+        transform: translate(6%, -4%) scale(0.105);
     }
 
     100% {
-        transform: translate(100px, -50px) scale(0.11);
+        transform: translate(10%, -5%) scale(0.11);
     }
 }
 
