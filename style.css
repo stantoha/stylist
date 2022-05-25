@@ -251,7 +251,7 @@ letter-spacing: 0.1vh;
    /*  visibility: hidden; */
     display: block;
     position: absolute;
-    top: 2.5vh;
+    top: 3vh;
     width: 6vh;
     height: 0.8vh;
     border-radius: 15px/15px;
