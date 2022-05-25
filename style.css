@@ -55,7 +55,7 @@ li {
 
 .header {
     position: fixed;
-    background-color:rgba(225, 191, 179, 0.7) ;
+    background-color:rgba(225, 191, 179, 0.5) ;
     display: block;
     top: 0;
     left: 0;
@@ -86,7 +86,7 @@ li {
 .navigation{
     padding: 1vh;
     text-align: center;
-    max-height: 10vh;
+    max-height: 8vh;
     border-radius:15px/15px;
 /*     box-shadow:0 0 1vh 0 rgba(255, 255, 255, 0.9); */
 }
@@ -94,10 +94,30 @@ li {
 
 .logo__container{
     flex:10%;
+
+
 }
 .logo img {
-    height: 8vh;
-    width: 8vh;
+    width: 6vh;
+    height: 6vh;
+    box-shadow:inset 0 0 3vh rgba(0, 0, 0,0.1);
+    border-radius:50%;
+}
+
+.logo__anim{
+    animation: logo__anim 50s linear infinite forwards;
+}
+
+@keyframes logo__anim{
+    0%{
+      transform: rotate();
+      filter: brightness(100%) contrast(100%);
+    }
+    100%{
+        transform: rotate(720deg);
+        filter: brightness(500%) contrast(500%);
+
+    }
 }
 
 
@@ -121,6 +141,7 @@ li {
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
     font-family:'Cormorant Garamond', serif;
+    text-shadow: 0 0 3vh rgba(0, 0, 0, 1);
     font-size: 2em;
     word-wrap: break-word;
     letter-spacing: 0.3vh;
@@ -132,8 +153,10 @@ li {
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
+    text-shadow: 0 0 3vh rgba(0, 0, 0, 1);
+
     letter-spacing: 0.2vh;
-    font-size: 1em;
+    font-size: 0.8em;
     word-wrap: break-word;
     margin: 0 auto;
 }
@@ -162,20 +185,50 @@ li {
 .nav__menu {
     display:flex;
     justify-content: space-around;
+    align-items:center;
     flex-wrap: wrap;
     position: fixed;
     visibility:hidden;
-    top: 0;
+    top: 9vh;
     left: -100%;
     width: 90vw;
-    height: 4vh;
-    margin:11vh 5vw 0 5vw;
+    height: auto;
+    margin:0 5vw;
     padding: 0;
     list-style: none;
-    background-color:rgba(225, 191, 179, 0.7);
+    background-color:rgba(225, 191, 179, 0.8);
+   /*  border:1px solid black; */
     transition-duration: .25s;
 }
+.menu__item {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin:0;
+padding: 0;
+    height:3vh;
+    /* line-height: 0.7; */
+   /*  border:1px solid black; */
+}
 
+.menu__button {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size:1em;
+    font-weight: 500;
+    text-shadow: 0 0 1vh rgba(0, 0, 0, .1);
+    text-transform: capitalize;
+letter-spacing: 0.1vh;
+   /*  background-color:transparent; */
+   color:rgba(255, 255, 255, 1);
+    width: auto;
+   /*  border:1px solid black; */
+}
+
+.menu__item a:hover {
+    color:rgba(231, 161, 125, 1);
+}
 .active {
     color: rgba(231, 161, 125, 1);
     font-weight: 600;
@@ -198,12 +251,14 @@ li {
    /*  visibility: hidden; */
     display: block;
     position: absolute;
-    top: 20px;
-    width: 55px;
-    height: 7px;
+    top: 2.5vh;
+    width: 6vh;
+    height: 0.8vh;
     border-radius: 15px/15px;
-    background-color:#fff9ef;
+    background-color:rgba(255, 255, 255, 1);
     transition-duration: .3s;
+    box-shadow: 0 0 10vh rgba(0, 0, 0, 0.5);
+
 }
 /*
   rgba(255, 249, 239, 1)
@@ -215,13 +270,13 @@ rgba(225, 191, 179, 1)
 
 .nav-btn>span::before {
     content: '';
-    top: -24px;
+    top: -2.5vh;
     background-color:#fff9ef;
 }
 
 .nav-btn>span::after {
     content: '';
-    top: 24px;
+    top: 2.5vh;
     background-color:#fff9ef;
 }
 
@@ -235,32 +290,7 @@ rgba(225, 191, 179, 1)
     background-color: #fff9ef;
 }
 
-.menu__item {
-    display: block;
-    margin:1%;
-    height:4vh;
-    line-height: 0.7;
-}
 
-.menu__button {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    text-decoration: none;
-    transition: all 0.3s;
-    font-size:1em;
-    font-weight: 500;
-    text-shadow: 0 0 1vh rgba(0, 0, 0, .1);
-    text-transform: capitalize;
-letter-spacing: 0.1vh;
-   /*  background-color:transparent; */
-   color:rgba(255, 255, 255, 1);
-    width: auto;
-}
-
-.menu__item a:hover {
-    color:rgba(231, 161, 125, 1);
-}
 
 #nav-toggle {
     position: absolute;
@@ -298,20 +328,30 @@ label .nav-btn {
 /* MAIN */
 
 .main {
-    width: 100vw;
-    padding-top: 15vh;
+    width: 100%;
+    padding-top: 12vh;
     margin: 0 auto;
     align-items: center;
+   /*  border: 1px solid rgba(0, 0, 0, .9); */
+}
+
+.tabcontent {
+    min-height: 86vh;
+  /*   border: 1px solid black; */
+    width: auto;
+    overflow: hidden;
     /* border: 1px solid rgba(0, 0, 0, .9); */
 }
 
 .section__name {
-    font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 0.1vh;
-    color: rgba(0, 0, 0, .3);
+    font-family: 'Comfortaa', cursive;
+    letter-spacing: 0.2vh;
+    color: rgba(0, 0, 0, .5);
+    font-weight: 400;
     align-items:center;
     text-align: center;
-    margin: 1%;
+/*     text-transform: uppercase;
+ */    margin:0;
     padding: 1%;
     font-size: 1em;
     transition: all 1s;
@@ -319,12 +359,13 @@ label .nav-btn {
 
 .section__title {
     color: white;
-    padding: 2%;
+    padding:0;
     text-align: center;
     font-size: 1em;
-    background-color: rgba(225, 191, 179, 1);
+    background-color: rgba(225, 191, 179, 0.5);
     margin: 0;
     transition: all 1s;
+    border-radius:15px/15px;
     box-shadow: 0 0 2vh rgba(0, 0, 0, .3);
 }
 
@@ -343,7 +384,7 @@ label .nav-btn {
     color: rgba(225, 191, 179, 1);
     border:1px solid rgba(170, 115, 84, 1);
     border-radius:15px/15px;
-    padding: 2%;
+    padding: 1%;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1em;
     margin: 2%;
@@ -351,30 +392,42 @@ label .nav-btn {
 
 .descr__card {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 0 auto;
+    margin: 1% auto;
     flex-wrap: wrap;
-    padding: 2%;
+    padding:0;
     width: 100%;
+    /* border: 1px solid rgba(0, 0, 0, .5); */
 }
 
 .content__picture {
     text-align: center;
     max-width: 45%;
     height: auto;
-    margin: 2%;
-    padding: 2%;
+    margin: 1%;
+    padding: 1%;
     border: 1px solid rgba(231, 161, 125, 1);
     border-radius: 15px/15px;
     box-shadow: 0 0 2vh rgba(0, 0, 0, .3);
 }
 
+.descr__text{
+    display: flex;
+    flex-direction: column;
+    align-content:center;
+    padding: 1%;
+    max-width: 50%;
+    height: auto;
+    /* border: 1px solid rgba(0, 0, 0, .5); */
+
+}
+
 .text__block {
     display: block;
     word-wrap: break-word;
-    padding: 5%;
-    margin: 5%;
+    padding: 2%;
+    margin: 2%;
     max-width: 90%;
     font-size: 1em;
     text-align: center;
@@ -387,19 +440,13 @@ label .nav-btn {
 .client__need {
     display:block;
     word-wrap: break-word;
-    padding: 2%;
-    margin: 2% auto;
+    padding: 1%;
+    margin: 1% auto;
     font-size: 1em;
     text-align: center;
     color: rgba(225, 191, 179, 1);
 }
 
-.tabcontent {
-    min-height: 86vh;
-    /* border: 1px solid black; */
-    width: 100vw;
-    overflow: hidden;
-}
 
 
 h3.section__title,
@@ -444,7 +491,7 @@ h3.section__title,
     flex: 30%;
     display: inline-block;
     margin: 1vh;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 15px/15px;
 }
 
@@ -458,6 +505,10 @@ h3.section__title,
     position: relative;
 }
 
+.service .descr__card{
+    align-items:baseline;
+}
+
 .services__container{
     display: flex;
     justify-content: space-between;
@@ -467,8 +518,8 @@ h3.section__title,
 
 .service {
     min-height: 86vh;
-    width: 90vw;
-    border: 1px solid black;
+    max-width: 90%;
+    /* border: 1px solid black; */
 }
 
 .personal__stylist__services .service__title{
@@ -481,12 +532,12 @@ h3.section__title,
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
     top: 15vh;
     right:0;
-    width: 10vw;
+    width: 10%;
     height: 80vh;
     margin: 0;
+    margin-right: 2%;
     padding: 0;
     list-style: none;
     transition-duration: .25s;
@@ -521,7 +572,16 @@ h3.section__title,
 
 .service__button:hover{
     color:rgba(255, 255, 255, 0.9) ;
+}
 
+.service__item:active  {
+    transform: scale(1.5);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.service__button:active{
+    font-size: 110%;
+    color:rgba(231, 161, 125, 1) ;
 }
 
 .service__button .badge{
@@ -594,21 +654,21 @@ h3.section__title,
 
 .service__details .text__block{
     flex: 100%;
-    margin: 2%;
+    margin: 1%;
 }
 
 .service__details table{
     flex: 100%;
     font-size: 1em;
     border:1px solid black;
-    margin: 2%;
-    padding: 2%;
+    margin: 1%;
+    padding: 1%;
     text-align: center;
 }
 .service__duration td,
 .service__online__possibility td{
     border:1px solid black;
-    padding:2%;
+    padding:1%;
 }
 
 .order__link{
@@ -622,6 +682,18 @@ h3.section__title,
     border-radius: 15px/15px;
     padding: 1%;
     margin: 2%;
+}
+
+
+
+/* GIFT */
+
+.gift__card__container{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    margin: 1% auto;
 }
 
 /* REVIEWS */
@@ -641,9 +713,10 @@ h3.section__title,
 .review__item {
     flex: 45%;
     display: block;
-    margin: 0 auto;
-    border: 1px solid black;
+    margin:1%;
+    border: 1px solid rgba(255, 151, 82, 1);
     border-radius: 15px/15px;
+    padding: 1%;
 }
 
 
@@ -651,6 +724,7 @@ h3.section__title,
 
 .shopping__tours__list {
     display: flex;
+    align-content:center;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
@@ -659,10 +733,11 @@ h3.section__title,
 }
 
 .shopping__tour__item {
+    flex: 40%;
     display: block;
-    margin: 0 auto;
-    border: 1px solid black;
-    padding: 1vh
+    margin: 1%;
+    /* border: 1px solid black; */
+    padding: 1%;
 }
 
 .shopping__tour__name {
@@ -868,8 +943,8 @@ a.social__link:hover {
 
 .CTA__container{
    display: block;
-   margin: 5% auto;
-   padding: 2%;
+   margin: 1% auto;
+   padding: 1%;
 /*    border-radius:15px/15px;
    border:1px solid rgba(255, 151, 82, 1); */
 }
@@ -1079,7 +1154,7 @@ rgba(231, 161, 125, 1)
 }
 
 .plane {
-    animation: plane 4s linear 1 forwards;
+    animation: plane 10s linear infinite forwards;
 /*     animation-name: plane;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -1100,87 +1175,87 @@ rgba(231, 161, 125, 1)
 
 @keyframes plane {
     0% {
-        transform: translate(-70%, 5%) scale(0.01);
+        transform: translate(-70vw, 5vw) scale(0.01);
     }
 
     5% {
-        transform: translate(-66%, 4%) scale(0.015);
+        transform: translate(-65vw, 4.5vw) scale(0.015);
     }
 
     10% {
-        transform: translate(-62%, 4%) scale(0.02);
+        transform: translate(-60vw, 4vw) scale(0.02);
     }
 
     15% {
-        transform: translate(-58%, 3%) scale(0.025);
+        transform: translate(-55vw, 3.5vw) scale(0.025);
     }
 
     20% {
-        transform: translate(-54%, 3%) scale(0.03);
+        transform: translate(-50vw, 3vw) scale(0.03);
     }
 
     25% {
-        transform: translate(-50%, 2%) scale(0.035);
+        transform: translate(-45vw, 2.5vw) scale(0.035);
     }
 
     30% {
-        transform: translate(-46%, 2%) scale(0.04);
+        transform: translate(-40vw, 2vw) scale(0.04);
     }
 
     35% {
-        transform: translate(-42%, 1%) scale(0.045);
+        transform: translate(-35vw, 1.5vw) scale(0.045);
     }
 
     40% {
-        transform: translate(-38%, 1%) scale(0.05);
+        transform: translate(-30vw, 1vw) scale(0.05);
     }
 
     45% {
-        transform: translate(-34%, 0) scale(0.055);
+        transform: translate(-25vw, 0.5vw) scale(0.055);
     }
 
     50% {
-        transform: translate(-30%, 0) scale(0.06);
+        transform: translate(-20vw, 0) scale(0.06);
     }
 
     55% {
-        transform: translate(-26%, 0.5%) scale(0.065);
+        transform: translate(-15vw, -0.5vw) scale(0.065);
     }
 
     60% {
-        transform: translate(-22%, -1%) scale(0.07);
+        transform: translate(-10vw, -1vw) scale(0.07);
     }
 
     65% {
-        transform: translate(-18%, -1%) scale(0.075);
+        transform: translate(-5vw, -1.5vw) scale(0.075);
     }
 
     70% {
-        transform: translate(-14%, -2%) scale(0.08);
+        transform: translate(0, -2vw) scale(0.08);
     }
 
     75% {
-        transform: translate(-10%, -2%) scale(0.085);
+        transform: translate(5vw, -2.5vw) scale(0.085);
     }
 
     80% {
-        transform: translate(-6%, -3%) scale(0.09);
+        transform: translate(10vw, -3vw) scale(0.09);
     }
 
     85% {
-        transform: translate(-2%, -3%) scale(0.095);
+        transform: translate(15vw, -3.5vw) scale(0.095);
     }
 
     90% {
-        transform: translate(2%, -4%) scale(0.1);
+        transform: translate(20vw, -4vw) scale(0.1);
     }
 
     95% {
-        transform: translate(6%, -4%) scale(0.105);
+        transform: translate(25vw, -4.5vw) scale(0.105);
     }
 
     100% {
-        transform: translate(10%, -5%) scale(0.11);
+        transform: translate(30vw, -5vw) scale(0.11);
     }
 }
 
