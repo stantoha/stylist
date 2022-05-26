@@ -110,11 +110,11 @@ li {
 
 @keyframes logo__anim{
     0%{
-      transform: rotate();
+      transform: rotate() skew(0,0);
       filter: brightness(100%) contrast(100%);
     }
     100%{
-        transform: rotate(720deg);
+        transform: rotate(720deg) skew(7deg,-21deg);
         filter: brightness(500%) contrast(500%);
 
     }
@@ -251,7 +251,7 @@ letter-spacing: 0.1vh;
    /*  visibility: hidden; */
     display: block;
     position: absolute;
-    top: 3vh;
+    top: 2.5vh;
     width: 6vh;
     height: 0.8vh;
     border-radius: 15px/15px;
@@ -332,7 +332,7 @@ label .nav-btn {
     padding-top: 12vh;
     margin: 0 auto;
     align-items: center;
-   /*  border: 1px solid rgba(0, 0, 0, .9); */
+   border: 1px solid rgba(0, 0, 0, .9);
 }
 
 .tabcontent {
@@ -340,7 +340,7 @@ label .nav-btn {
   /*   border: 1px solid black; */
     width: auto;
     overflow: hidden;
-    /* border: 1px solid rgba(0, 0, 0, .9); */
+    border: 1px solid rgba(0, 0, 0, .9);
 }
 
 .section__name {
@@ -512,8 +512,9 @@ h3.section__title,
 .services__container{
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     width: 100%;
+    height: auto;
 }
 
 .service {
