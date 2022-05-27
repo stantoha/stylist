@@ -18,12 +18,12 @@ li {
     margin: 0;
     padding: 0;
 }
-
+/* 
 .hidden {
-    display: none;
-    position: absolute;
+    visibility: hidden;
+    left: -100%;
 }
-
+ */
 .wrapper {
     display: block;
     margin: 0 auto;
@@ -179,7 +179,7 @@ li {
     padding: 0;
     list-style: none;
     background-color: rgba(225, 191, 179, 0.8);
-    transition-duration: .25s;
+    transition-duration: 0.1s;
 }
 
 .menu__item {
@@ -228,7 +228,7 @@ li {
 .nav-btn>span::after {
     display: block;
     position: absolute;
-    top: 2.5vh;
+    top: 3.5vh;
     width: 6vh;
     height: 0.8vh;
     border-radius: 15px/15px;
@@ -284,6 +284,11 @@ li {
     visibility: visible;
     left: 0;
 }
+
+/* .nav__menu__visible{
+    visibility: visible;
+    left: 0;
+} */
 
 label .nav-btn {
     float: right;
