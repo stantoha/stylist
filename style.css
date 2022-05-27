@@ -229,6 +229,7 @@ li {
     display: block;
     position: absolute;
     top: 3vh;
+    right: 1%;
     width: 6vh;
     height: 0.8vh;
     border-radius: 15px/15px;
