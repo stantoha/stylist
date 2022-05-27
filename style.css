@@ -228,7 +228,7 @@ li {
 .nav-btn>span::after {
     display: block;
     position: absolute;
-    top: 3.5vh;
+    top: 3vh;
     width: 6vh;
     height: 0.8vh;
     border-radius: 15px/15px;
