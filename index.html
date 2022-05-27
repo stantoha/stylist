@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Cormorant+Garamond:wght@300&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,52 +16,69 @@
 </head>
 <style>
     @media (orientation: portrait) {
-
-
-        .header{
+        .header {
             margin: 0 auto;
             width: 100vw;
         }
 
         .header__content {
             width: 100%;
-            /* font-size: 150%; */
+        }
+
+        .logo__container {
+            flex: 15%;
         }
 
         .title__container {
-            flex: 60%;
+            flex: 70%;
         }
 
-        .title{
+        .title {
             font-size: 1.5em;
         }
-        
-        .sub__title{
-            font-size:0.7em;
-letter-spacing: 0;
+
+        .sub__title {
+            font-size: 0.7em;
+            letter-spacing: 0;
         }
 
         .navigation {
-            flex: 20%;
+            flex: 15%;
             justify-content: flex-start;
         }
 
         .nav__menu {
             display: flex;
             flex-direction: column;
-            align-content:space-around;
+            align-content: space-around;
             position: fixed;
             visibility: hidden;
             top: 0;
-            right: -100%;
-            width:100%;
+            left: -100%;
+            width: 100%;
             height: 100vh;
             margin: 0;
             padding: 0;
-            list-style: none;
             overflow: hidden;
-            background-color: rgba(231, 161, 125, 0.7);
-            transition-duration: .25s;
+        }
+
+        .nav-btn {
+            width: 5vh;
+            height: 5vh;
+        }
+
+        .nav-btn>span,
+        .nav-btn>span::before,
+        .nav-btn>span::after {
+            width: 5vh;
+        }
+
+        .nav-btn>span::before {
+            top: -2vh;
+        }
+
+        .nav-btn>span::after {
+            top: 2vh;
         }
 
         .menu__item {
@@ -75,80 +92,105 @@ letter-spacing: 0;
             width: auto;
         }
 
-       
         .main {
             width: 100vw;
             padding-top: 11vh;
         }
 
-        .services__container{
+        .content__picture {
+            text-align: center;
+            max-width: 90%;
+            height: auto;
+            margin: 1% 2%;
+            padding: 1%;
+            border: 1px solid rgba(231, 161, 125, 1);
+            border-radius: 15px/15px;
+            box-shadow: 0 0 2vh rgba(0, 0, 0, .3);
+        }
 
+        .descr__text {
+            width: 90%;
+            height: auto;
+            border: 1px solid rgba(0, 0, 0, .5);
+        }
+
+        .service__item .descr__card {
+            align-content: space-around;
+            flex-direction: column;
+            margin: 1% auto;
         }
 
         .service {
             flex: 75%;
-           max-width: 75%;
+            max-width: 75%;
         }
 
         .services__list {
             flex: 25%;
             width: 25%;
             right: 0;
-            top:10%;
+            top: 10%;
             margin-right: 0;
         }
 
         .service__aim,
         .text__block,
         .service__details table,
-        .service__component{
+        .service__component {
             font-size: 0.8em;
         }
 
-        .service__details table{
+        .service__details table {
             flex: 100%;
         }
 
-        .service .descr__card{
-            align-items:flex-start;
-           /*  flex: 100%; */
+        .review__item,
+        .review__item .descr__card {
+            flex-direction: column;
         }
 
-        .service  .content__picture,
-        .service  .figcaption{
+        .service .descr__card {
+            align-items: flex-start;
+        }
+
+        .review__item .content__picture,
+        .review__item figcaption,
+        .service .content__picture,
+        .service figcaption {
             flex: 100%;
             max-width: 100%;
-                  margin: 0 auto;
+            margin: 0 auto;
         }
 
+        .service .descr__text {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            padding: 1%;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid rgba(0, 0, 0, .5);
+        }
 
-     .service .descr__text{
-    display: flex;
-    flex-direction: column;
-    align-content:center;
-    padding: 1%;
-    max-width: 100%;
-    height: auto;
-    border: 1px solid rgba(0, 0, 0, .5);
-
-}
-        .order__link{
+        .order__link {
             width: 50%;
         }
 
-        .contacts__center{
+        .contacts__center {
             flex: 100%;
-        justify-content: space-around;
-    font-size: 0.6em;
-}
-        .modal {}
+            justify-content: space-around;
+            font-size: 0.6em;
+        }
+
+        .modal__content {
+            width: 100%;
+        }
 
         .modal__dialog {
             width: 90%;
             height: 35vh;
             margin: 30vh auto 35vh auto;
             border-radius: 15px/15px;
-
         }
 
         .modal__input {
@@ -156,29 +198,40 @@ letter-spacing: 0;
             font-size: 80%;
         }
 
-
         .up__button img {
-
-    transform: scale(0.7);
-    bottom: 2vh;
-    right: 2vh;
-}
+            transform: scale(0.7);
+            bottom: 2vh;
+            right: 2vh;
+        }
     }
 
 
     @media (min-width: 1440px) and (max-width:2560px) {}
 
     @media (min-width: 1024px) and (max-width:1439px) {
-        .menu__item{
+        .menu__item {
             font-size: 0.7em;
         }
     }
 
-    @media (min-width: 768px) and (max-width: 1023px) {}
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .header {
+            margin: 0 5vw;
+            width: 90vw;
+        }
+
+        .header__content {
+            width: 100%;
+        }
+
+        .navigation {
+            flex: 10%;
+        }
+    }
 
     @media (min-width:425px) and (max-width: 767px) {
-        .service__item{
-            border-radius:5px/5px;
+        .service__item {
+            border-radius: 5px/5px;
         }
     }
 
@@ -261,7 +314,6 @@ letter-spacing: 0;
 
         <main class="main">
 
-
             <section class="tabcontent about__me container">
                 <h3 class="section__name">
                     Про мене
@@ -283,7 +335,7 @@ letter-spacing: 0;
                     </figcaption>
 
                 </figure>
-                
+
                 <figure class="descr__card">
 
                     <figcaption class="descr__text">
@@ -297,7 +349,7 @@ letter-spacing: 0;
 
                     <img class="content__picture" src="img/alinka4.jpg" alt="#">
                 </figure>
-                
+
                 <figure class="descr__card ">
                     <img class="content__picture" src="img/alinka1.jpg" alt="#">
                     <figcaption class="descr__text">
@@ -313,15 +365,13 @@ letter-spacing: 0;
                     <h3 class="CTA">
                         Підпишися, щоб бути в курсі останніх новин стилю та моди
                     </h3>
-                    <br>
-                    <form class="sign__up" action="get">
-    
-                        <input type="text" name="name" class="name" id="name" value="Ваше ім'я">
-                        <button type="submit" name="subscribe" class="subscribe btn" id="subscribe"
-                            value="Підписатися">Підписатися</button>
-    
-                        <input type="text" name="email" class="email" id="email" value="Ваш email ">
-    
+
+                    <form action="" method="get" class="sign__up">
+
+                        <input type="text" name="name" id="name" value="Ваше ім'я" required>
+                        <input class="CTA__button" type="submit" value="Підписатися!">
+                        <input type="email" name="email" id="email" value="Ваш email " required>
+
                     </form>
                 </div>
 
@@ -392,15 +442,12 @@ letter-spacing: 0;
                                 <h3 class="CTA">
                                     Готова до змін?:)
                                 </h3>
-                                <form class="sign__up" action="get">
-                                    <button type="submit" name="subscribe" class="subscribe btn" id="subscribe"
-                    value="Запишися до мене на консультацію!">Запишися до мене на консультацію!</button>
-                                </form>
-                                
-                                
+                                <button class="CTA__button" type="submit">
+                                    Запишися до мене на
+                                    консультацію!
+                                </button>
                             </div>
                         </div>
-
 
                     </div>
 
@@ -417,59 +464,54 @@ letter-spacing: 0;
                         <figure class="descr__card ">
                             <img class="content__picture" src="img/al4.JPG" alt="#">
                             <figcaption class="descr__text">
-
                                 <p class="service__aim">
                                     Проаналізувати ситуацію на даний момент, зрозуміти які речі приносять вам позитивні
                                     емоції,а які просто займають місце в шафі, навчитись правильно працювати з речима,
                                     створювати цікаві образи-це все можливо за допомогою розбору гардеробу.</p>
-
-
-                                <ul class="service__components__list">
-                                    <li class="service__components__list__title">
-                                        Як відбувається розбір гардеробу?
-                                    </li>
-                                    <li class="service__component">
-                                        Процес розбору гардеробу відбувається у клієнта вдома.
-                                    </li>
-                                    <li class="service__component">
-                                        Речі, які є у вас відсортовуються на певні катерогії.
-                                    </li>
-                                    <li class="service__component">
-                                        Ми обговорюємо ваш напрям стилю, тип фігіри, кольори, які вам пасують та
-                                        багато інших нюансів.
-                                    </li>
-                                    <li class="service__component">
-                                        В гардеробі залишаємо той одяг і аксесуари, які будуть працювати на вас, а
-                                        не створювати ілюзію
-                                        присутності в шафі.
-                                    </li>
-                                    <li class="service__component">
-                                        Імовірно, що з деякими речима, треба буде розпрощатись, але на їхнє місце
-                                        прийдуть значно кращі.
-                                    </li>
-                                    <li class="service__component">
-                                        В процесі розбору я допоможу вам сформувати десятки комплектів з тих речей,
-                                        які залишаються.
-                                    </li>
-                                    <li class="service__component">
-                                        Ми обов‘язково зробимо фото нових образів аби ваші майбутні збори стали ще
-                                        приємніші!
-                                    </li>
-                                    <li class="service__component">
-                                        Також протягом п’яти робочих днів після розбору буде сформований
-                                        шопінг-лист.
-                                    </li>
-                                </ul>
-
                             </figcaption>
-
-                          
                         </figure>
+
+                        <ul class="service__components__list">
+                            <li class="service__components__list__title">
+                                Як відбувається розбір гардеробу?
+                            </li>
+                            <li class="service__component">
+                                Процес розбору гардеробу відбувається у клієнта вдома.
+                            </li>
+                            <li class="service__component">
+                                Речі, які є у вас відсортовуються на певні катерогії.
+                            </li>
+                            <li class="service__component">
+                                Ми обговорюємо ваш напрям стилю, тип фігіри, кольори, які вам пасують та
+                                багато інших нюансів.
+                            </li>
+                            <li class="service__component">
+                                В гардеробі залишаємо той одяг і аксесуари, які будуть працювати на вас, а
+                                не створювати ілюзію
+                                присутності в шафі.
+                            </li>
+                            <li class="service__component">
+                                Імовірно, що з деякими речима, треба буде розпрощатись, але на їхнє місце
+                                прийдуть значно кращі.
+                            </li>
+                            <li class="service__component">
+                                В процесі розбору я допоможу вам сформувати десятки комплектів з тих речей,
+                                які залишаються.
+                            </li>
+                            <li class="service__component">
+                                Ми обов‘язково зробимо фото нових образів аби ваші майбутні збори стали ще
+                                приємніші!
+                            </li>
+                            <li class="service__component">
+                                Також протягом п’яти робочих днів після розбору буде сформований
+                                шопінг-лист.
+                            </li>
+                        </ul>
+
                         <div class="service__details">
                             <p class="text__block">
                                 Розбір гардеробу проводиться по сезонах: весна/літо або осінь/зима.
                             </p>
-
                             <table>
                                 <tr class="service__duration">
                                     <td>Тривалість надання послуги</td>
@@ -500,10 +542,7 @@ letter-spacing: 0;
 
                             <img class="content__picture" src="img/al3.JPG" alt="#">
 
-
                             <figcaption class="descr__text">
-
-
 
                                 <ul class="service__components__list">
                                     <li class="service__component">
@@ -524,14 +563,13 @@ letter-spacing: 0;
                                         акцентувати увагу, як знайти те, що буде ідеально пасувати вам.
                                     </li>
                                 </ul>
-                           
+
                             </figcaption>
 
                         </figure>
+
                         <div class="service__details">
-
                             <table>
-
                                 <tr class="service__online__possibility">
                                     <td>Чи можливе онлайн:</td>
                                     <td><span>+</span></td>
@@ -542,7 +580,6 @@ letter-spacing: 0;
                                 Замовити
                             </a>
                         </div>
-
 
                     </div>
 
@@ -568,34 +605,30 @@ letter-spacing: 0;
                                     фігури.
                                 </p>
 
-
-
-                                <ul class="service__components__list">
-                                    <li class="service__components__list__title">
-                                        Що ви отримаєте в результаті?
-                                    </li>
-                                    <li class="service__component">
-                                        Результатом буде презентація, де зібрана інформація про ваш тип фігури,
-                                        методи роботи з нею, важливі поради по фасонах, силуетах, кольорах, принтах,
-                                        які будуть працювати найефективніше.
-                                    </li>
-                                    <li class="service__component">
-                                        Капсульний гардероб буде складений з 10/15/20 речей з посиланням на кожну з
-                                        них.
-                                    </li>
-                                    <li class="service__component">
-                                        В презентації ви побачите 40-60 створених образів в рамках нової капсули.
-                                    </li>
-
-                                    <li class="service__component">
-                                        До кожної речі я додаю посилання і 3-5 альтернативних варіанта.
-                                    </li>
-                                </ul>
-
                             </figcaption>
                         </figure>
 
+                        <ul class="service__components__list">
+                            <li class="service__components__list__title">
+                                Що ви отримаєте в результаті?
+                            </li>
+                            <li class="service__component">
+                                Результатом буде презентація, де зібрана інформація про ваш тип фігури,
+                                методи роботи з нею, важливі поради по фасонах, силуетах, кольорах, принтах,
+                                які будуть працювати найефективніше.
+                            </li>
+                            <li class="service__component">
+                                Капсульний гардероб буде складений з 10/15/20 речей з посиланням на кожну з
+                                них.
+                            </li>
+                            <li class="service__component">
+                                В презентації ви побачите 40-60 створених образів в рамках нової капсули.
+                            </li>
 
+                            <li class="service__component">
+                                До кожної речі я додаю посилання і 3-5 альтернативних варіанта.
+                            </li>
+                        </ul>
                         <div class="service__details">
                             <table>
                                 <tr class="service__duration">
@@ -620,7 +653,6 @@ letter-spacing: 0;
                             <span class="badge bg-secondary">
                                 онлайн</span></h3>
 
-
                         <p class="client__need">
                             Для роботи зі стилістом немає меж на кордонів, а ефективність роботи така ж висока
                             як і при живому спілкуванні.
@@ -629,52 +661,43 @@ letter-spacing: 0;
                         <figure class="descr__card ">
 
                             <img class="content__picture" src="img/al1.JPG" alt="#">
-
-
                             <figcaption class="descr__text">
-
-
-
 
                                 <p class="service__aim">
                                     При виборі онлайн розбору, крім заповненої анкети клієнта, вам потрібно буде
                                     додатково відправити фото речей відповідного сезону.
                                 </p>
 
-
-
-                                <ul class="service__components__list">
-                                    <li class="service__components__list__title">
-                                        Що буде у вас в результаті:
-                                    </li>
-                                    <li class="service__component">
-                                        Презентація з описом речей, які залишаємо в гардеробі і від яких
-                                        рекомендую позбавитись (з поясненням причин);
-                                    </li>
-                                    <li class="service__component">
-                                        Десятки комплектів з тих речей, які залишаємо;
-                                    </li>
-                                    <li class="service__component">
-                                        Шопінг - лист;
-                                    </li>
-                                    <li class="service__component">
-                                        Поради по кольорах/фасонах/текстурах, які вам пасують;
-                                    </li>
-                                    <li class="service__component">
-                                        Поради по організації речей в шафі та ще багато всього цікавого;
-                                    </li>
-                                    <li class="service__component">
-                                        Консультація та відповіді на всі питання;
-                                    </li>
-                                </ul>
-
                             </figcaption>
 
                         </figure>
 
+                        <ul class="service__components__list">
+                            <li class="service__components__list__title">
+                                Що буде у вас в результаті:
+                            </li>
+                            <li class="service__component">
+                                Презентація з описом речей, які залишаємо в гардеробі і від яких
+                                рекомендую позбавитись (з поясненням причин);
+                            </li>
+                            <li class="service__component">
+                                Десятки комплектів з тих речей, які залишаємо;
+                            </li>
+                            <li class="service__component">
+                                Шопінг - лист;
+                            </li>
+                            <li class="service__component">
+                                Поради по кольорах/фасонах/текстурах, які вам пасують;
+                            </li>
+                            <li class="service__component">
+                                Поради по організації речей в шафі та ще багато всього цікавого;
+                            </li>
+                            <li class="service__component">
+                                Консультація та відповіді на всі питання;
+                            </li>
+                        </ul>
+
                         <div class="service__details">
-
-
                             <table>
                                 <tr class="service__duration">
                                     <td>Термін виконання </td>
@@ -691,8 +714,6 @@ letter-spacing: 0;
                                 Замовити
                             </a>
                         </div>
-
-
 
                     </div>
 
@@ -713,44 +734,41 @@ letter-spacing: 0;
                             <img class="content__picture" src="img/al.JPG" alt="#">
 
                             <figcaption class="descr__text">
-
                                 <p class="service__aim">
                                     Додавайте в свій гардероб унікальні, правильні речі, я обов‘язково допоможу!
                                 </p>
-
-                                <ul class="service__components__list">
-                                    <li class="service__components__list__title">
-                                        Як ми готуємось до шопінг в онлайн форматі?
-                                    </li>
-                                    <li class="service__component">
-                                        Перед початком шопінгу ми проговорюємо бюджет, список покупок.
-                                    </li>
-                                    <li class="service__component">
-                                        Також буде відправлений рекомендований шопінг-маршрут у вашому місті.
-                                    </li>
-
-                                    <li class="service__component">
-                                        Все, що потрібно у день шопінгу - телефон та інтернет.
-                                    </li>
-                                </ul>
-
-
-
-                                <ul class="service__components__list">
-                                    <li class="service__components__list__title">
-                                        Як відбувається сам процес?
-                                    </li>
-                                    <li class="service__component">
-                                        Ви відвідуєте магазини, відправляєте мені фото/відео речей і я одразу даю
-                                        рекомендації та поради по вибору речей.
-                                    </li>
-                                    <li class="service__component">
-                                        В процесі надання послуги орієнтую вас по кольорах, фасонах, посадці і т.д.
-                                    </li>
-                                </ul>
-
                             </figcaption>
                         </figure>
+
+                        <ul class="service__components__list">
+                            <li class="service__components__list__title">
+                                Як ми готуємось до шопінг в онлайн форматі?
+                            </li>
+                            <li class="service__component">
+                                Перед початком шопінгу ми проговорюємо бюджет, список покупок.
+                            </li>
+                            <li class="service__component">
+                                Також буде відправлений рекомендований шопінг-маршрут у вашому місті.
+                            </li>
+
+                            <li class="service__component">
+                                Все, що потрібно у день шопінгу - телефон та інтернет.
+                            </li>
+                        </ul>
+
+                        <ul class="service__components__list">
+                            <li class="service__components__list__title">
+                                Як відбувається сам процес?
+                            </li>
+                            <li class="service__component">
+                                Ви відвідуєте магазини, відправляєте мені фото/відео речей і я одразу даю
+                                рекомендації та поради по вибору речей.
+                            </li>
+                            <li class="service__component">
+                                В процесі надання послуги орієнтую вас по кольорах, фасонах, посадці і т.д.
+                            </li>
+                        </ul>
+
                         <div class="service__details">
                             <table>
                                 <tr class="service__online__possibility">
@@ -775,36 +793,31 @@ letter-spacing: 0;
                             тими, що вже є в гардеробі
                         </p>
                         <figure class="descr__card ">
-
                             <img class="content__picture" src="img/al6.JPG" alt="#">
-
                             <figcaption class="descr__text">
-
                                 <p class="text__block">
                                     Це дасть вам змогу повністю позбавитись проблеми вибору образу, який ідеально
                                     підійде для тої чи іншої потреби.
                                 </p>
-
-                                <div class="service__details">
-                                    <table>
-                                        <tr class="service__duration">
-                                            <td>Термін виконання </td>
-                                            <td>5-7 робочих днів після отримання всіх необхідних даних </td>
-                                        </tr>
-                                        <tr class="service__online__possibility">
-                                            <td>Чи можливе онлайн:</td>
-                                            <td> Можливий офлайн та онлайн формат.</td>
-                                        </tr>
-                                    </table>
-
-                                    <a class="order__link" href="#">
-                                        Замовити
-                                    </a>
-                                </div>
                             </figcaption>
-
                         </figure>
 
+                        <div class="service__details">
+                            <table>
+                                <tr class="service__duration">
+                                    <td>Термін виконання </td>
+                                    <td>5-7 робочих днів після отримання всіх необхідних даних </td>
+                                </tr>
+                                <tr class="service__online__possibility">
+                                    <td>Чи можливе онлайн:</td>
+                                    <td> Можливий офлайн та онлайн формат.</td>
+                                </tr>
+                            </table>
+
+                            <a class="order__link" href="#">
+                                Замовити
+                            </a>
+                        </div>
                     </div>
 
                     <div class="service">
@@ -816,60 +829,55 @@ letter-spacing: 0;
                         <figure class="descr__card ">
                             <img class="content__picture" src="img/alinka2.jpg" alt="#">
                             <figcaption class="descr__text">
-
-                                <ul class="service__components__list">
-                                    <li class="service__components__list__title">
-                                        Ця послуга дозволяє економити дуже багато вашого часу.
-                                    </li>
-                                    <li class="service__component">
-                                        <p class="client__need">
-                                            Прокинулись зранку і немає можливості довго вибирати образ?
-                                        </p>
-                                        <p class="text__block">
-                                            Надішліть мені фото варіантів і я оберу найкращий.
-                                        </p>
-                                    </li>
-                                    <li class="service__component">
-                                        <p class="client__need">
-                                            Ввечері запланована важлива зустріч, а лук ще не сформований?
-                                        </p>
-                                        <p class="text__block">
-                                            Я вам з цим обов’язково допоможу.
-                                        </p>
-                                    </li>
-                                    <li class="service__component">
-                                        <p class="client__need">
-                                            Приймаєте участь у важливій конференції і хочете виглядати на всі сто?
-                                        </p>
-                                        <p class="text__block">
-                                            Для цього потрібно буде всього лиш написати мені.
-                                        </p>
-                                    </li>
-                                    <li class="service__component">
-                                        <p class="client__need">
-                                            Забігли в магазин купити пальто і не знаєте, яке краще обрати?
-                                        </p>
-                                        <p class="text__block">
-                                            Для цього у вас є я.
-                                        </p>
-                                    </li>
-                                </ul>
-
+                                <p class="text__block">Ця послуга дозволяє економити дуже багато вашого часу.</p>
                             </figcaption>
                         </figure>
+                        <ul class="service__components__list">
+
+                            <li class="service__component">
+                                <p class="question">
+                                    Прокинулись зранку і немає можливості довго вибирати образ?
+                                </p>
+                                <p class="answer">
+                                    Надішліть мені фото варіантів і я оберу найкращий.
+                                </p>
+                            </li>
+                            <li class="service__component">
+                                <p class="question">
+                                    Ввечері запланована важлива зустріч, а лук ще не сформований?
+                                </p>
+                                <p class="answer">
+                                    Я вам з цим обов’язково допоможу.
+                                </p>
+                            </li>
+                            <li class="service__component">
+                                <p class="question">
+                                    Приймаєте участь у важливій конференції і хочете виглядати на всі сто?
+                                </p>
+                                <p class="answer">
+                                    Для цього потрібно буде всього лиш написати мені.
+                                </p>
+                            </li>
+                            <li class="service__component">
+                                <p class="question">
+                                    Забігли в магазин купити пальто і не знаєте, яке краще обрати?
+                                </p>
+                                <p class="answer">
+                                    Для цього у вас є я.
+                                </p>
+                            </li>
+                        </ul>
 
                         <div class="service__details">
                             <p class="text__block">
                                 Моя онлайн підтримка допоможе вам завжди знати, що вдягнути!
                             </p>
-
                             <table>
                                 <tr class="service__online__possibility">
                                     <td>Чи можливе онлайн:</td>
                                     <td>Спілкування проходить у зручному для вас месенджері</td>
                                 </tr>
                             </table>
-
                             <a class="order__link" href="#">
                                 Замовити
                             </a>
@@ -889,9 +897,6 @@ letter-spacing: 0;
                                 <p class="service__aim">
                                     Образ на корпоратив, новорічну вечірку, день народження, тощо.
                                 </p>
-                                <!-- <div class="service__details">
-                                    З задоволенням попрацюю над образом на особливу подію
-                                </div> -->
                             </li>
 
                             <li class="aditional__services__item">
@@ -902,9 +907,6 @@ letter-spacing: 0;
                                     Огляд колекцій шоу-румів, стилізація нової колекції для брендів, стилізація зйомок
                                     лукбуку та ін.
                                 </p>
-                                <!--    <div class="service__details">
-                                    Буду рада співпрацювати з вами та вашим брендом.
-                                </div> -->
                             </li>
 
                             <li class="aditional__services__item">
@@ -915,7 +917,6 @@ letter-spacing: 0;
                                     Створення дрес-коду для працівників компанії, лекції по стилю, оформлення брендбуку,
                                     стилізація зйомок та ін.
                                 </p>
-
                             </li>
 
                             <li class="aditional__services__item">
@@ -941,18 +942,23 @@ letter-spacing: 0;
                                         сезону, завжди бути зі мною на зв'язку і позбавитись від проблеми "немає, що
                                         одягнути".
                                     </p>
-
                                 </div>
-
                             </li>
 
                         </ul>
 
                         <div class="service__details">
-
-                            <form action="post">
-                                <input type="text">
-                            </form>
+                            <div class="CTA__container">
+                                <h3 class="CTA">
+                                    Хочеш дізнатися більше?
+                                </h3>
+                                <form action="get">
+                                    <label for="message">Напиши свій запит щоб швидко отримати відповідь!</label>
+                                    <textarea class="message" name="message" id="message" cols="30" rows="10"
+                                        placeholder="напиши щось тут">
+                                    </textarea>
+                                </form>
+                            </div>
                         </div>
                     </div>
 
@@ -999,8 +1005,6 @@ letter-spacing: 0;
                     </div>
 
                 </div>
-
-
             </section>
 
             <section class="tabcontent personal__buyer__services container">
@@ -1049,14 +1053,11 @@ letter-spacing: 0;
 
                 </ul>
                 <div class="CTA__container">
-                    <h1 class="CTA">
-                        Telegram-канал
-                    </h1>
-                    <p class="telegram__chanel__desc">
+                    <h3 class="CTA">
                         Хочеш побачити актуальний ассортимент?
-                    </p>
-                    <a class="btn" href="https://t.me/stoliarova_alina">
-                        Підпишися на мій канал
+                    </h3>
+                    <a class="CTA__button" href="https://t.me/stoliarova_alina">
+                        Підпишися на мій Telegram-канал!
                     </a>
                 </div>
 
@@ -1120,9 +1121,7 @@ letter-spacing: 0;
                             Додатково нічого оплачувати НЕ ПОТРІБНО.
                         </p>
                     </li>
-
                 </ul>
-
 
                 <div class="service__details">
                     <p class="client__need">Також, я з радістю створю для вас підбірку речей за заданими параметрами
@@ -1183,7 +1182,6 @@ letter-spacing: 0;
 
                     </div>
                 </a>
-               
 
                 <p class="text__block">
                     Перед тим як поринути у сферу моди, я працювала в туризмі керівником груп в автобусних турах.
@@ -1202,17 +1200,10 @@ letter-spacing: 0;
 
                 <p class="text__block">
                     Нас чекають Франція, Італія та інші куточки Європи.
-
                     Ми відвідаємо місця в яких жили та творили відомі кутюр’є, дізнаємось чим вони надихались,
                     відправимось
                     на шопінг по знаменитих європейських вулицях.
                 </p>
-
-
-                <h3 class="section__title right__slide">
-                    Слідкуйте за оновленнями!
-                </h3>
-
 
                 <ul class="shopping__tours__list">
                     <li class="shopping__tour__item">
@@ -1256,7 +1247,6 @@ letter-spacing: 0;
                                 </p>
                             </figcaption>
                         </figure>
-
 
                         <ul class="shopping__tour__program column">
                             <li class="day__descr__item">
@@ -1319,9 +1309,7 @@ letter-spacing: 0;
                                     tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
                                 </p>
                             </li>
-
                         </ul>
-
 
                         <div class="order__block">
                             <a class="order__link" href="#">
@@ -1332,12 +1320,8 @@ letter-spacing: 0;
                                 <span>10000</span>
                                 <span>UAH</span>
                             </div>
-
                         </div>
-
                     </li>
-
-                   
 
                     <li class="shopping__tour__item">
                         <h3 class="shopping__tour__name">
@@ -1417,9 +1401,7 @@ letter-spacing: 0;
                                     tenetur quis voluptatibus quod laboriosam repellendus unde iure eveniet!
                                 </p>
                             </li>
-
                         </ul>
-
 
                         <div class="order__block">
                             <a class="order__link" href="#">
@@ -1430,9 +1412,7 @@ letter-spacing: 0;
                                 <span>10000</span>
                                 <span>UAH</span>
                             </div>
-
                         </div>
-
                     </li>
                 </ul>
 
@@ -1457,7 +1437,17 @@ letter-spacing: 0;
                     Робота можлива в будь-якому місті Європи, я порекомендую найкращі варіанти, але вибір за вами!
                 </p>
 
-
+                <div class="CTA__container">
+                    <h3 class="CTA">
+                        Хочеш дізнатися більше?
+                    </h3>
+                    <form action="get">
+                        <label for="message">Напиши свій запит щоб швидко отримати відповідь!</label>
+                        <textarea class="message" name="message" id="message" cols="30" rows="10"
+                            placeholder="напиши щось тут">
+                        </textarea>
+                    </form>
+                </div>
             </section>
 
             <section class="tabcontent gift__cards container">
@@ -1470,7 +1460,6 @@ letter-spacing: 0;
                 <figure class="descr__card">
 
                     <figcaption class="descr__text">
-                        
                         <p class="text__block">
                             Подарунковий сертифікат вам в цьому допоможе!
                         </p>
@@ -1478,18 +1467,27 @@ letter-spacing: 0;
                             Скористайтесь можливістю подарувати приємні емоції вашим рідним та близьким.
                         </p>
                     </figcaption>
-
                     <div class="gift__card__container">
                         <img class="content__picture" src="img/gift__card__frontside.png" alt="#">
                         <img class="content__picture" src="img/gift__card__backside.png" alt="#">
                     </div>
                 </figure>
 
+                <div class="service__details">
+                    <p class="text__block">Ви можете обрати сертифікат на конкретну послуга або з визначеною сумою.</p>
 
-
-                <p class="text__block">Ви можете обрати сертифікат на конкретну послуга або з визначеною сумою.</p>
-
-
+                    <div class="CTA__container">
+                        <h3 class="CTA">
+                            Хочеш дізнатися більше?
+                        </h3>
+                        <form action="get">
+                            <label for="message">Напиши свій запит щоб швидко отримати відповідь!</label>
+                            <textarea class="message" name="message" id="message" cols="30" rows="10"
+                                placeholder="напиши щось тут">
+                        </textarea>
+                        </form>
+                    </div>
+                </div>
             </section>
 
             <section class="tabcontent advantages container">
@@ -1503,7 +1501,6 @@ letter-spacing: 0;
                 <h3 class="client__need">
                     Робота зі стилістом - це захоплюючий процес, в результаті якого ви знайдете свій унікальний стиль.
                 </h3>
-
 
                 <ul class="advantages__list">
                     <li class="advantages__item">
@@ -1534,9 +1531,6 @@ letter-spacing: 0;
                         </p>
                     </li>
                 </ul>
-
-
-
             </section>
 
 
@@ -1544,13 +1538,10 @@ letter-spacing: 0;
                 <h3 class="section__name">
                     Відгуки
                 </h3>
-
                 <h3 class="section__title left__slide">
                     Ваші відгуки
                 </h3>
-
                 <ul class="reviews__list">
-
                     <li class="review__item">
                         <figure class="descr__card">
                             <img class="content__picture" src="img/style.jpg" alt="#">
@@ -1561,12 +1552,10 @@ letter-spacing: 0;
                                     <br>
                                     <i><span>клієнтка</span></i>
                                 </p>
-
                                 <p class="services__recieved">
                                     Розбір гармидару<br>
                                     <i><span>замовлена послуга</span></i>
                                 </p>
-
                                 <p class="client__age"> Вік:
                                     <span>25</span>
                                 </p>
@@ -1580,29 +1569,23 @@ letter-spacing: 0;
                             </figcaption>
                         </figure>
 
-
                     </li>
                     <li class="review__item">
-
                         <figure class="descr__card">
                             <img class="content__picture" src="img/style1.jpg" alt="#">
-
                             <figcaption class="descr__text">
                                 <p class="client__name">
                                     <b>Василина</b>
                                     <br>
                                     <i><span>клієнтка</span></i>
                                 </p>
-
                                 <p class="services__recieved">
                                     Розбір гармидару<br>
                                     <i><span>замовлена послуга</span></i>
                                 </p>
-
                                 <p class="client__age">Вік:
                                     <span>27</span>
                                 </p>
-
                                 <p class="text__block">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nulla illum ea
                                     quis
@@ -1611,10 +1594,7 @@ letter-spacing: 0;
                                     sequi quaerat, nostrum ad accusamus!
                                 </p>
                             </figcaption>
-
                         </figure>
-
-
                     </li>
                 </ul>
             </section>
@@ -1671,15 +1651,12 @@ letter-spacing: 0;
                     <div class="contacts__container">
                         <p>Alina Stoliarova</p>
                         <br>
-
                         <span>tel:</span>
                         <a href="tel:380967407500"> +38 ( 096 ) 740 75 00 </a>
                         <br>
-
                         <span>email:</span>
                         <a href="mailto:alinka199@gmail.com">Mail me</a>
                         <br>
-
                     </div>
 
                     <div class="contacts__logo__container logo__anim">
@@ -1722,12 +1699,8 @@ letter-spacing: 0;
                     <span>|</span><a href="#">Фотогрвфії Anton Stoliarov</a><span>|</span>
                     <span>|</span><a href="#">Web Design by Anton Stoliarov</a><span>|</span>
                 </div>
-
             </section>
-
-
         </main>
-
 
         <div class="modal__container">
             <div class="modal__dialog">
@@ -1748,8 +1721,6 @@ letter-spacing: 0;
                             </span>
                             <input required placeholder="e-mail" name="email" type="email" class="modal__input">
                         </div>
-
-
                         <button type="submit" class="modal__btn ">Передзвонити</button>
                     </form>
                 </div>
