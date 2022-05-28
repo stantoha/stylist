@@ -2,11 +2,15 @@ window.addEventListener('DOMContentLoaded', () => {
     //SHOW-HIDE CONTENT
 
     let tabs = document.querySelectorAll('.menu__button'),
+    footerTab = document.querySelectorAll('.footer__menu__button'),
+    footer=document.querySelector('.footer'),
         tabsContent = document.querySelectorAll('.tabcontent'),
         tabParent = document.querySelector('.nav__menu'),
         serviceTabs = document.querySelectorAll('.service__button'),
         servicesTabsContent = document.querySelectorAll('.service'),
         servicesTabParent = document.querySelector('.services__list'),
+        contactsServiceTabs = document.querySelectorAll('.contacts__service__button'),
+        contactsServicesTabParent = document.querySelector('.contacts__services__list'),
         upButton = document.querySelector('.up__button'),
         sectionTitles = document.querySelectorAll('.section__title'),
         serviceTitles = document.querySelectorAll('.service__title'),
@@ -44,6 +48,10 @@ window.addEventListener('DOMContentLoaded', () => {
         tabParent.classList.toggle('hidden');
     }) */
 
+    console.log(sectionTitles);
+    console.log(serviceTitles);
+
+
     upButton.classList.add('hide');
     setTimeout(() => {
         titleLink.classList.remove('left__slide');
@@ -69,11 +77,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (sectionTitles[i].classList.contains('right__slide')) {
             setTimeout(() => {
-                sectionTitles[i].classList.remove('right__slide')
+                sectionTitles[i].classList.remove('right__slide');
             }, 1000);
         } else if (sectionTitles[i].classList.contains('left__slide')) {
             setTimeout(() => {
-                sectionTitles[i].classList.remove('left__slide')
+                sectionTitles[i].classList.remove('left__slide');
             }, 1000);
         }
     }
@@ -105,13 +113,12 @@ window.addEventListener('DOMContentLoaded', () => {
         if (target && target.classList.contains('menu__button')) {
             tabs.forEach((item, i) => {
                 if (target == item) {
-                    /* hideMenu(); */
                     hideTabContent();
                     showTabContent(i);
                     
-                    if (i = 1) {
+                    if (i == 1) {
                         setTimeout(() => {
-                            serviceTitles[0].classList.remove('right__slide')
+                            serviceTitles[0].classList.remove('right__slide');
                         }, 1000);
                         showServiceTabContent();
                         servicesTabParent.addEventListener('click', (event) => {
@@ -125,11 +132,11 @@ window.addEventListener('DOMContentLoaded', () => {
                                         serviceTitles.forEach(item => {
                                             if (serviceTitles[j].classList.contains('right__slide')) {
                                                 setTimeout(() => {
-                                                    serviceTitles[j].classList.remove('right__slide')
+                                                    serviceTitles[j].classList.remove('right__slide');
                                                 }, 1000);
                                             } else if (serviceTitles[j].classList.contains('left__slide')) {
                                                 setTimeout(() => {
-                                                    serviceTitles[j].classList.remove('left__slide')
+                                                    serviceTitles[j].classList.remove('left__slide');
                                                 }, 1000);
                                             }
                                         });
