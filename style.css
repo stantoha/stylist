@@ -4,6 +4,7 @@ body {
     font-size: 1em;
     line-height: 1.5;
     width: 100%;
+    height: auto;
     font-family: 'Cormorant Garamond', serif;
 }
 
@@ -27,11 +28,11 @@ li {
 .wrapper {
     display: block;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, .4);
+    background-color: rgba(255, 255, 255, 1);
     width: 100%;
     height: auto;
     overflow: hidden;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .left__slide {
@@ -49,7 +50,7 @@ li {
 
 .header {
     position: fixed;
-    background-color: rgba(225, 191, 179, 0.5);
+    background-color: rgba(225, 191, 179, 0.8);
     display: block;
     top: 0;
     left: 0;
@@ -58,6 +59,7 @@ li {
     padding: 0;
     z-index: 100;
     height: auto;
+    border-radius: 10px/10px;
 }
 
 .header__hide {
@@ -80,7 +82,7 @@ li {
     padding: 1vh;
     text-align: center;
     max-height: 8vh;
-    border-radius: 15px/15px;
+    
 }
 
 .logo__container {
@@ -231,7 +233,7 @@ li {
 .nav-btn>span::after {
     display: block;
     position: absolute;
-    top: 4vh;
+    top: 2.5vh;
     right: 1%;
     width: 6vh;
     height: 0.8vh;
@@ -306,14 +308,14 @@ label .nav-btn {
     padding-top: 12vh;
     margin: 0 auto;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, .9);
+   /*  border: 1px solid rgba(0, 0, 0, .9); */
 }
 
 .tabcontent {
     /* min-height: 86vh; */
     width: 100%;
     overflow: hidden;
-    border: 1px solid rgba(255, 151, 82, 1);
+    /* border: 1px solid rgba(255, 151, 82, 1); */
 }
 
 .section__name {
@@ -742,7 +744,7 @@ h3.section__title,
 
 .contacts {
     display: block;
-    margin: 50px auto;
+    margin: 2% auto;
     margin-bottom: 0;
     text-align: center;
     align-items: center;
@@ -769,8 +771,8 @@ h3.section__title,
     align-items: center;
     list-style: none;
     width: 100%;
-    margin: 10% auto;
-    padding: 0;
+    margin: 2% auto;
+    padding: 2%;
     height: auto;
 }
 
@@ -1013,8 +1015,8 @@ rgba(231, 161, 125, 1)
     background-color: rgba(0, 0, 0, 1);
     position: fixed;
     transform: scale(1.2);
-    bottom: 5vh;
-    right: 5vh;
+    bottom: 5%;
+    right: 5%;
     opacity: 0.5;
     border-radius: 50%;
     transition: all 1s;
@@ -1153,7 +1155,10 @@ rgba(231, 161, 125, 1)
     margin: 1% auto;
     padding: 1%;
     text-align: center;
-    width: 100%;
+    width: 80%;
+    box-shadow:0 0 30px 0 rgba(0, 0, 0, .5);
+    border:2px solid rgba(255, 151, 82, 1);
+    border-radius:15px/15px;
 }
 
 .CTA {
@@ -1167,6 +1172,22 @@ rgba(231, 161, 125, 1)
     border-radius: 10px/10px;
 }
 
+.CTA__container label,
+.CTA__button{
+    display: block;
+    margin: 2% auto;
+    padding: 1%;
+    width: 300px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color:rgba(255, 151, 82, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius:10px/10px;
+}
+
+.CTA__container textarea{
+    width: 80%;
+}
 .sign__up {
     display: flex;
     width: auto;
@@ -1218,4 +1239,12 @@ textarea {
 #message label  {
     font-size: 2em;
     margin-bottom: 1vh;
+}
+
+.divider{
+    display: block;
+    width: 40%;
+    height: 2px;
+    background-color:rgba(0, 0, 0, .3);
+    margin: 3% auto;
 }
