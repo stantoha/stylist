@@ -113,7 +113,7 @@ li {
 
 /* TITLE */
 .title__container {
-    flex: 70%;
+    flex: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,8 +160,8 @@ li {
 
 .burger {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     width: 55px;
     height: 55px;
 }
@@ -226,6 +226,7 @@ li {
     height: 6vh;
     cursor: pointer;
     z-index: 1;
+    top: 0;
 }
 
 .nav-btn>span,
@@ -479,13 +480,13 @@ h3.section__title,
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    top: 12vh;
+    top: 12%;
     right: 2%;
     width: 10%;
     height: 70vh;
     margin: 0;
-    margin-right: 2%;
-    padding: 0;
+    /* margin-right: 2%; */
+    padding: 2% 5% 2;
     list-style: none;
     transition-duration: .25s;
 }
@@ -745,6 +746,7 @@ h3.section__title,
 .contacts {
     display: block;
     margin: 2% auto;
+    padding: 2%;
     margin-bottom: 0;
     text-align: center;
     align-items: center;
@@ -797,7 +799,7 @@ a.social__link:hover {
 
 .contacts__center {
     display: flex;
-    align-self: center;
+    /* align-self: center; */
     flex-wrap: wrap;
     align-items: center;
     border: 1px solid rgba(0, 0, 0, .2);
@@ -806,9 +808,11 @@ a.social__link:hover {
 }
 
 .contacts__container {
-    flex: 35%;
+    flex: 33%;
     display: block;
     text-align: start;
+    margin: 2%;
+    
 }
 
 .contacts__info__list{
@@ -817,6 +821,7 @@ a.social__link:hover {
     width: 100%;
     margin: 0 auto;
     padding: 0;
+    box-shadow:0 0 3% rgba(0, 0, 0,1);
 }
 
 .contacts__info__item{
@@ -1177,7 +1182,7 @@ rgba(231, 161, 125, 1)
     display: block;
     margin: 2% auto;
     padding: 1%;
-    width: 300px;
+    width: 200px;
     text-align: center;
     text-transform: uppercase;
     background-color:rgba(255, 151, 82, 1);
