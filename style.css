@@ -466,7 +466,7 @@ h3.section__title,
 
 .service {
     min-height: 85vh;
-    flex: 90%;
+    width: 90%;
     margin: 1% ;
 }
 
