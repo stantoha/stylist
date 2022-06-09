@@ -932,7 +932,7 @@ rgba(231, 161, 125, 1)
 }
 
 .modal__dialog {
-    width: 40%;
+    width: 70%;
     height: 35vh;
     margin: 25vh auto 35vh auto;
     border-radius: 15px/15px;
@@ -972,7 +972,7 @@ rgba(231, 161, 125, 1)
 .modal__input {
     display: block;
     margin: 2vh auto 2vh auto;
-    width: 12vw;
+    width: 40%;
     height: 4vh;
     background-color: rgba(231, 161, 125, 1);
     box-shadow: inset 0 0 1vh rgba(0, 0, 0, .7);
@@ -997,7 +997,7 @@ rgba(231, 161, 125, 1)
 
 .modal__btn {
     display: block;
-    width: 50%;
+    width: 70%;
     border-radius: 15px/15px;
     text-align: center;
     color: rgba(0, 0, 0, .9);
