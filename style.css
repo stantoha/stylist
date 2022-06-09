@@ -354,7 +354,7 @@ label .nav-btn {
     text-align: center;
     width: 33%;
     height: auto;
-    margin: 1% 2%;
+    margin: 1% 4%;
     padding: 1%;
     border: 1px solid rgba(231, 161, 125, 1);
     border-radius: 15px/15px;
@@ -367,7 +367,7 @@ label .nav-btn {
     align-items: center;
     align-content: center;
     padding: 1%;
-    width: 45%;
+    width: 55%;
     height: auto;
 }
 
@@ -376,7 +376,7 @@ label .nav-btn {
     word-wrap: break-word;
     padding: 5%;
     margin: 2% auto;
-    max-width: 90%;
+    max-width: 75%;
     font-size: 1.2em;
     text-align: center;
     font-family: 'Comfortaa', cursive;
