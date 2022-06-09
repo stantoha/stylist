@@ -50,18 +50,32 @@
         .nav__menu {
             display: flex;
             flex-direction: column;
-            align-content: space-around;
             position: fixed;
             visibility: hidden;
             top: 0;
             left: -100%;
             width: 100%;
-            height: 100vh;
+            height: 90vh;
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
-
+        .nav__menu__visible{
+    display: flex;
+    flex-direction: column;
+    
+    position: fixed;
+    visibility: visible;
+    top: 9vh;
+    left:0;
+    width: 90vw;
+    height: 90vh;
+    margin: 0 5vw;
+    padding: 0;
+    list-style: none;
+    background-color: rgba(225, 191, 179, 0.8);
+    transition-duration: 0.1s;
+}
         .nav-btn {
             width: 5vh;
             height: 5vh;
@@ -81,9 +95,22 @@
         .nav-btn>span::after {
             top: 2vh;
         }
+        .nav-btn__transform>span{
+    transform: rotate(45deg);
+}
 
+.nav-btn__transform>span::before{
+    top: 0;
+    transform: rotate(0);
+}
+
+.nav-btn__transform>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
         .menu__item {
             width: auto;
+            font-size: 1em;
         }
 
         .menu__button {
@@ -96,7 +123,7 @@
         .main {
             width: 100%;
             margin: 0 auto;
-            padding-top: 11vh;
+            padding-top: 10vh;
         }
 
         .content__picture {
@@ -202,8 +229,8 @@
 
         .up__button img {
             transform: scale(0.7);
-            bottom: 2vh;
-            right: 2vh;
+            bottom: 1.5vh;
+            right: 1.5vh;
         }
     }
 
@@ -294,7 +321,7 @@
                 <div class="title__container">
 
                     <a href="#">
-                        <h1 class="title left__slide">Аліна Столярова</h1>
+                        <h1 class="title top__slide">Аліна Столярова</h1>
                     </a>
                     <p class="sub__title hide">
                         Персональний стиліст
@@ -311,11 +338,11 @@
                         </label>
 
                         <ul class="nav__menu ">
-                            <div class="menu__item">
-                                <a class="menu__button">Про мене</a>
+                            <div class="menu__item ">
+                                <a class="menu__button active">Про мене</a>
                             </div>
                             <div class="menu__item">
-                                <a class="menu__button">Послуги</a>
+                                <a class="menu__button">Мої послуги</a>
                             </div>
                             <div class="menu__item">
                                 <a class="menu__button">Персональний шоппінг</a>
@@ -330,10 +357,10 @@
                                 <a class="menu__button">Подарункові сертифікати</a>
                             </div>
                             <div class="menu__item">
-                                <a class="menu__button">Переваги</a>
+                                <a class="menu__button">Переваги роботи зі стилістом</a>
                             </div>
                             <div class="menu__item">
-                                <a class="menu__button">Відгуки</a>
+                                <a class="menu__button">Ваші відгуки</a>
                             </div>
 
                         </ul>
@@ -352,6 +379,8 @@
                     Про мене
                 </h3>
 
+                <!-- <div class="divider"></div> -->
+
                 <h3 class="section__title  left__slide">
                     Привіт, мене звати Аліна і я персональний стиліст.
                 </h3>
@@ -368,7 +397,7 @@
                     </figcaption>
 
                 </figure>
-                <div class="divider"></div>
+                <!-- <div class="divider"></div> -->
                 <figure class="descr__card">
 
                     <figcaption class="descr__text">
@@ -382,7 +411,7 @@
 
                     <img class="content__picture" src="img/alinka4.jpg" alt="#">
                 </figure>
-                <div class="divider"></div>
+                <!-- <div class="divider"></div> -->
                 <figure class="descr__card ">
                     <img class="content__picture" src="img/alinka1.jpg" alt="#">
                     <figcaption class="descr__text">
@@ -393,18 +422,16 @@
 
                     </figcaption>
                 </figure>
-                <div class="divider"></div>
+                <!-- <div class="divider"></div> -->
                 <div class="CTA__container">
                     <h3 class="CTA">
                         Підпишися, щоб бути в курсі останніх новин стилю та моди
                     </h3>
 
                     <form action="" method="get" class="sign__up">
-
-                        <input type="text" name="name" id="name" value="Ваше ім'я" required>
-                        <input class="CTA__button" type="submit" value="Підписатися!">
+                        <input type="text" name="name" id="name"  value="Ваше ім'я" required>
                         <input type="email" name="email" id="email" value="Ваш email " required>
-
+                        <input class="CTA__button" type="submit" value="Підписатися">
                     </form>
                 </div>
 
@@ -414,7 +441,7 @@
                 <h3 class="section__name">
                     Мої послуги
                 </h3>
-
+                <!-- <div class="divider"></div> -->
                 <h3 class="section__title left__slide">
                     Що потрібно змінити саме тобі?
                 </h3>
@@ -1045,9 +1072,9 @@
 
             <section class="tabcontent personal__buyer__services container">
                 <h3 class="section__name">
-                    ПОСЛУГИ ПЕРСОНАЛЬНОГО ШОППЕРА (БАЄРА)
+                    Послуги персонального шопера 
                 </h3>
-
+                <!-- <div class="divider"></div> -->
                 <h3 class="section__title right__slide">
                     Робота у сфері моди дозволяє розвиватись та не зупинятись на одному напрямку.
                     Саме тому я вирішила частину своєї роботи присвятити баєрству в сегменті люкс та в середньому
@@ -1172,6 +1199,7 @@
                 <h3 class="section__name">
                     Fashion-тури
                 </h3>
+                <!-- <div class="divider"></div> -->
                 <h3 class="section__title left__slide">
                     Подорожі та мода - моє суцільне натхнення, те без чого я не уявляю свого життя!
                 </h3>
@@ -1458,7 +1486,7 @@
                 <h3 class="section__name">
                     Робота з клієнтами в Європі
                 </h3>
-
+                <!-- <div class="divider"></div> -->
                 <h3 class="section__title left__slide">
                     Інколи так хочеться влаштувати собі свято, пропоную зробити це разом у вигляді шопінгу.
                 </h3>
@@ -1489,6 +1517,7 @@
                 <h3 class="section__name">
                     Подарункові сертифікати
                 </h3>
+                <!-- <div class="divider"></div> -->
                 <h3 class="section__title right__slide">
                     Хочете зробити приємний подарунок мамі/подрузі/колезі?
                 </h3>
@@ -1530,6 +1559,7 @@
                 <h3 class="section__name">
                     Переваги в роботі зі стилістом
                 </h3>
+                <!-- <div class="divider"></div> -->
                 <h3 class="section__title right__slide">
                     Які клієнт отримує переваги під час та в результаті нашої роботи?
                 </h3>
@@ -1568,11 +1598,11 @@
                 </ul>
             </section>
 
-
             <section class="tabcontent reviews container">
                 <h3 class="section__name">
                     Відгуки
                 </h3>
+                <!-- <div class="divider"></div> -->
                 <h3 class="section__title left__slide">
                     Ваші відгуки
                 </h3>
@@ -1637,7 +1667,7 @@
 
         </main>
 
-        <div class="divider"></div>
+        <!-- <div class="divider"></div> -->
 
         <footer class="footer contacts container">
             <h3 class="section__name">

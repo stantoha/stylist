@@ -19,45 +19,47 @@ window.addEventListener('DOMContentLoaded', () => {
         modal = document.querySelector('.modal__container'),
         modalTrigger = document.querySelectorAll('[data-modal]'),
         modalClosebtn = document.querySelector('[data-close]'),
-        navMenuButton = document.getElementById('nav-toggle');
+        navMenuButton = document.getElementById('nav-toggle'),
+        navButton=document.querySelector('.nav-btn');
 
-  /*   function showMenu() {
-        tabParent.classList.remove('hidden');
-        tabParent.classList.add('nav__menu__visible');
-    }
-
-    function hideMenu() {
-        if (navMenuButton.checked) {
-            if(tabParent.classList.contains('nav__menu__visible')){
-                tabParent.classList.remove('nav__menu__visible');
-            }
-            tabParent.classList.add('hidden');
-        }
-    }
-
-    hideMenu();
-    navMenuButton.addEventListener('click', () => {
-        if (navMenuButton.checked) {
-            showMenu();
-        } else {
-            hideMenu();
-        }
-    }); */
-
- /*    navMenuButton.addEventListener('click',()=>{
-        tabParent.classList.toggle('hidden');
-    }) */
-
+     
     console.log(sectionTitles);
     console.log(serviceTitles);
 
 
+    function showNavMenu(){
+            tabParent.classList.remove('nav__menu');
+            tabParent.classList.add('nav__menu__visible');
+                navButton.classList.add('nav-btn__transform');
+            
+    }
+
+    function hideNavMenu(){
+        tabParent.classList.add('nav__menu');
+        tabParent.classList.remove('nav__menu__visible'); 
+        navButton.classList.remove('nav-btn__transform');
+    }
+
+    
+
+    navMenuButton.addEventListener('click',()=>{
+        if(navMenuButton.checked){
+            showNavMenu();
+        }
+       else if(!navMenuButton.checked){
+                hideNavMenu();
+            }
+    });
+        
+       
+
+
     upButton.classList.add('hide');
     setTimeout(() => {
-        titleLink.classList.remove('left__slide');
+        titleLink.classList.remove('top__slide');
         subTitleLink.classList.remove('hide');
         subTitleLink.classList.add('show', 'fade');
-    }, 2000);
+    }, 1000);
 
 
     function hideTabContent() {
@@ -94,15 +96,15 @@ window.addEventListener('DOMContentLoaded', () => {
             item.classList.add('hide');
             item.classList.remove('show', 'fade');
         });
-        serviceTabs.forEach(item => {
-            item.classList.remove('active');
-        });
+        /* serviceTabs.forEach(item => {
+            item.classList.remove('active__service');
+        }); */
     }
 
     function showServiceTabContent(j = 0) {
         servicesTabsContent[j].classList.add('show', 'fade');
         servicesTabsContent[j].classList.remove('hide');
-        serviceTabs[j].classList.add('active');
+        /* serviceTabs[j].classList.add('active__service'); */
 
     }
 
@@ -113,8 +115,12 @@ window.addEventListener('DOMContentLoaded', () => {
         if (target && target.classList.contains('menu__button')) {
             tabs.forEach((item, i) => {
                 if (target == item) {
+                    window.scrollTo(0, 0);
                     hideTabContent();
                     showTabContent(i);
+                    if(document.documentElement.clientWidth< 600){
+                        hideNavMenu();
+                    }
                     
                     if (i == 1) {
                         setTimeout(() => {
@@ -124,6 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         servicesTabParent.addEventListener('click', (event) => {
                             let target = event.target;
                             if (target && target.classList.contains('service__button')) {
+                                
                                 serviceTabs.forEach((item, j) => {
                                     if (target == item) {
                                         hideServiceTabContent();
@@ -158,13 +165,13 @@ window.addEventListener('DOMContentLoaded', () => {
         if (window.pageYOffset > 300) {
             subTitleLink.classList.remove('show', 'fade');
             subTitleLink.classList.add('hide');
-            titleLink.classList.add('left__slide');
+            titleLink.classList.add('top__slide');
             upButton.classList.remove('hide');
             upButton.classList.add('show', 'fade');
         } else {
             subTitleLink.classList.add('show', 'fade');
             subTitleLink.classList.remove('hide');
-            titleLink.classList.remove('left__slide');
+            titleLink.classList.remove('top__slide');
             upButton.classList.add('hide');
             upButton.classList.remove('show', 'fade');
         }
