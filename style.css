@@ -177,6 +177,7 @@ li {
     padding: 0;
     height: 3vh;
     width: auto;
+    font-size: 1.5em;
 }
 
 .footer__menu__button,
@@ -184,7 +185,7 @@ li {
     display: inline-block;
     text-decoration: none;
     transition: all 0.3s;
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 400;
     text-shadow: 0 0 1vh rgba(0, 0, 0, .1);
     text-transform: capitalize;
