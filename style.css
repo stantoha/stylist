@@ -347,7 +347,7 @@ label .nav-btn {
     align-items: center;
     margin: 2% auto;
     flex-wrap: wrap;
-    padding: 0;
+    padding: 1%;
     width: 100%;
 }
 
@@ -355,7 +355,7 @@ label .nav-btn {
     text-align: center;
     width: 33%;
     height: auto;
-    margin: 2% 4%;
+    margin:  4%;
     padding: 2%;
     border: 1px solid rgba(231, 161, 125, 1);
     border-radius: 15px/15px;
@@ -378,7 +378,7 @@ label .nav-btn {
     padding: 5%;
     margin: 2% auto;
     max-width: 70%;
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-align: center;
     font-family: 'Comfortaa', cursive;
     color: rgba(170, 115, 84, 1);
@@ -391,7 +391,7 @@ label .nav-btn {
     word-wrap: break-word;
     padding: 2%;
     margin: 2% auto;
-    font-size: 1em;
+    font-size: 0.9em;
     text-align: center;
     color: rgba(225, 191, 179, 1);
 }
@@ -403,7 +403,7 @@ h3.section__title,
     flex: 100%;
     color: #fff9ef;
     font-family: 'Comfortaa', cursive;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 500;
     text-shadow: 0 0 1vh rgba(255, 255, 255, 0.9);
     background-color: rgba(225, 191, 179, 1);
@@ -418,7 +418,7 @@ h3.section__title,
 }
 
 .answer {
-    font-size: 1em;
+    font-size: 1.3em;
     text-align: start;
     font-family: 'Cormorant Garamond', serif;
 }
@@ -429,7 +429,7 @@ h3.section__title,
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 2%;
+    margin: 0;
     padding: 2%;
     list-style: circle;
 }
@@ -504,9 +504,10 @@ h3.section__title,
     transition: all 0.3s
 }
 
-.service__button {
+a.service__button {
     text-decoration: none;
     color: rgba(231, 161, 125, 1);
+    text-shadow: 0 0  5px 0 rgba(0, 0, 0, 1);
     font-family: 'Cormorant Garamond', serif;
     height: auto;
 }
@@ -542,6 +543,7 @@ h3.section__title,
     color: rgba(231, 161, 125, 1);
     font-weight: 600;
 }
+
 .service__aim {
     font-size: 1.5em;
     color: rgba(170, 115, 84, 1);
@@ -910,13 +912,6 @@ a.social__link:hover {
     border-bottom: 5px solid rgba(0, 0, 0, .2);
 }
 
-/*
-#fff9ef
-#fce6d1     
-rgba(225, 191, 179, 1)
-rgba(231, 161, 125, 1)
-#aa7354  
-*/
 
 /* MODAL */
 .modal__container {
@@ -1220,7 +1215,7 @@ h3.CTA {
     text-decoration: none;
     text-transform: capitalize;
     letter-spacing: 0.2vh;
-    
+    max-width: 80%;
     color: rgba(255, 255, 255, 1);
     margin: 3% auto;
     padding:2%;

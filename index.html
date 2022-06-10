@@ -17,7 +17,7 @@
 <style>
     @media (orientation: portrait) {
         body{
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
         .header {
             margin: 0 auto;
@@ -67,7 +67,6 @@
         .nav__menu__visible {
             display: flex;
             flex-direction: column;
-
             position: fixed;
             visibility: visible;
             top: 9vh;
@@ -151,30 +150,39 @@
             border: 1px solid rgba(0, 0, 0, .5);
         }
 
-        .service__item .descr__card {
+         .descr__card {
             align-content: space-around;
             flex-direction: column;
             margin: 1% auto;
         }
 
         .service {
-            flex: 75%;
-            max-width: 75%;
+            flex: 74%;
+            max-width: 74%;
         }
 
         .services__list {
-            flex: 25%;
-            width: 25%;
+            flex: 24%;
+            width: 24%;
+            padding: 1%;
             right: 0;
-            top: 20%;
+            top: 24%;
             margin-right: 0;
+            justify-content: space-evenly;
+            height: auto;
+        }
+
+        .service__item{
+            line-height: 1;
+            font-size: 0.9em;
         }
 
         .service__aim,
         .text__block,
         .service__details table,
         .service__component {
-            font-size: 0.8em;
+            font-size: 1em;
+            max-width: 90%;
         }
 
         .service__details table {
@@ -209,6 +217,9 @@
             border: 1px solid rgba(0, 0, 0, .5);
         }
 
+        .advantages__item {
+    flex: 80%;}
+
         .order__link {
             width: 50%;
         }
@@ -235,6 +246,11 @@
             font-size: 80%;
         }
 
+        .modal__btn {
+    display: block;
+    width: 40%;
+}
+
         .up__button img {
             transform: scale(0.7);
             bottom: 1.5vh;
@@ -252,9 +268,12 @@
     }
 
     @media (min-width: 768px) and (max-width: 1023px) {
+        body{
+            font-size: 1em;
+        }
         .header {
-            margin: 0 5vw;
-            width: 90vw;
+            margin: 0 auto;
+            width: 100vw;
         }
 
         .header__content {
@@ -267,6 +286,9 @@
     }
 
     @media (min-width:425px) and (max-width: 767px) {
+        body{
+            font-size: 0.9em;
+        }
         .service__item {
             border-radius: 5px/5px;
         }
@@ -299,6 +321,9 @@
     }
 
     @media (min-width:375px) and (max-width: 424px) {
+        body{
+            font-size: 0.9em;
+        }
         .content__picture {
             text-align: center;
             width: 100%;
@@ -339,7 +364,11 @@
         }
     }
 
-    @media (max-width: 319px) {}
+    @media (max-width: 319px) {
+        body{
+            font-size: 0.9em;
+        }
+    }
 </style>
 
 <body>
@@ -412,7 +441,7 @@
 
         <main class="main">
 
-            <section class="tabcontent about__me container">
+            <section class="tabcontent about__me">
                 <h3 class="section__name">
                     Про мене
                 </h3>
@@ -475,7 +504,7 @@
 
             </section>
 
-            <section class="tabcontent personal__stylist__services container">
+            <section class="tabcontent personal__stylist__services">
                 <h3 class="section__name">
                     Мої послуги
                 </h3>
@@ -1108,7 +1137,7 @@
                 </div>
             </section>
 
-            <section class="tabcontent personal__buyer__services container">
+            <section class="tabcontent personal__buyer__services">
                 <h3 class="section__name">
                     Послуги персонального шопера
                 </h3>
@@ -1119,21 +1148,23 @@
                     сегменті.
                 </h3>
 
-                <ul class="section__descr">
-
-                    <li class="section__descr__item">
+                <ul class="service__components__list">
+                    <li class="service__components__list__title">
+                        Переваги співпраці із персональним шопером
+                    </li>
+                    <li class="service__component">
                         <p class="text__block question">
-                            Хто такий персональний шоппер?
+                            Хто такий персональний шопер?
                         </p>
                         <p class="text__block answer">
-                            Персональний шоппер-це людина, яка займається пошуком речей для вас, старається знайти
+                            Персональний шопер-це людина, яка займається пошуком речей для вас, старається знайти
                             позиції за найкращою ціною, дістати неможливе з розряду sold out.
                         </p>
                     </li>
 
-                    <li class="section__descr__item">
+                    <li class="service__component">
                         <p class="text__block question">
-                            Для чого звертатись до персонального шоппера, якщо можна купити річ самостійно?
+                            Для чого звертатись до персонального шопера, якщо можна купити річ самостійно?
                         </p>
                         <p class="text__block answer">
                             Звичайно, ви можете це зробити самостійно. Але, в бутіках, які є в нас часто далеко не весь
@@ -1142,7 +1173,7 @@
                         </p>
                     </li>
 
-                    <li class="section__descr__item">
+                    <li class="service__component">
                         <p class="text__block question">
                             З якими брендами я працюю?
                         </p>
@@ -1232,7 +1263,7 @@
 
             </section>
 
-            <section class="tabcontent fashion__tours container">
+            <section class="tabcontent fashion__tours">
 
                 <h3 class="section__name">
                     Fashion-тури
@@ -1520,7 +1551,7 @@
 
             </section>
 
-            <section class="tabcontent europe__personal__stylist__services container">
+            <section class="tabcontent europe__personal__stylist__services">
                 <h3 class="section__name">
                     Робота з клієнтами в Європі
                 </h3>
@@ -1551,7 +1582,7 @@
                 </div>
             </section>
 
-            <section class="tabcontent gift__cards container">
+            <section class="tabcontent gift__cards">
                 <h3 class="section__name">
                     Подарункові сертифікати
                 </h3>
@@ -1592,7 +1623,7 @@
                 </div>
             </section>
 
-            <section class="tabcontent advantages container">
+            <section class="tabcontent advantages">
 
                 <h3 class="section__name">
                     Переваги в роботі зі стилістом
@@ -1636,7 +1667,7 @@
                 </ul>
             </section>
 
-            <section class="tabcontent reviews container">
+            <section class="tabcontent reviews">
                 <h3 class="section__name">
                     Відгуки
                 </h3>
@@ -1707,7 +1738,7 @@
 
         <!-- <div class="divider"></div> -->
 
-        <footer class="footer contacts container">
+        <footer class="footer contacts">
             <h3 class="section__name">
                 Контакти
             </h3>

@@ -96,16 +96,11 @@ window.addEventListener('DOMContentLoaded', () => {
             item.classList.add('hide');
             item.classList.remove('show', 'fade');
         });
-        /* serviceTabs.forEach(item => {
-            item.classList.remove('active__service');
-        }); */
     }
 
     function showServiceTabContent(j = 0) {
         servicesTabsContent[j].classList.add('show', 'fade');
         servicesTabsContent[j].classList.remove('hide');
-        /* serviceTabs[j].classList.add('active__service'); */
-
     }
 
     hideServiceTabContent();
@@ -118,7 +113,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     window.scrollTo(0, 0);
                     hideTabContent();
                     showTabContent(i);
-                    if(document.documentElement.clientWidth< 900){
+                    if(document.documentElement.clientWidth< 800){
                         hideNavMenu();
                     }
                     
@@ -186,7 +181,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //MODAL
 
     function openModal() {
-        modal.classList.add('show', 'fade'); //или modal.classList.toggle('show);
+        modal.classList.add('show', 'fade'); 
         modal.classList.remove('hide');
         document.body.style.overflow = 'hidden';
         clearInterval(modalTimerId);
@@ -197,7 +192,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     function closeModal() {
-        modal.classList.remove('show', 'fade'); //или modal.classList.toggle('show);
+        modal.classList.remove('show', 'fade'); 
         modal.classList.add('hide');
         document.body.style.overflow = '';
     }
