@@ -489,23 +489,15 @@ label .nav-btn {
     width: 86%;
     border:1px solid rgba(0, 0, 0, .5);
     background-color: rgba(0, 0, 0, .1);
+}
 
-    /* padding: 2% ; */
-}
-.personal__stylist__services h3.section__name,
-.personal__stylist__services h3.section__title {
-    width: 86%;
-    margin:1% 4% 1% 0 ;
-    /* padding: 2% ; */
-    text-transform: none;
-}
 
 .services__list {
     position: fixed;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    top: 13%;
+    top: 22%;
     right: 5%;
     width: 11%;
     height: 70vh;
