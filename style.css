@@ -24,7 +24,7 @@ li {
     display: block;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 1);
-    width: 100%;
+    width:100%;
     height: auto;
     overflow: hidden;
 }
@@ -60,6 +60,7 @@ li {
     height: auto;
     border-radius: 10px/10px;
     
+
 }
 
 
@@ -166,6 +167,7 @@ li {
     list-style: none;
     background-color: rgba(225, 191, 179, 0.8);
     transition-duration: 0.1s;
+    border-bottom:5px solid rgba(0, 0, 0, .25);
 }
 
 .footer__menu__item,
@@ -298,10 +300,10 @@ label .nav-btn {
 /* MAIN */
 
 .main {
-    width: 100vw;
+    width: 90vw;
     height: auto;
-    padding-top: 11vh;
-    margin: 0 auto;
+    padding-top: 12vh;
+    margin: 0 5vw;
     align-items: center;
 }
 
@@ -318,9 +320,10 @@ label .nav-btn {
     font-weight: 400;
     align-items: center;
     text-align: center;
-    margin:2%;
-    padding:2%;
-    font-size: 1em;
+    width: 80%;
+    margin:2% auto 1% auto;
+    padding:1%;
+    font-size: 0.8em;
     line-height: 1;
     transition: all 1s;
     border-top:5px solid rgba(0, 0, 0, .25);
@@ -330,14 +333,17 @@ label .nav-btn {
 
 .section__title {
     color: white;
-    padding: 0;
+    width: 70%;
+    padding:1%;
     text-align: center;
     font-size: 1em;
     background-color: rgba(225, 191, 179, 0.5);
-    margin: 2%;
+    margin: 1% auto;
     transition: all 1s;
     border-radius: 15px/15px;
     box-shadow: 0 0 2vh rgba(0, 0, 0, .3);
+    text-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
+
 }
 
 
@@ -345,9 +351,9 @@ label .nav-btn {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 2% auto;
+    margin: 1% auto;
     flex-wrap: wrap;
-    padding: 1%;
+    padding: 1% ;
     width: 100%;
 }
 
@@ -355,8 +361,8 @@ label .nav-btn {
     text-align: center;
     width: 33%;
     height: auto;
-    margin:  4%;
-    padding: 2%;
+    margin:  1% 4%;
+    padding: 1%;
     border: 1px solid rgba(231, 161, 125, 1);
     border-radius: 15px/15px;
     box-shadow: 0 0 2vh rgba(0, 0, 0, .3);
@@ -367,8 +373,8 @@ label .nav-btn {
     flex-direction: column;
     align-items: center;
     align-content: center;
-    padding: 2%;
-    width: 55%;
+    padding: 4%;
+    width: 45%;
     height: auto;
 }
 
@@ -389,15 +395,17 @@ label .nav-btn {
 .client__need {
     display: block;
     word-wrap: break-word;
-    padding: 2%;
-    margin: 2% auto;
-    font-size: 0.9em;
+    text-transform: uppercase;
+    padding: 1%;
+    margin: 1% auto;
+    font-size: 1em;
     text-align: center;
     color: rgba(225, 191, 179, 1);
+    border-bottom:1px solid rgba(0, 0, 0, .3);
 }
 
-h3.section__title,
-.service__title,
+
+/* .service__title, */
 .service__components__list__title {
     text-align: center;
     flex: 100%;
@@ -447,10 +455,25 @@ h3.section__title,
     position: relative;
 }
 
+.service__title{
+    text-align: center;
+    flex: 8%;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 151, 82, 0.5);
+    transition: all 1s;
+    margin: 1%;
+    padding: 1%;
+}
+
 .service__item .descr__card {
     justify-content: space-around;
     align-items: baseline;
     margin: 2% auto;
+    padding: 0;
 }
 
 .services__container {
@@ -463,13 +486,17 @@ h3.section__title,
 
 .service {
     min-height: 85vh;
-    width: 90%;
-    margin: 2% ;
-}
+    width: 86%;
+    border:1px solid rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .1);
 
+    /* padding: 2% ; */
+}
+.personal__stylist__services h3.section__name,
 .personal__stylist__services h3.section__title {
-    width: 90%;
-    margin: 2% ;
+    width: 86%;
+    margin:1% 4% 1% 0 ;
+    /* padding: 2% ; */
     text-transform: none;
 }
 
@@ -478,9 +505,9 @@ h3.section__title,
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    top: 20%;
-    right: 2%;
-    width: 10%;
+    top: 13%;
+    right: 5%;
+    width: 11%;
     height: 70vh;
     margin: 0;
     /* margin-right: 2%; */
@@ -611,7 +638,7 @@ a.service__button {
 }
 
 .service__details table {
-    flex: 100%;
+    width:70%;
     font-size: 1em;
     border: 1px solid black;
     margin: 2%;
@@ -748,7 +775,12 @@ a.service__button {
 }
 
 
-/*contacts*/
+/*CONTACTS*/
+
+.footer{
+    width: 90vw;
+    margin: 0 5vw;
+}
 
 .contacts {
     display: block;
@@ -930,7 +962,7 @@ a.social__link:hover {
 }
 
 .modal__dialog {
-    width: 60%;
+    width: 50vw;
     height: 40vh;
     margin: 25vh auto 35vh auto;
     border-radius: 15px/15px;
@@ -995,7 +1027,7 @@ a.social__link:hover {
 
 .modal__btn {
     display: block;
-    width: 70%;
+    width: 30%;
     border-radius: 15px/15px;
     text-align: center;
     color: rgba(0, 0, 0, .9);
