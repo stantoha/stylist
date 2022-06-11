@@ -398,9 +398,11 @@ label .nav-btn {
     text-transform: uppercase;
     padding: 1%;
     margin: 1% auto;
-    font-size: 1em;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
     text-align: center;
-    color: rgba(225, 191, 179, 1);
+    font-weight: 700;
+    color: rgba(255, 151, 82, 0.7);
     border-bottom:1px solid rgba(0, 0, 0, .3);
 }
 
@@ -495,6 +497,7 @@ label .nav-btn {
 .services__list {
     position: fixed;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
     top: 22%;
@@ -513,7 +516,7 @@ label .nav-btn {
     display: block;
     font-size: 1em;
     margin: 2% auto;
-    padding: 2%;
+    padding: 5%;
     text-align: center;
     justify-content: center;
     align-content: center;
