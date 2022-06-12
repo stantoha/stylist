@@ -506,7 +506,7 @@ label .nav-btn {
 .services__list {
     position: fixed;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     flex-wrap: wrap;
     align-items: center;
     top: 22%;
@@ -523,7 +523,7 @@ label .nav-btn {
 .service__item {
     flex: 100%;
     display: block;
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 2% auto;
     padding: 5%;
     text-align: center;
