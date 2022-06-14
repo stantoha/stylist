@@ -321,14 +321,14 @@ label .nav-btn {
     margin: 0 3vw;
     align-items: center;
     box-shadow: 0 0 2vh rgba(0, 0, 0, .3);
-    background-color:rgba(255, 249, 239, 1);
+    background-color:rgba(255, 249, 239, 0.1);
 }
 
 .tabcontent {
     width: 100%;
     overflow: hidden;
     box-shadow: 0 0 2vh rgba(0, 0, 0, .3);
-    background-color:rgba(255, 249, 239, 0.4);
+    background-color:rgba(0, 0, 0, 0.1);
 
 }
 
