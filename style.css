@@ -340,12 +340,12 @@ label .nav-btn {
 
 
 .section__name {
-   /*  font-family: 'Comfortaa'; */
+    font-family: 'Comfortaa';
     letter-spacing: 0.2vh;
     color: rgba(0, 0, 0, .5);
     font-weight: 500;
-    /* align-items: center;
-    text-align: center; */
+    align-items: center;
+    text-align: center;
     width: 15%;
     margin:1% auto;
     padding:0.5%;
@@ -365,14 +365,15 @@ label .nav-btn {
 
 .section__title {
     color: rgba(255, 255, 255, 1);
-    width: 60%;
+    width: 50%;
     padding:0.5%;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
     letter-spacing: 0.2vh;
     line-height: 1.2;
     background-color: rgba(225, 191, 179, 0.7);
-    margin: 0.5% auto;
+    margin: 1% auto;
+    margin-bottom: 0;
     transition: all 1s;
     border-radius: 5px/5px;
     box-shadow: 0 0 1vh rgba(0, 0, 0, .3);
@@ -386,44 +387,46 @@ label .nav-btn {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 3% auto;
+    margin: 1% auto;
     flex-wrap: wrap;
-    padding: 2% ;
-    width: 90%;
-    box-shadow: 0 0 1vh rgba(0, 0, 0, .4);
+    padding: 1% ;
+    width: 95%;
+    border: 1px solid rgba(231, 161, 125, 1);
+    border-radius: 15px/15px;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, .3);
+    /* box-shadow: 0 0 1vh rgba(0, 0, 0, .4);
     border-radius: 10px/10px;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .1); */
 }
 
 .content__picture {
-    text-align: center;
-    width: 35%;
+   /*  text-align: center; */
+    width: 30%;
     height: auto;
     margin:  1% 5%;
     padding: 1%;
     border: 1px solid rgba(231, 161, 125, 1);
     border-radius: 15px/15px;
-    box-shadow: 0 0 2vh rgba(0, 0, 0, .3);
+    box-shadow: 0 0 1vh rgba(0, 0, 0, .3);
 }
 
 .descr__text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: center;
-    padding: 4%;
-    width: 55%;
+    /* align-items: center;
+    align-content: center; */
+    width: 40%;
     height: auto;
 }
 
 .text__block {
-    display: block;
+    display: inline-block;
     word-wrap: break-word;
     padding: 5%;
     margin: 2% auto;
     max-width: 70%;
-    font-size: 1.5em;
-    text-align: center;
+    font-size: 1.2em;
+    text-align:justify;
     font-family: 'Comfortaa', cursive;
     color: rgba(170, 115, 84, 1);
     background-color: rgba(225, 191, 179, 0.5);
@@ -434,15 +437,15 @@ label .nav-btn {
 .client__need {
     display: block;
     word-wrap: break-word;
-    /* text-transform: uppercase; */
-    padding: 1%;
-    margin: 1% auto;
+    font-family: 'Comfortaa', cursive;
+    flex: 100%;
+    padding: 0.5% 3%;
+    margin: 0.5% 5%;
     font-size: 1em;
-    letter-spacing: 0.1em;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     color: rgba(231, 161, 125, 1);
-    border-bottom:1px solid rgba(0, 0, 0, .3);
+/*     border-bottom:2px solid rgba(170, 115, 84, 0.5); */
 }
 
 
@@ -496,17 +499,32 @@ label .nav-btn {
     position: relative;
 }
 
+.service__title__container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items:center;
+    margin: 0 5%;
+    background-color: rgba(225, 191, 179, 1);
+}
+
+.service__title__container svg{
+   position: absolute;
+   left: 28%;
+    transform: scale(0.6);
+}
 .service__title{
     text-align: center;
-width: 30%;
+display: inline-block;
     color: white;
     font-family: 'Comfortaa', cursive;
     font-size: 1.2em;
     font-weight: 500;
     text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
-   
+border-bottom:2px solid rgba(255, 249, 239, 1);
     transition: all 1s;
-    margin: 1% auto;
+    margin: 1% ;
+    margin-left: 5%;
     padding: 1%;
 }
 
@@ -525,15 +543,16 @@ width: 30%;
     height: auto;
 }
 
-.personal__stylist__services .section__name,
+/* .personal__stylist__services .section__name,
 .personal__stylist__services .section__title{
     transform: translateX(-5%);
-}
+} */
 
 .service {
     min-height: 85vh;
     width: 86%;
-    
+    margin: 1% 0 1% 1%;
+    border:2px solid rgba(170, 115, 84, 0.5);
 }
 
 
@@ -725,12 +744,29 @@ a.service__button {
 }
 
 .review__item {
-    flex: 45%;
+    flex: 47%;
     display: block;
-    margin: 2%;
+    margin: 1%;
     border: 1px solid rgba(231, 161, 125, 1);
     border-radius: 15px/15px;
-    padding: 2%;
+    padding: 1%;
+}
+
+
+.review__item .descr__card{
+    display: flex;
+    flex-direction: column;
+    align-content:center;
+    align-items:center;
+    margin: 0 auto;
+}
+
+.review__item .descr__card .descr__text,
+.review__item .descr__card .content__picture{
+    flex: 100%;
+    width: 80%;
+    margin: 0;
+    padding: 0;
 }
 
 /* SHOPPING-TOURS */
