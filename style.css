@@ -349,8 +349,8 @@ label .nav-btn {
     width: 15%;
     margin:1% auto;
     padding:0.5%;
-    font-size: 0.8em;
-    line-height: 1;
+    font-size: 0.7em;
+    line-height: 1.6;
     transition: all 1s;
     border-top:2px solid rgba(0, 0, 0, .2);
     border-bottom:2px solid rgba(0, 0, 0, .2);
@@ -401,7 +401,7 @@ label .nav-btn {
 
 .content__picture {
    /*  text-align: center; */
-    width: 30%;
+    width: 31%;
     height: auto;
     margin:  1% 5%;
     padding: 1%;
@@ -413,8 +413,8 @@ label .nav-btn {
 .descr__text {
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    align-content: center; */
+    align-items: center;
+    align-content: center;
     width: 40%;
     height: auto;
 }
@@ -425,7 +425,7 @@ label .nav-btn {
     padding: 5%;
     margin: 2% auto;
     max-width: 70%;
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-align:justify;
     font-family: 'Comfortaa', cursive;
     color: rgba(170, 115, 84, 1);
@@ -475,23 +475,6 @@ label .nav-btn {
     font-family: 'Cormorant Garamond', serif;
 }
 
-/* ADVANTAGES */
-
-.advantages__list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 2%;
-    list-style: circle;
-}
-
-.advantages__item {
-    flex: 30%;
-    display: inline-block;
-    margin:2%;
-    border-radius: 15px/15px;
-}
 
 /* SERVICES */
 
@@ -499,20 +482,29 @@ label .nav-btn {
     position: relative;
 }
 
+.section__name__container,
 .service__title__container{
     display: flex;
     position: relative;
     justify-content: center;
     align-items:center;
     margin: 0 5%;
-    background-color: rgba(225, 191, 179, 1);
-}
+/*     background-color: rgba(225, 191, 179, 1);
+ */}
 
+.section__name__container svg,
 .service__title__container svg{
    position: absolute;
    left: 28%;
     transform: scale(0.6);
 }
+
+.section__name__container svg{
+ /*   position: absolute;
+   left: 28%; */
+    transform: scale(0.3);
+}
+
 .service__title{
     text-align: center;
 display: inline-block;
@@ -573,7 +565,7 @@ border-bottom:2px solid rgba(255, 249, 239, 1);
 .service__item {
     flex: 100%;
     display: block;
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 2% auto;
     padding: 5%;
     text-align: center;
@@ -727,6 +719,41 @@ a.service__button {
     align-items: center;
     flex-wrap: wrap;
     margin: 2% auto;
+}
+
+
+/* ADVANTAGES */
+
+.advantages__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: circle;
+    width: 100%;
+}
+
+.advantages__item {
+    flex: 90%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    align-content: space-between;
+    margin:1%;
+    padding: 1%;
+   border-radius: 15px/15px;
+}
+
+.advantage__icon svg{
+    width:100px;
+    height: 100px;
+    padding: 1%;
+    margin: 1%;
+}
+
+.advantages__item .text__block{
+    text-align:center;
 }
 
 /* REVIEWS */
@@ -1033,9 +1060,9 @@ a.social__link:hover {
 }
 
 .modal__dialog {
-    width: 50vw;
-    height: 40vh;
-    margin: 25vh auto 35vh auto;
+    width: 35vw;
+    height: 70vh;
+    margin: 15vh auto 15vh auto;
     border-radius: 15px/15px;
 }
 
@@ -1073,12 +1100,11 @@ a.social__link:hover {
 .modal__input {
     display: block;
     margin: 2vh auto 2vh auto;
-    width: 35%;
+    width: 30%;
     height: 4vh;
-    background-color: rgba(231, 161, 125, 1);
+    background-color: rgba(255, 255, 255, 1);
     box-shadow: inset 0 0 1vh rgba(0, 0, 0, .7);
     border: none;
-    border-radius: 15px/15px;
     font-size: 1em;
     text-align: center;
     padding: 0 2vh;
@@ -1101,7 +1127,7 @@ a.social__link:hover {
     width: 30%;
     border-radius: 15px/15px;
     text-align: center;
-    color: rgba(0, 0, 0, .9);
+    color: rgba(255, 255, 255, .9);
     font-family: 'Comfortaa', cursive;
     font-size: 0.9em;
     text-shadow: 0 0 1vh rgba(255, 255, 255, 0.7);
@@ -1130,7 +1156,6 @@ a.social__link:hover {
     border-radius: 50%;
     transition: all 1s;
     overflow: hidden;
-  
 }
 
 .hide {

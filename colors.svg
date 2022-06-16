@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="364" height="306" viewBox="0 0 364 306">
+  <g id="farbklima-analog-kontrast" transform="translate(-390 -5935)">
+    <g id="Group_3667" data-name="Group 3667" transform="translate(-45 5)">
+      <g id="Group_3447" data-name="Group 3447" transform="translate(752.193 6074.688) rotate(180)" opacity="0.2">
+        <path id="Path_4787" data-name="Path 4787" d="M47.07,23.535A23.535,23.535,0,1,0,23.535,47.07,23.535,23.535,0,0,0,47.07,23.535" transform="translate(0 0)" fill="#f18e1c"/>
+      </g>
+      <g id="Group_3448" data-name="Group 3448" transform="translate(752.193 6135.145) rotate(180)" opacity="0.2">
+        <path id="Path_4788" data-name="Path 4788" d="M23.535,47.07A23.535,23.535,0,1,0,0,23.535,23.535,23.535,0,0,0,23.535,47.07" transform="translate(0 0)" fill="#ea621f"/>
+      </g>
+      <g id="Group_3446" data-name="Group 3446" transform="translate(669.281 6219.628) rotate(180)" opacity="0.2">
+        <path id="Path_4786" data-name="Path 4786" d="M23.535,47.07A23.535,23.535,0,1,0,0,23.535,23.535,23.535,0,0,0,23.535,47.07" transform="translate(0 0)" fill="#c4037d"/>
+      </g>
+      <g id="Group_3449" data-name="Group 3449" transform="translate(669.281 5993.07) rotate(180)" opacity="0.2">
+        <path id="Path_4789" data-name="Path 4789" d="M47.07,23.535A23.535,23.535,0,1,0,23.535,47.07,23.535,23.535,0,0,0,47.07,23.535" transform="translate(0)" fill="#f4e500"/>
+      </g>
+      <g id="Group_3450" data-name="Group 3450" transform="translate(721.965 6190.479) rotate(180)" opacity="0.2">
+        <path id="Path_4790" data-name="Path 4790" d="M23.535,47.07A23.535,23.535,0,1,0,0,23.535,23.535,23.535,0,0,0,23.535,47.07" transform="translate(0 0)" fill="#e32322"/>
+      </g>
+      <g id="Group_3451" data-name="Group 3451" transform="translate(721.965 6022.867) rotate(180)" opacity="0.2">
+        <path id="Path_4791" data-name="Path 4791" d="M47.07,23.535A23.535,23.535,0,1,0,23.535,47.07,23.535,23.535,0,0,0,47.07,23.535" transform="translate(0 0)" fill="#fdc60b"/>
+      </g>
+      <g id="Group_3453" data-name="Group 3453" transform="translate(610.119 5993.07) rotate(180)" opacity="0.2">
+        <path id="Path_4793" data-name="Path 4793" d="M0,23.535A23.535,23.535,0,1,0,23.535,0,23.535,23.535,0,0,0,0,23.535" fill="#8cbb26"/>
+      </g>
+      <g id="Group_3454" data-name="Group 3454" transform="translate(610.119 6219.628) rotate(180)" opacity="0.2">
+        <path id="Path_4794" data-name="Path 4794" d="M23.535,47.07A23.535,23.535,0,1,0,0,23.535,23.535,23.535,0,0,0,23.535,47.07" transform="translate(0 0)" fill="#6d398b"/>
+      </g>
+      <g id="Group_3452" data-name="Group 3452" transform="translate(528.07 6135.145) rotate(180)">
+        <path id="Path_4792" data-name="Path 4792" d="M23.535,47.07A23.535,23.535,0,1,0,0,23.535,23.535,23.535,0,0,0,23.535,47.07" transform="translate(0 0)" fill="#2a71b0"/>
+      </g>
+      <g id="Group_3455" data-name="Group 3455" transform="translate(528.07 6074.688) rotate(180)">
+        <path id="Path_4795" data-name="Path 4795" d="M0,23.535A23.535,23.535,0,1,0,23.535,0,23.535,23.535,0,0,0,0,23.535" transform="translate(0 0)" fill="#0696bb"/>
+      </g>
+      <g id="Group_3456" data-name="Group 3456" transform="translate(559.162 6190.479) rotate(180)">
+        <path id="Path_4796" data-name="Path 4796" d="M23.535,47.07A23.535,23.535,0,1,0,0,23.535,23.535,23.535,0,0,0,23.535,47.07" transform="translate(0 0)" fill="#444e99"/>
+      </g>
+      <g id="Group_3457" data-name="Group 3457" transform="translate(559.162 6022.867) rotate(180)" opacity="0.2">
+        <path id="Path_4797" data-name="Path 4797" d="M0,23.535A23.535,23.535,0,1,0,23.535,0,23.535,23.535,0,0,0,0,23.535" transform="translate(0 0)" fill="#008e5b"/>
+      </g>
+    </g>
+    <rect id="Rectangle_906" data-name="Rectangle 906" width="364" height="306" transform="translate(390 5935)" fill="none"/>
+  </g>
+</svg>
