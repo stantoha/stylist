@@ -27,6 +27,13 @@
             margin: 2% auto;
         }
 
+        .logo__container {
+    text-align: center;
+}
+.logo{
+    transform: scale(1.1);
+}
+
         .descr__text {
             display: flex;
             flex-direction: column;
@@ -41,13 +48,35 @@
             margin: 2% auto;
         }
 
+        .nav__menu__visible {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    width: 94vw;
+    height: 100vh;
+    margin: 0 3vw;
+    padding: 0;
+    list-style: none;
+    background-color: rgba(225, 191, 179, 0.8);
+    transition-duration: 0.1s;
+    }
+
         .menu__button{
-            font-size:0.9em;
+            font-size:1.8em;
         }
 
         .section__name{
             font-size:0.6em;
         }
+
+        .service__title__container svg{
+   position: absolute;
+   left: 15%;
+    transform: scale(0.6);
+}
 
         .services__list{
             right: 1%;
@@ -55,12 +84,149 @@
         }
 
         .services__item{
-            padding: 1%;
+           
             margin: 1% auto;
+           
         }
+
+        .service__button{
+            font-size: 0.8em;
+            padding: 0.5%;
+        }
+
+        .modal__dialog{
+    width: 85vw;
+}
+.modal__btn {
+    width: 60vw;
+}
+.CTA__container {
+    margin: 2% auto;
+    padding: 2%;
+    width: 90%;
+    border-radius:10px/10px;
+}
     }
 
-    @media (min-width:425px) and (max-width: 767px) {}
+    @media (min-width:320px) and (max-width: 840px) {
+
+        body{
+            font-size: 0.8em;
+        }
+        .header,
+        .main{
+            width: 100vw;
+            margin: 0 auto;
+        }
+        .content__picture {
+            flex:100%;
+            margin: 2% auto;
+        }
+
+        .descr__text,
+        .text__block {
+            flex:100%;
+            word-wrap: break-word;
+            padding: 2%;
+            margin: 1% ;
+        }
+        .section__name,
+        .section__title{
+            width: 100%;
+        }
+
+        .nav__menu__visible {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    width: 94vw;
+    height: 100vh;
+    margin: 0 3vw;
+    padding: 0;
+    list-style: none;
+    background-color: rgba(225, 191, 179, 0.8);
+    transition-duration: 0.1s;
+    }
+
+        .menu__button{
+            font-size:1.8em;
+        }
+
+        .modal__dialog {
+    width: 85vw;
+}
+.modal__btn {
+    width: 60vw;
+}
+
+.CTA__container {
+    margin: 2% auto;
+    padding: 2%;
+    width: 90%;
+    border-radius:10px/10px;
+}
+  /*     
+
+        .logo__container {
+    text-align: center;
+}
+.logo{
+    transform: scale(1.1);
+}
+
+        
+
+        
+
+        .nav__menu__visible {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    width: 94vw;
+    height: 100vh;
+    margin: 0 3vw;
+    padding: 0;
+    list-style: none;
+    background-color: rgba(225, 191, 179, 0.8);
+    transition-duration: 0.1s;
+    }
+
+        .menu__button{
+            font-size:1.8em;
+        }
+
+        .section__name{
+            font-size:0.6em;
+        }
+
+        .service__title__container svg{
+   position: absolute;
+   left: 15%;
+    transform: scale(0.6);
+}
+
+        .services__list{
+            right: 1%;
+            width: 12%;
+        }
+
+        .services__item{
+           
+            margin: 1% auto;
+           
+        }
+
+        .service__button{
+            font-size: 0.8em;
+            padding: 0.5%;
+        } */
+    }
 </style>
 
 <body>

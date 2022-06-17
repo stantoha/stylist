@@ -568,7 +568,7 @@ border-bottom:2px solid rgba(255, 249, 239, 1);
 .service__item {
     flex: 100%;
     display: block;
-    font-size: 1.1em;
+    
     margin: 1% auto;
     padding: 1%;
     text-align: center;
@@ -576,7 +576,7 @@ border-bottom:2px solid rgba(255, 249, 239, 1);
     align-content: center;
     background-color: rgba(252, 230, 209, 1);
     border-radius: 15px/15px;
-    box-shadow: 0 0px 10px 1vhrgba(0, 0, 0, 0.5);
+    box-shadow: 0 0px  1vh 0 rgba(0, 0, 0, 0.5);
     transition: all 0.3s
 }
 
@@ -586,6 +586,7 @@ a.service__button {
     text-shadow: 0 0  5px 0 rgba(0, 0, 0, 1);
     font-family: 'Cormorant Garamond', serif;
     height: auto;
+    font-size: 1.1em;
 }
 
 .service__item:hover {
@@ -774,7 +775,7 @@ a.service__button {
 }
 
 .review__item {
-    flex: 47%;
+   
     display: block;
     margin: 1%;
     border: 1px solid rgba(231, 161, 125, 1);
@@ -788,15 +789,15 @@ a.service__button {
     flex-direction: column;
     align-content:center;
     align-items:center;
-    margin: 0 auto;
+    margin: 0 auto; padding: 1%;
 }
 
 .review__item .descr__card .descr__text,
 .review__item .descr__card .content__picture{
-    flex: 100%;
-    width: 80%;
+    /* flex: 100%;
+    width: 80%; */
     margin: 0;
-    padding: 0;
+    padding: 1%;
 }
 
 /* SHOPPING-TOURS */
