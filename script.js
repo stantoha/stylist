@@ -96,11 +96,16 @@ window.addEventListener('DOMContentLoaded', () => {
             item.classList.add('hide');
             item.classList.remove('show', 'fade');
         });
+        
+        serviceTabs.forEach(item => {
+            item.parentElement.classList.remove('active__service');
+        });
     }
 
     function showServiceTabContent(j = 0) {
         servicesTabsContent[j].classList.add('show', 'fade');
         servicesTabsContent[j].classList.remove('hide');
+        serviceTabs[j].parentElement.classList.add('active__service');
     }
 
     hideServiceTabContent();
@@ -122,8 +127,7 @@ window.addEventListener('DOMContentLoaded', () => {
                             serviceTitles[0].classList.remove('right__slide');
                         }, 1000);
                         showServiceTabContent();
-                        goRight();
-        soldierMove();
+                     
                         servicesTabParent.addEventListener('click', (event) => {
                             let target = event.target;
                             if (target && target.classList.contains('service__button')) {

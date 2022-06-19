@@ -198,13 +198,14 @@ a:hover.menu__button {
   text-shadow: 0 0 1vh rgba(255, 255, 255, 0.5);
 }
 
-a:active.menu__button .active {
+.menu__item .active {
   background-color: rgba(225, 191, 179, 1);
-  font-weight: 600;
-  padding: 2%;
+  font-weight: 900;
   border-radius: 10px/10px;
-  color: rgba(231, 161, 125, 1);
+  text-shadow: 0 0 0.5vh rgba(0, 0, 0, 0.5);
+  color:rgba(231, 161, 125, 1);
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .nav-btn {
@@ -317,12 +318,12 @@ label .nav-btn {
   width: 100%;
   overflow: hidden;
   box-shadow: 0 0 2vh rgba(0, 0, 0, 0.3);
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 1%;
 }
 
 .tabcontent:nth-of-type(2n) {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
  
   }
 
@@ -472,7 +473,7 @@ label .nav-btn {
   display: inline-block;
   color: rgba(255, 255, 255, 1);
   font-family: "Comfortaa", cursive;
-  font-size: 1.3em;
+  font-size: 1.2em;
   letter-spacing: 0.1vh;
   font-weight: 500;
   text-shadow: 0 0 2vh rgba(255, 255, 255,1);
@@ -509,8 +510,8 @@ label .nav-btn {
   justify-content: space-between;
   align-items: center;
   top: 21%;
-  left: 6%;
-  width: 10%;
+  left: 5%;
+  width: 12%;
   height: 78vh;
   margin: 0;
  
@@ -519,15 +520,16 @@ label .nav-btn {
 
 .service__item {
   flex: 100%;
-  display: block;
-  margin: 1% auto;
-  padding: 1%;
+  display: flex;
+  margin: 0.5% auto;
+  padding: 0.5%;
   text-align: center;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  height: 7vh;
   background-color: rgba(252, 230, 209, 1);
-  border-radius: 15px/15px;
-  box-shadow: 0 0 1vh 0 rgba(255, 255, 255, 0.2);
+  border-radius: 10px/10px;
+  box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.5);
   transition: all 0.3s;
 }
 
@@ -542,7 +544,7 @@ label .nav-btn {
 a.service__button {
   text-decoration: none;
   color: rgba(231, 161, 125, 1);
-  text-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
+  text-shadow: 0 0 1vh 0 rgba(0, 0, 0, 1);
   font-family: "Cormorant Garamond", serif;
   height: auto;
   font-size: 1.1em;
@@ -550,22 +552,19 @@ a.service__button {
 
 .service__item:hover {
   transform: scale(1.1);
-  background-color: rgba(231, 161, 125, 1);
+  background-color: rgba(231, 161, 125, 0.5);
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.service__button:hover {
+.service__item:hover .service__button{
   color: rgba(255, 255, 255, 0.9);
 }
 
-.service__item:active {
-  transform: scale(1.5);
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.7);
-}
 
-.service__button:active {
+
+.active__service .service__button{
   font-size: 110%;
-  color: rgba(231, 161, 125, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .service__button .badge {
@@ -576,8 +575,10 @@ a.service__button {
   transform: scale(0.9);
 }
 .active__service {
-  color: rgba(231, 161, 125, 1);
+  background-color: rgba(231, 161, 125, 1);
   font-weight: 600;
+  box-shadow: 0 0 1vh rgba(0, 0, 0, 0.9);
+  transform: scale(1.2);
 }
 
 .service__aim {
@@ -715,9 +716,11 @@ a.service__button {
 
 .advantages__item {
   flex: 100%;
-  width: 80%;
+  width: 100%;
   display: flex;
+  justify-content: space-around;
   align-items: center;
+  height: 25vh;
   margin: 2% auto;
   padding: 1%;
   border-radius: 15px/15px;
@@ -733,12 +736,14 @@ a.service__button {
 
 
 .advantages__item .text__block {
-  text-align: start;
+   
+  text-align: center;
   width: 75%;
   padding: 4%;
   margin: 1%;
-  margin-left: 10%;
+  height: 20vh;
 }
+
 
 /* REVIEWS */
 
@@ -755,6 +760,7 @@ a.service__button {
 }
 
 .review__item {
+    flex: 48%;
   display: block;
   margin: 1%;
   border: 1px solid rgba(231, 161, 125, 1);
@@ -764,9 +770,8 @@ a.service__button {
 
 .review__item .descr__card {
   display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
+  justify-content:space-between;
+  align-items:baseline;
   margin: 0 auto;
   padding: 1%;
 }
@@ -1130,7 +1135,7 @@ a.social__link:hover {
   position: fixed;
   transform: scale(1);
   bottom: 1%;
-  right: 8%;
+  right: 5%;
   opacity: 0.5;
   border-radius: 50%;
   transition: all 1s;
@@ -1363,6 +1368,34 @@ textarea {
   background-color: rgba(0, 0, 0, 0.3);
   margin: 2% auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .soldier__item {
   border: 1px solid black;
