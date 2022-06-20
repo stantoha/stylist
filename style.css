@@ -93,6 +93,7 @@ li {
   height: 6vh;
   box-shadow: inset 0 0 3vh rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  margin-left: 15%;
 }
 
 /* TITLE */
@@ -171,9 +172,7 @@ li {
   width: auto;
   font-size: 0.8em;
   font-weight: 500;
-  /* border:1px solid rgba(0, 0, 0, .2); */
   border-radius: 10px/10px;
-  /* box-shadow:  0 0 1vh rgba(0, 0, 0, 0.3); */
   background-color: rgba(225, 191, 179, 0.8);
   transition: all 0.2s;
 }
@@ -318,17 +317,15 @@ label .nav-btn {
   width: 100%;
   overflow: hidden;
   box-shadow: 0 0 2vh rgba(0, 0, 0, 0.3);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   padding: 1%;
 }
 
 .tabcontent:nth-of-type(2n) {
-    background-color: rgba(255, 255, 255, 0.2);
- 
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   
-
 .section__name {
   font-family: "Comfortaa";
   letter-spacing: 0.1vh;
@@ -352,8 +349,8 @@ label .nav-btn {
   width: 50%;
   padding: 0.5%;
   text-align: center;
-  font-size: 1.5em;
-  
+  font-size: 1.2em;
+  font-style: italic;
   letter-spacing: 0.2vh;
   line-height: 1.5;
   background-color: rgba(225, 191, 179, 0.7);
@@ -361,8 +358,8 @@ label .nav-btn {
   transition: all 1s;
   border-radius: 5px/5px;
   box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
-  text-shadow: 0 0 1vh rgba(0, 0, 0, 0.2);
-  font-weight: 300;
+  text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+  font-weight: 400;
 }
 
 .descr__card {
@@ -398,7 +395,6 @@ label .nav-btn {
 }
 
 .text__block {
-/*   display: inline-block; */
   word-wrap: break-word;
   padding: 3%;
   margin: 2% auto;
@@ -476,7 +472,7 @@ label .nav-btn {
   font-size: 1.2em;
   letter-spacing: 0.1vh;
   font-weight: 500;
-  text-shadow: 0 0 2vh rgba(255, 255, 255,1);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid rgba(255, 255, 255, 1);
   transition: all 1s;
   margin: 1%;
@@ -492,15 +488,14 @@ label .nav-btn {
   width: 100%;
   height: auto;
   padding: 1% ;
-/*   border: 2px solid rgba(255, 249, 239, 1); */
 }
 
 .service {
   min-height: 85vh;
  
-  margin-left: 14%;
+  margin-left: 15%;
   padding: 0.5%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .services__list {
@@ -514,7 +509,6 @@ label .nav-btn {
   width: 12%;
   height: 78vh;
   margin: 0;
- 
   transition-duration: 0.25s;
 }
 
@@ -522,15 +516,15 @@ label .nav-btn {
   flex: 100%;
   display: flex;
   margin: 0.5% auto;
-  padding: 0.5%;
+  padding: 0;
   text-align: center;
   justify-content: center;
   align-items: center;
-  height: 7vh;
+  height: 6vh;
   background-color: rgba(252, 230, 209, 1);
   border-radius: 10px/10px;
   box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.5);
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 
 .service__item .descr__card {
@@ -551,7 +545,7 @@ a.service__button {
 }
 
 .service__item:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   background-color: rgba(231, 161, 125, 0.5);
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -560,7 +554,12 @@ a.service__button {
   color: rgba(255, 255, 255, 0.9);
 }
 
-
+.active__service {
+    background-color: rgba(231, 161, 125, 1);
+    font-weight: 600;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+  }
 
 .active__service .service__button{
   font-size: 110%;
@@ -574,12 +573,7 @@ a.service__button {
 .badge {
   transform: scale(0.9);
 }
-.active__service {
-  background-color: rgba(231, 161, 125, 1);
-  font-weight: 600;
-  box-shadow: 0 0 1vh rgba(0, 0, 0, 0.9);
-  transform: scale(1.2);
-}
+
 
 .service__aim {
   font-size: 1.5em;
@@ -716,32 +710,31 @@ a.service__button {
 
 .advantages__item {
   flex: 100%;
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 25vh;
+  height: 15vh;
   margin: 2% auto;
   padding: 1%;
   border-radius: 15px/15px;
-/*   border:1px solid black; */
+  border:1px solid black;
 }
 
-/* .advantage__icon image{
+.advantage__icon image{
   width: 100px;
   height: 100px;
    margin: 2%;
-   padding-right: 5%;
-} */
+}
 
 
 .advantages__item .text__block {
-   
+    display: flex;
+  justify-content:center;
+ align-items:center;
   text-align: center;
   width: 75%;
-  padding: 4%;
-  margin: 1%;
-  height: 20vh;
+  height: 15vh;
 }
 
 
@@ -761,7 +754,9 @@ a.service__button {
 
 .review__item {
     flex: 48%;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-content:space-between;
   margin: 1%;
   border: 1px solid rgba(231, 161, 125, 1);
   border-radius: 15px/15px;
@@ -769,22 +764,44 @@ a.service__button {
 }
 
 .review__item .descr__card {
+    flex: 45%;
   display: flex;
+  flex-direction: row;
   justify-content:space-between;
-  align-items:baseline;
+  align-items:flex-start;
   margin: 0 auto;
   padding: 1%;
 }
 
-.review__item .descr__card .descr__text,
+.review__item .descr__card figcaption.descr__text,
 .review__item .descr__card .content__picture {
-  /* flex: 100%;
-    width: 80%; */
-  margin: 0;
+  margin: 0 auto;
   padding: 1%;
 }
 
-/* SHOPPING-TOURS */
+.review__item .descr__card .content__picture {
+    flex: 40%;
+}
+
+.review__item .descr__card figcaption.descr__text{
+    flex: 20%;
+}
+
+.review__item .text__block{
+  flex: 45%;
+}
+
+.review__item .descr__card figcaption.descr__text table{
+    align-self:baseline;
+}
+
+.client__review__details {
+    width: 90%;
+    margin: 1% auto;
+}
+
+
+/* SHOPPING-TOURS */tr
 
 .shopping__tours__list {
   display: flex;
@@ -817,6 +834,10 @@ a.service__button {
   text-align: start;
   margin: 2% auto;
   padding: 2%;
+}
+
+.shopping__tour__item .content__picture {
+    width: 90%;
 }
 
 .day__descr__item {
@@ -923,7 +944,6 @@ a.social__link:hover {
 
 .contacts__center {
   display: flex;
-  /* align-self: center; */
   flex-wrap: wrap;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1185,85 +1205,8 @@ a.social__link:hover {
   0% {
     transform: translate(-70vw, 5vw) scale(0.01);
   }
-
-  5% {
-    transform: translate(-65vw, 4.5vw) scale(0.015);
-  }
-
-  10% {
-    transform: translate(-60vw, 4vw) scale(0.02);
-  }
-
-  15% {
-    transform: translate(-55vw, 3.5vw) scale(0.025);
-  }
-
-  20% {
-    transform: translate(-50vw, 3vw) scale(0.03);
-  }
-
-  25% {
-    transform: translate(-45vw, 2.5vw) scale(0.035);
-  }
-
-  30% {
-    transform: translate(-40vw, 2vw) scale(0.04);
-  }
-
-  35% {
-    transform: translate(-35vw, 1.5vw) scale(0.045);
-  }
-
-  40% {
-    transform: translate(-30vw, 1vw) scale(0.05);
-  }
-
-  45% {
-    transform: translate(-25vw, 0.5vw) scale(0.055);
-  }
-
-  50% {
-    transform: translate(-20vw, 0) scale(0.06);
-  }
-
-  55% {
-    transform: translate(-15vw, -0.5vw) scale(0.065);
-  }
-
-  60% {
-    transform: translate(-10vw, -1vw) scale(0.07);
-  }
-
-  65% {
-    transform: translate(-5vw, -1.5vw) scale(0.075);
-  }
-
-  70% {
-    transform: translate(0, -2vw) scale(0.08);
-  }
-
-  75% {
-    transform: translate(5vw, -2.5vw) scale(0.085);
-  }
-
-  80% {
-    transform: translate(10vw, -3vw) scale(0.09);
-  }
-
-  85% {
-    transform: translate(15vw, -3.5vw) scale(0.095);
-  }
-
-  90% {
-    transform: translate(20vw, -4vw) scale(0.1);
-  }
-
-  95% {
-    transform: translate(25vw, -4.5vw) scale(0.105);
-  }
-
   100% {
-    transform: translate(30vw, -5vw) scale(0.11);
+    transform: translate(35vw, -5.5vw) scale(0.11);
   }
 }
 
