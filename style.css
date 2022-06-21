@@ -376,10 +376,10 @@ label .nav-btn {
 }
 
 .content__picture {
-  width: 31%;
+  width: 33%;
   height: auto;
-  margin: 1% 5%;
-  padding: 1%;
+  margin: 2% ;
+  padding: 2%;
   border: 1px solid rgba(231, 161, 125, 1);
   border-radius: 15px/15px;
   box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
@@ -390,16 +390,19 @@ label .nav-btn {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  width: 40%;
+  width: 50%;
   height: auto;
+  margin: 1% ;
+  padding: 1%;
+  box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
 }
 
 .text__block {
   word-wrap: break-word;
   padding: 3%;
   margin: 2% auto;
-  max-width: 70%;
-  font-size: 1.1em;
+  max-width: 90%;
+  font-size: 1.3em;
   text-align: justify;
   font-family: "Comfortaa", cursive;
   color: rgba(170, 115, 84, 1);
@@ -801,7 +804,7 @@ a.service__button {
 }
 
 
-/* SHOPPING-TOURS */tr
+/* SHOPPING-TOURS */
 
 .shopping__tours__list {
   display: flex;
@@ -884,13 +887,13 @@ a.service__button {
 /*CONTACTS*/
 
 .footer {
-  width: 90vw;
-  margin: 0 5vw;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .contacts {
   display: block;
-  margin: 2% auto;
+/*   margin: 2% auto; */
   padding: 2%;
   margin-bottom: 0;
   text-align: center;
