@@ -24,15 +24,16 @@
     <title>stylist</title>
   </head>
   <style>
-    @media (min-width: 841px) and (max-width: 1024px) and (orientation:portrait) {
+    @media (min-width: 841px) and (max-width: 1025px) and (orientation:portrait) {
       .header,
-      .main {
+      .main,
+      .footer {
         width: 100vw;
         margin: 0 auto;
       }
 
       .main {
-        padding-top: 9vh;
+        padding-top: 11vh;
       }
       .content__picture {
         width: 40%;
@@ -63,6 +64,7 @@
       .nav__menu__visible {
         display: flex;
         flex-direction: column;
+        align-content:center;
         position: fixed;
         visibility: visible;
         top: 0;
@@ -76,12 +78,24 @@
         transition-duration: 0.1s;
       }
 
-      .menu__button {
+      .menu__item {
         font-size: 1.8em;
+      }
+
+      .menu__item .active {
+        font-weight: 800;
+  border-radius: 5px/5px;
+  text-transform: uppercase;
+  color:rgba(231, 161, 125, 1);
+  text-decoration: none;
+font-size: 1.8em;
+  padding: 0.2%;
+  background-color: rgba(255, 255, 255, 0.5);
       }
 
       .section__name {
         font-size: 0.6em;
+        float:none;
       }
 
       .service__title__container svg {
@@ -97,7 +111,23 @@
       }
 
       .service__item {
-        margin: 1% auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: 30%;
+        max-width: 30%;
+        padding: 0.5%;
+        margin:0.5% 1%;
+        height:4.5vh;
+        line-height: 1;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        border-radius: 5px/5px;
+      }
+
+      .service__item span{
+        font-size: 0.6em;
       }
 
       .service__button {
@@ -119,18 +149,19 @@
       }
     }
 
-    @media (min-width: 320px) and (max-width: 840px) {
+    @media (min-width: 320px) and (max-width: 840px) and (orientation:portrait) {
       body {
         font-size: 0.8em;
       }
       .header,
-      .main {
+      .main,
+      .footer {
         width: 100vw;
         margin: 0 auto;
       }
 
       .main {
-        padding-top: 9vh;
+        padding-top: 11vh;
       }
 
       .header {
@@ -162,9 +193,14 @@
         padding: 0;
         margin: 2% auto;
       }
+
       .section__name,
       .section__title {
         width: 100%;
+      }
+
+      .section__name{
+        float: none;
       }
 
       .nav__menu__visible {
@@ -185,7 +221,7 @@
 
       .services__list {
         flex: 100%;
-        top: 9vh;
+        top: 10vh;
         left: 0;
         justify-content: space-between;
         flex-direction: row;
@@ -200,12 +236,19 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        flex: 19%;
-        padding: 0;
-        margin: 0.5%;
-        height: 6vh;
+        flex: 30%;
+        max-width: 30%;
+        padding: 0.5%;
+        margin:0.5% 1%;
+        height:4.5vh;
         line-height: 1;
+        font-size: 0.8em;
+        text-transform: uppercase;
         border-radius: 5px/5px;
+      }
+
+      .service__item span{
+        font-size: 0.6em;
       }
 
       .service__title__container {
@@ -224,8 +267,19 @@
         margin: 0;
       }
 
-      .menu__button {
-        font-size: 1.8em;
+      .menu__item {
+        font-size: 1.2em;
+      }
+
+      .menu__item .active {
+        font-weight: 800;
+  border-radius: 5px/5px;
+  text-transform: uppercase;
+  color:rgba(231, 161, 125, 1);
+  text-decoration: none;
+font-size: 1.2em;
+  padding: 0.2%;
+  background-color: rgba(255, 255, 255, 0.5);
       }
 
       .modal__dialog {
