@@ -14,17 +14,25 @@
       rel="stylesheet"
     />
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Tenor+Sans&display=swap" rel="stylesheet"> -->
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>stylist</title>
   </head>
   <style>
-    @media (min-width: 841px) and (max-width: 1025px) and (orientation:portrait) {
+    @media (min-width: 841px) and (max-width: 1024px) {
+      .up__button img {
+  transform: scale(1);
+}
+
+.modal__dialog{
+  width:50vw ;
+}
+.modal__btn {
+        width: 30vw;
+      }
+    }
+    @media (min-width: 841px) and (max-width: 1024px) and (orientation:portrait) {
       .header,
       .main,
       .footer {
@@ -50,12 +58,13 @@
       .descr__text {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 80%;
         height: auto;
       }
 
       .text__block {
         display: inline-block;
+        width: 100%;
         word-wrap: break-word;
         padding: 2%;
         margin: 2% auto;
@@ -139,7 +148,7 @@ font-size: 1.8em;
         width: 65vw;
       }
       .modal__btn {
-        width: 30vw;
+        width: 50vw;
       }
       .CTA__container {
         margin: 2% auto;
@@ -147,11 +156,13 @@ font-size: 1.8em;
         width: 90%;
         border-radius: 10px/10px;
       }
+
+      
     }
 
     @media (min-width: 320px) and (max-width: 840px) and (orientation:portrait) {
       body {
-        font-size: 0.8em;
+        font-size: 1em;
       }
       .header,
       .main,
@@ -174,6 +185,7 @@ font-size: 1.8em;
       .content__picture {
         flex: 100%;
         margin: 2% auto;
+        padding: 2%;
       }
 
       .descr__text,
@@ -181,8 +193,9 @@ font-size: 1.8em;
         flex: 100%;
         word-wrap: break-word;
         padding: 2%;
-        margin: 1% 0;
+        margin:2% auto;
         max-width: 95%;
+        font-size: 1em;
       }
 
       .descr__text {
@@ -198,9 +211,12 @@ font-size: 1.8em;
       .section__title {
         width: 100%;
       }
-
+      .section__title {
+        font-size: 1.5em;
+      }
       .section__name{
         float: none;
+        font-size: 1em;
       }
 
       .nav__menu__visible {
@@ -221,7 +237,7 @@ font-size: 1.8em;
 
       .services__list {
         flex: 100%;
-        top: 10vh;
+        top: 9vh;
         left: 0;
         justify-content: space-between;
         flex-direction: row;
@@ -242,6 +258,7 @@ font-size: 1.8em;
         margin:0.5% 1%;
         height:4.5vh;
         line-height: 1;
+        font-weight: 700;
         font-size: 0.8em;
         text-transform: uppercase;
         border-radius: 5px/5px;
@@ -254,13 +271,14 @@ font-size: 1.8em;
       .service__title__container {
         margin: 0 auto;
         justify-content: flex-start;
-        font-size: 0.8em;
       }
 
       .service__title__container svg {
         right: -1%;
-        transform: scale(0.3);
+        transform: scale(0.5);
       }
+
+
 
       .service {
         width: 100%;
@@ -282,11 +300,21 @@ font-size: 1.2em;
   background-color: rgba(255, 255, 255, 0.5);
       }
 
+      .service__components__list{
+        list-style: none;
+      }
+
+      .question,
+      .answer{
+        width: 95%;
+      }
+
       .modal__dialog {
-        width: 85vw;
+        width: 90vw;
       }
       .modal__btn {
-        width: 40vw;
+        width: 70vw;
+        font-size: 1.5em;
       }
 
       .CTA__container {
@@ -295,7 +323,35 @@ font-size: 1.2em;
         width: 90%;
         border-radius: 10px/10px;
       }
+
+      .CTA__button{
+        width: 80vw;
+      }
+
+      .up__button img{
+        transform: scale(1);
+      }
       
+      
+    }
+
+    @media (min-width: 320px) and (max-width: 425px) and (orientation:portrait) {
+      .service__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: 30%;
+        max-width: 30%;
+        padding: 0.5%;
+        margin:0.5% 1%;
+        height:4.5vh;
+        line-height: 1;
+        font-size: 0.7em;
+        font-weight: 900;
+        text-transform: uppercase;
+        border-radius: 5px/5px;
+      }
     }
   </style>
 
@@ -463,186 +519,7 @@ font-size: 1.2em;
                 </h3>
               </div>
 
-              <!-- <div class="soldier__container">
-                            <div class="soldier">
-                    
-                                <div class="body__section left__hand hand">
-                        
-                                    <div class="body__section__top arm">
-                                        <div class="body__part shoulder">
-                                            
-                                        </div>
-                        
-                                        <div class="body__part ">
-                                            
-                                        </div>
-                        
-                                    </div>
-                                    <div class="body__section__middle elbow">
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                        
-                                    </div>
-                                    <div class="body__section__bottom forearm">
-                                        <div class="body__part">
-                                            
-                                        </div>
-                                        <div class="body__part wirst">
-                                            
-                                        </div>
-                        
-                                    </div>
-                        
-                                </div>
-                                <div class="body__section left__leg leg">
-                        
-                    
-                                    <div class="body__section__top thigh">
-                                        <div class="body__part ">
-                                            
-                                        </div>
-                        
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                                    </div>
-                                    <div class="body__section__middle knee">
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                        
-                                    </div>
-                                    <div class="body__section__bottom shin">
-                                        <div class="body__part">
-                                            
-                                        </div>
-                                        <div class="body__part foot">
-                                            
-                                        </div>
-                        
-                                    </div>
-                        
-                                </div>
-                                <div class="body__section head__and__body">
-                        
-                                    <div class="body__section__top">
-                                        <div class="body__part head">
-                                            
-                                        </div>
-                        
-                                        <div class="body__part neck">
-                                            
-                                        </div>
-                                      
-                        
-                        
-                                    </div>
-                                   
-                                    <div class="body__section__middle chest">
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                        
-                                    </div>
-                                    <div class="body__section__bottom stomach">
-                                        <div class="body__part">
-                                            
-                                        </div>
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                                    </div>
-                        
-                                </div>
-                                <div class="body__section right__leg leg">
-                        
-                                    <div class="body__section__top thigh">
-                                        <div class="body__part thigh">
-                                            
-                                        </div>
-                        
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                                    </div>
-                                    <div class="body__section__middle knee">
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                        
-                                    </div>
-                                    <div class="body__section__bottom shin">
-                                        <div class="body__part">
-                                            
-                                        </div>
-                                        <div class="body__part foot">
-                                            
-                                        </div>
-                    
-                                    </div>
-                        
-                                </div>
-                                <div class="body__section right__hand hand">
-                        
-                                    <div class="body__section__top arm">
-                                        <div class="body__part shoulder">
-                                            
-                                        </div>
-                        
-                                        <div class="body__part ">
-                                            
-                                        </div>
-                        
-                                    </div>
-                                    <div class="body__section__middle elbow">
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                                        <div class="body__part">
-                                            
-                                        </div>
-                        
-                        
-                                    </div>
-                                    <div class="body__section__bottom forearm">
-                                        <div class="body__part">
-                                            
-                                        </div>
-                                        <div class="body__part wirst">
-                                            
-                                        </div>
-                        
-                                    </div>
-                        
-                                </div>
-                            </div>
-                        </div> -->
-              <figure class="descr__card">
+                    <figure class="descr__card">
                 <p class="client__need">
                   Консультація- це перший крок на шляху до змін вашого стилю!
                 </p>
@@ -689,7 +566,7 @@ font-size: 1.2em;
                 <div class="CTA__container">
                   <h3 class="CTA">Готова до змін?</h3>
                   <button class="CTA__button" type="submit">
-                    Запишися до мене на консультацію!
+                    Запишися на консультацію!
                   </button>
                 </div>
               </div>

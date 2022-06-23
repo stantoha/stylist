@@ -311,7 +311,6 @@ label .nav-btn {
   padding-top: 14vh;
   margin: 0 5vw;
   align-items: center;
-  /* box-shadow: 0 0 2vh rgba(0, 0, 0, 0.3); */
   background-color: rgba(255, 249, 239, 0.1);
 }
 
@@ -319,7 +318,7 @@ label .nav-btn {
   width: 100%;
   overflow: hidden;
   box-shadow: 0 0 2vh rgba(0, 0, 0, 0.3);
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 1%;
 }
 
@@ -331,60 +330,52 @@ label .nav-btn {
 .section__name {
   font-family: "Comfortaa";
   letter-spacing: 0.1vh;
-  color: rgba(0, 0, 0,1);
+  color: rgba(255, 255, 255,1);
   font-weight: 500;
   text-align: center;
   width: 12%;
-  margin: 1%;
+  margin:0.5%;
   float: left;
   padding: 0.5% 1%;
   padding-top: 0.8%;
   font-size: 0.7em;
   line-height: 1.5;
   transition: all 1s;
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .section__title {
   color: rgba(170, 115, 84, 0.8);
   width: 50%;
-  padding: 2% 3%;
+  padding: 1% 2%;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: "Cormorant Garamond", serif;
   letter-spacing: 1px;
-
-  line-height: 1.5;
   background-color: rgba(252, 230, 209, 1);
-  margin: 2% auto 2% auto;
+  margin: 2% auto;
   transition: all 1s;
   border-radius: 5px/5px;
   box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
-  /* text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5); */
   font-weight: 600;
 }
 
 .descr__card {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  margin: 1% auto;
+  margin: 1% ;
   flex-wrap: wrap;
   padding: 1%;
-  width:100%;
-  border: 5px solid  rgba(225, 191, 179, 1);;
-  
+  width:auto;
   border-radius: 5px/5px;
-  box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
 }
 
 .content__picture {
-  width: 31%;
+  width: 35%;
   height: auto;
-  margin: 2% ;
-  padding: 0;
-  border: 1px solid rgba(231, 161, 125, 1);
+  margin: 0 auto;
+  padding: 1%;
   border-radius: 5px/5px;
   box-shadow: 0 0 1vh rgba(255, 255, 255, 0.8);
 }
@@ -394,21 +385,19 @@ label .nav-btn {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  width: 50%;
+  width: 45%;
   height: auto;
-  margin: 1% ;
+  margin: 1% auto;
   padding: 1%;
-  box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
 }
 
 .text__block {
   word-wrap: break-word;
   padding: 3%;
   margin: 2% auto;
-  max-width: 90%;
-  font-size: 1.1em;
+  width: 90%;
+  font-size: 1.5em;
   text-align: justify;
-  font-family: "Comfortaa", cursive;
   color: rgba(170, 115, 84, 1);
   background-color: rgba(225, 191, 179, 0.5);
   box-shadow: 0 0 2vh rgba(0, 0, 0, 0.3);
@@ -419,15 +408,16 @@ label .nav-btn {
     display:block;
   word-wrap: break-word;
   font-style: italic;
-  flex: 100%;
-  padding: 2%;
-  margin:0 auto ;
+  font-family: "Comfortaa", cursive;
+  flex: 80%;
+  padding: 1% 4%;
+  margin:1% auto ;
   width: auto;
   line-height: 1.5;
-  letter-spacing: 1px;
-  font-size: 1.2em;
+  letter-spacing: 0.1vh;
+  font-size: 1em;
   text-align: center;
-  font-weight: 600;
+  font-weight: 800;
   color:rgba(231, 161, 125, 1);
   border-radius:15px/15px;
   background-color:rgba(255, 255, 255,0.4);
@@ -443,40 +433,39 @@ label .nav-btn {
 
 .personal__stylist__services .section__title{
     float: right;
-    margin: 1%;
+    margin: 0.5%;
     width: auto;
   }
 
 
 .service__title__container {
   display: flex;
-  position: relative;
-  justify-content: center;
+  max-height: 7vh;
+  justify-content: flex-start;
   align-items: center;
-  margin: 0 5%;
+  margin: 1% 3%;
+  padding: 0;
+  background-color: rgba(231, 161, 125, 1);
 }
 
 .service__title__container svg {
-  position: absolute;
-  right: 0;
   transform: scale(0.6);
+  margin: 0.5%;
 }
 
 
 .service__title {
-  text-align: center;
   display: inline-block;
-  color: rgba(255, 255, 255, 1);
-  font-family: "Comfortaa", cursive;
-  font-size: 1.5em;
+  color:rgba(255, 255, 255, 1);
+  font-family: "Comfortaa";
+  font-size: 1.3em;
   letter-spacing: 0.1vh;
-  font-weight: 500;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  font-weight: 400;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
   transition: all 1s;
-  margin: 1%;
-  margin-left: 5%;
-  padding: 1%;
+  margin: 0;
+  margin-top: 0.5%;
+  padding: 0.5%;
 }
 
 
@@ -573,7 +562,6 @@ a.service__button {
 .service__aim {
   font-size: 1.5em;
   color: rgba(170, 115, 84, 1);
-  font-family: "Comfortaa";
   text-align: center;
   margin: 2%;
   padding: 2%;
@@ -582,7 +570,7 @@ a.service__button {
 .service__components__list {
   margin: 2%;
   padding: 2%;
-  list-style: none;
+  list-style: circle;
 }
 
 .personal__buyer__services {
@@ -596,24 +584,27 @@ a.service__button {
     flex: 100%;
     color: #fff9ef;
     font-family: "Comfortaa", cursive;
-    font-size: 1.4em;
-    font-weight: 500;
-    text-shadow: 0 0 1vh rgba(255, 255, 255, 0.9);
+    font-size: 1.6em;
+    font-weight: 600;
+    text-shadow: 0 0 1vh rgba(255, 255, 255, 0.5);
     background-color: rgba(225, 191, 179, 1);
     transition: all 1s;
-    margin: 2%;
-    padding: 3%;
+    margin: 3%;
+    padding: 4%;
   }
 .service__component {
-  border: 1px solid rgba(231, 161, 125, 1);
+ /*  border: 1px solid rgba(170, 115, 84, 1); */
   margin: 2%;
   padding: 2%;
   color: rgba(170, 115, 84, 1);
+  font-size: 1.5em;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
 }
 
 .question {
   padding: 2%;
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: "Comfortaa", cursive;
   background-color: rgba(255, 255, 255, 0.4);
   text-align: center;
@@ -621,10 +612,11 @@ a.service__button {
 
 .answer {
   padding: 2%;
-  font-size: 1.5em;
+  font-size: 1em;
   text-align: start;
   font-weight: 500;
   font-family: "Cormorant Garamond", serif;
+  color:rgba(255, 255, 255, 0.9);
 }
 
 .aditional__services__list {
@@ -653,13 +645,13 @@ a.service__button {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: 5%;
-  margin: 5%;
+  padding: 1%;
+  margin: 1%;
 }
 
 .service__details .text__block {
   flex: 100%;
-  margin: 2%;
+  margin: 2% auto;
 }
 
 .service__details table {
@@ -812,7 +804,7 @@ a.service__button {
 
 .shopping__tours__list {
   display: flex;
-  align-content: center;
+  align-items: center;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
@@ -1071,7 +1063,7 @@ a.social__link:hover {
 }
 
 .modal__dialog {
-  width: 35vw;
+  width: 50vw;
   height: 70vh;
   margin: 15vh auto 15vh auto;
   border-radius: 15px/15px;
@@ -1135,7 +1127,7 @@ a.social__link:hover {
 
 .modal__btn {
   display: block;
-  width: 30%;
+  width: 40%;
   border-radius: 15px/15px;
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
@@ -1157,12 +1149,12 @@ a.social__link:hover {
 /* UP__BUTTON */
 
 .up__button img {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 1vh rgba(255, 255, 255, 1);
   background-color: rgba(0, 0, 0, 1);
   position: fixed;
-  transform: scale(1);
-  bottom: 1%;
-  right: 5%;
+  transform: scale(1.4);
+  bottom: 5%;
+  right: 6%;
   opacity: 0.5;
   border-radius: 50%;
   transition: all 1s;
@@ -1213,7 +1205,7 @@ a.social__link:hover {
     transform: translate(-70vw, 5vw) scale(0.01);
   }
   100% {
-    transform: translate(35vw, -5.5vw) scale(0.11);
+    transform: translate(55vw, -7.5vw) scale(0.11);
   }
 }
 
@@ -1221,11 +1213,12 @@ a.social__link:hover {
 
 .CTA__container {
   display: block;
-  margin: 3% auto;
-  padding: 3%;
+  margin: 2% auto;
+  padding: 2%;
   text-align: center;
-  width: 60%;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+  width: 70%;
+  background-color: rgba(225, 191, 179, 1);
+  box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(231, 161, 125, 1);
   border-radius: 15px/15px;
 }
@@ -1234,10 +1227,13 @@ h3.CTA {
   color: rgba(255, 255, 255, 1);
   background-color: rgba(225, 191, 179, 1);
   padding: 2%;
-  font-size: 1.5em;
-  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3em;
+  letter-spacing:0.1vh;
+  font-family: "Comfortaa";
   text-align: center;
+  font-weight: 400;
   border-radius: 10px/10px;
+  font-style: italic;
 }
 
 .CTA__container label,
@@ -1267,29 +1263,32 @@ h3.CTA {
 
 .sign__up input[type="text"],
 .sign__up input[type="email"] {
-  width: 80%;
-  padding: 2%;
-  margin: 2%;
+  width: 50%;
+  padding: 1%;
+  margin: 1%;
   text-align: center;
   color: rgba(0, 0, 0, 0.3);
 }
 
 .CTA__button {
+  font-family: "Cormorant Garamond", serif;
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 0.1vh;
-  width: 60%;
+  width: 50%;
   color: rgba(255, 255, 255, 1);
-  margin:2% auto;
-  padding:2%;
+  margin:1% auto;
+  padding:1%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(255, 255, 255,1);
-  box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 1vh 0 rgba(255, 255, 255, 0.8);
   background-color: rgba(231, 161, 125, 1);
   border-radius: 10px/10px;
   font-size: 1.5em;
+  font-weight: 600;
+  
 }
 
 label,
