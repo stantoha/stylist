@@ -613,10 +613,11 @@ a.service__button {
 .answer {
   padding: 2%;
   font-size: 1em;
+  line-height: 1.3;
   text-align: start;
   font-weight: 500;
   font-family: "Cormorant Garamond", serif;
-  color:rgba(255, 255, 255, 0.9);
+  color:rgba(255, 255, 255, 1);
 }
 
 .aditional__services__list {
