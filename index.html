@@ -21,6 +21,11 @@
   </head>
   <style>
     @media (min-width: 841px) and (max-width: 1024px) {
+      .content__picture {
+  width: 44%;
+  margin: 0 3%;
+}
+
       .up__button img {
   transform: scale(1);
 }
@@ -45,7 +50,7 @@
       }
       .content__picture {
         width: 40%;
-        margin: 2% auto;
+        margin: 2% 3%;
       }
 
       .logo__container {
@@ -183,9 +188,8 @@ font-size: 1.8em;
         padding-top: 14vh;
       }
       .content__picture {
-        flex: 100%;
+        width:85%;
         margin: 2% auto;
-        padding: 2%;
       }
 
       .descr__text,
@@ -195,7 +199,7 @@ font-size: 1.8em;
         padding: 2%;
         margin:2% auto;
         max-width: 95%;
-        font-size: 1em;
+        font-size: 1.2em;
       }
 
       .descr__text {
@@ -213,10 +217,17 @@ font-size: 1.8em;
       }
       .section__title {
         font-size: 1.5em;
+        
       }
       .section__name{
         float: none;
         font-size: 1em;
+        margin:0.5% ;
+      }
+
+      .client__need{
+        font-size: 1.3em;
+        margin:0.5% ;
       }
 
       .nav__menu__visible {
@@ -255,11 +266,11 @@ font-size: 1.8em;
         flex: 30%;
         max-width: 30%;
         padding: 0.5%;
-        margin:0.5% 1%;
+        margin:0.5% ;
         height:4.5vh;
         line-height: 1;
         font-weight: 700;
-        font-size: 0.8em;
+        font-size: 0.7em;
         text-transform: uppercase;
         border-radius: 5px/5px;
       }
@@ -269,7 +280,7 @@ font-size: 1.8em;
       }
 
       .service__title__container {
-        margin: 0 auto;
+        margin:0.5% ;
         justify-content: flex-start;
       }
 
@@ -301,9 +312,18 @@ font-size: 1.2em;
       }
 
       .service__components__list{
-        list-style: none;
+        list-style: circle;
         padding: 1%;
         margin: 0;
+      }
+
+      .service__component{
+        border:1px solid rgba(255, 255, 255, 1);
+        margin:1% 0 1% 2%;
+        width: 100%;
+      }
+      .service__components__list__title{
+        font-size: 1.3em;
       }
 
       .question,
@@ -323,14 +343,15 @@ font-size: 1.2em;
       }
 
       .CTA__container {
+        font-size: 1.3em;
         margin: 2% auto;
         padding: 2%;
-        width: 90%;
+        width: 85%;
         border-radius: 10px/10px;
       }
 
       .CTA__button{
-        width: 80vw;
+        width: 50vw;
       }
 
       .up__button img{
@@ -343,7 +364,7 @@ font-size: 1.2em;
       
     }
 
-    @media (min-width: 320px) and (max-width: 425px) and (orientation:portrait) {
+    @media (min-width: 320px) and (max-width: 424px) and (orientation:portrait) {
       .service__item {
         display: flex;
         justify-content: center;
@@ -359,6 +380,28 @@ font-size: 1.2em;
         font-weight: 900;
         text-transform: uppercase;
         border-radius: 5px/5px;
+      }
+    }
+
+    @media (max-width: 828px) and (max-height:1792px) and (orientation:portrait) {
+      body {
+        font-size:180%;
+      }
+
+      .service__item{
+        font-size: 0.9em;
+      }
+
+      .service__components__list{
+        list-style: none;
+      }
+
+      .service__component{
+        margin: 1% 0;
+      }
+
+      .client__need{
+        text-align: start;
       }
     }
   </style>

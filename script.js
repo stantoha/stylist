@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     window.scrollTo(0, 0);
                     hideTabContent();
                     showTabContent(i);
-                    if(document.documentElement.clientWidth< 800){
+                    if(document.documentElement.clientWidth< 900){
                         hideNavMenu();
                     }
                     

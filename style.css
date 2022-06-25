@@ -333,28 +333,29 @@ label .nav-btn {
   color: rgba(255, 255, 255,1);
   font-weight: 500;
   text-align: center;
-  width: 12%;
-  margin:0.5%;
+  width: 10%;
+  margin:0;
   float: left;
-  padding: 0.5% 1%;
+  padding: 0.5% ;
   padding-top: 0.8%;
   font-size: 0.7em;
-  line-height: 1.5;
+  line-height: 1;
   transition: all 1s;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .section__title {
-  color: rgba(170, 115, 84, 0.8);
+  color: rgba(170, 115, 84,1);
   width: 50%;
-  padding: 1% 2%;
+  padding: 0.5% ;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-family: "Cormorant Garamond", serif;
-  letter-spacing: 1px;
-  background-color: rgba(252, 230, 209, 1);
-  margin: 2% auto;
+ /*  font-style: italic; */
+  letter-spacing: 2px;
+  background-color: rgba(252, 230, 209, 0.5);
+  margin: 3% auto 1% auto;
   transition: all 1s;
   border-radius: 5px/5px;
   box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
@@ -372,12 +373,12 @@ label .nav-btn {
 }
 
 .content__picture {
-  width: 35%;
+  width: 34%;
   height: auto;
-  margin: 0 auto;
-  padding: 1%;
+  margin: 0 9%;
+ /*  padding: 1%; */
   border-radius: 5px/5px;
-  box-shadow: 0 0 1vh rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 1vh rgba(255, 255, 255, 1);
 }
 
 .descr__text {
@@ -385,7 +386,7 @@ label .nav-btn {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  width: 45%;
+  width: 48%;
   height: auto;
   margin: 1% auto;
   padding: 1%;
