@@ -717,7 +717,7 @@ a.service__button {
   margin: 2% auto;
   padding: 1%;
   border-radius: 15px/15px;
-  border:1px solid black;
+  border:1px solid rgba(255, 255, 255,1);
 }
 
 .advantage__icon svg{
