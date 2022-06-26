@@ -352,7 +352,6 @@ label .nav-btn {
   text-align: center;
   font-size: 1.5em;
   font-family: "Cormorant Garamond", serif;
- /*  font-style: italic; */
   letter-spacing: 2px;
   background-color: rgba(252, 230, 209, 0.5);
   margin: 3% auto 1% auto;
@@ -400,8 +399,8 @@ label .nav-btn {
   font-size: 1.5em;
   text-align: justify;
   color: rgba(170, 115, 84, 1);
-  background-color: rgba(225, 191, 179, 0.5);
-  box-shadow: 0 0 2vh rgba(0, 0, 0, 0.3);
+  background-color: rgba(225, 191, 179, 0.3);
+  box-shadow: 0 0 2vh rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(231, 161, 125, 1);
 }
 
