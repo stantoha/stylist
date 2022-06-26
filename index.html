@@ -20,8 +20,324 @@
     <title>stylist</title>
   </head>
   <style>
-    
-    @media (min-width: 830px) and (max-width: 1024px) and (orientation: portrait) {
+    @media (min-width: 320px) and (max-width: 424px) and (orientation: portrait) {
+      .service__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: 30%;
+        max-width: 30%;
+        padding: 0.5%;
+        margin: 0.5% 1%;
+        height: 4.5vh;
+        line-height: 1;
+        font-size: 0.7em;
+        font-weight: 900;
+        text-transform: uppercase;
+        border-radius: 5px/5px;
+      }
+    }
+
+    @media (min-width: 425px) and (max-width: 830px) and (orientation: portrait) {
+      body {
+        font-size: 180%;
+      }
+
+      .header,
+      .main,
+      .footer {
+        width: 100vw;
+        margin: 0 ;
+        padding: 0;
+      }
+
+      .main {
+        box-shadow:0 0 2vh rgba(0, 0, 0, 0.);
+        padding-top:10vh;
+        margin: 0;
+      }
+
+      .tabcontent {
+        margin: 0;
+        width: 100vw;
+        padding:0 0 5vh 0  ;
+      }
+
+      .header {
+        top: 0;
+        margin-top: 1%;
+      }
+
+      .nav__menu__visible {
+        display: flex;
+        flex-direction: column;
+        align-content:space-around;
+        align-items:center;
+        position: fixed;
+        visibility: visible;
+        top: 0;
+        left: 0;
+        width: 94vw;
+        height: 1700px;
+        margin: 0 3vw;
+        padding: 0;
+        list-style: none;
+        background-color: rgba(225, 191, 179, 0.8);
+        transition-duration: 0.1s;
+      }
+
+      .menu__item {
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.2em;
+        padding: 0.2%;
+      }
+
+      .menu__item .active {
+        font-weight: 700;
+        border-radius: 15px/15px;
+        text-transform: uppercase;
+        color: rgba(231, 161, 125, 1);
+        text-decoration: none;
+        font-size: 1.1em;
+        padding: 0.2%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .section__name,
+      .section__title {
+        width: 100%;
+      }
+
+      .section__title {
+        font-size: 1.5em;
+        margin: 2% auto;
+      }
+      .section__name {
+        float: none;
+        font-size: 1em;
+        margin: 0.5%;
+      }
+
+      .descr__card {
+        width: 100%;
+        display: flex;
+        align-content:space-around;
+        align-items: center;
+        margin: 2% auto;
+        flex-direction: column;
+        padding: 0;
+        width: auto;
+        border-radius: 5px/5px;
+      }
+
+      .descr__text,
+      .text__block {
+        text-align: start;
+        flex: 100%;
+        word-wrap: break-word;
+        padding:2%;
+        margin:2% auto;
+        width: 95%;
+        font-size: 1.2em;
+      }
+
+      .text__block {
+        width: 100%;
+        padding: 2%;
+        
+      }
+
+      .content__picture {
+        flex: 100%;
+        width: 90%;
+        margin: 2% auto;
+      }
+
+      .client__need {
+        text-align: start;
+        font-size: 1.3em;
+        margin: 0.5%;
+      }
+
+      .personal__stylist__services {
+        padding-top: 14vh;
+      }
+
+      .services__list {
+        position: fixed;
+        flex: 100%;
+        top: 9vh;
+        left: 0;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 10vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .service__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: 30%;
+        max-width: 30%;
+        padding: 0.5%;
+        margin: 0.5%;
+        height: 4.5vh;
+        line-height: 1;
+        font-weight: 700;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        border-radius: 5px/5px;
+      }
+
+      .service__item span {
+        font-size: 0.6em;
+      }
+
+      .service__title__container {
+        margin: 0.5%;
+        justify-content: flex-start;
+      }
+
+      .service__title__container svg {
+        right: -1%;
+        transform: scale(0.5);
+      }
+
+      .service {
+        width: 100%;
+        margin: 0;
+      }
+
+      .service__components__list {
+        list-style: none;
+        padding: 0;
+        margin:8% 0 3% 0;
+      }
+
+      .service__components__list__title {
+        font-size: 1.8em;
+        width: auto;
+        margin: 5% 0;
+        text-align: center;  
+      }
+
+      .service__component {
+        text-align: start;
+        
+        margin: 5% auto;
+        padding: 5%;
+        width: 100%;
+      }
+
+      .question,
+      .answer {
+        display: inline-block;
+        padding: 3%;
+        font-size: 1em;
+        width: 100%;
+        border-radius: 15px/15px;
+      }
+
+      .answer {
+        padding-left: 5%;
+        font-size:1.8em;
+        line-height: 1.2;
+      }
+
+      .service__details .client__need {
+  flex: 80%;
+  width:80%;
+    display:block;
+    margin: 2% auto;
+  padding: 4%;
+  word-wrap: break-word;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-style: italic;
+  text-align: start;
+  line-height: 1.5;
+  letter-spacing: 0.1vh;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(231, 161, 125, 0.5);
+  box-shadow:0 0 1vh  rgba(255, 255, 255, 1);
+  border-radius:15px/15px;
+
+}
+
+      .shopping__tours__list {
+  display: flex;
+  align-content:flex-start;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 4% 0;
+  width: auto;
+}
+
+.shopping__tour__item {
+  flex: 100%;
+  width:100%;
+  display: block;
+  margin: 2% auto;
+  padding: 1%;
+}
+
+
+
+
+      .modal__btn {
+        width: 70vw;
+        font-size: 1.5em;
+      }
+      .modal__dialog {
+        width: 90vw;
+        font-size: 1.3em;
+      }
+
+      .modal__title h3 {
+        font-size: 1.3em;
+      }
+
+      .CTA__container {
+        font-size: 1em;
+        margin:8% auto;
+        padding: 2%;
+        width: 80%;
+        border-radius: 10px/10px;
+      }
+
+      .CTA__button {
+        width: 50vw;
+        margin: 5% auto;
+      }
+
+      .up__button img {
+        transform: scale(1);
+      }
+
+      .advantages__item {
+        width: 100%;
+        margin: 2% 0;
+      }
+
+      .advantage__item svg {
+        filter: brightness(0.5);
+      }
+
+      .footer{
+        margin-top: 4%;
+        padding-top: 2%;
+      }
+    }
+
+     @media (min-width: 831px) and (max-width: 1024px) and (orientation: portrait) {
       .header,
       .main,
       .footer {
@@ -145,272 +461,7 @@
         width: 90%;
         border-radius: 10px/10px;
       }
-    }
-
-    @media (min-width: 425px) and (max-width: 829px) and (orientation: portrait) {
-      body {
-        font-size: 180%;
-      }
-
-      .header,
-      .main,
-      .footer {
-        width: 100vw;
-        margin: 0 auto;
-        padding: 0;
-      }
-
-      .main {
-        box-shadow:0 0 2vh rgba(0, 0, 0, 0.);
-        padding-top:10vh;
-      }
-
-      .tabcontent {
-        width: 100%;
-        padding: 0.5%;
-      }
-
-      .header {
-        top: 0;
-        margin-top: 1%;
-      }
-
-      .nav__menu__visible {
-        display: flex;
-        flex-direction: column;
-        align-content:space-around;
-        align-items:center;
-        position: fixed;
-        visibility: visible;
-        top: 0;
-        left: 0;
-        width: 94vw;
-        height: 1700px;
-        margin: 0 3vw;
-        padding: 0;
-        list-style: none;
-        background-color: rgba(225, 191, 179, 0.8);
-        transition-duration: 0.1s;
-      }
-
-      .menu__item {
-        font-weight: 500;
-        color: rgba(255, 255, 255, 1);
-        font-size: 1.2em;
-        padding: 0.2%;
-      }
-
-      .menu__item .active {
-        font-weight: 700;
-        border-radius: 15px/15px;
-        text-transform: uppercase;
-        color: rgba(231, 161, 125, 1);
-        text-decoration: none;
-        font-size: 1.1em;
-        padding: 0.2%;
-        background-color: rgba(255, 255, 255, 0.5);
-      }
-
-      .section__name,
-      .section__title {
-        width: 100%;
-      }
-
-      .section__title {
-        font-size: 1.5em;
-        margin: 2% auto;
-      }
-      .section__name {
-        float: none;
-        font-size: 1em;
-        margin: 0.5%;
-      }
-
-      .descr__card {
-        width: 100%;
-        display: flex;
-        align-content:space-around;
-        align-items: center;
-        margin: 2% auto;
-        flex-direction: column;
-        padding: 0;
-        width: auto;
-        border-radius: 5px/5px;
-      }
-
-      .descr__text,
-      .text__block {
-        text-align: start;
-        flex: 100%;
-        word-wrap: break-word;
-        padding:2%;
-        margin:2% auto;
-        width: 95%;
-        font-size: 1.2em;
-      }
-
-      .text__block {
-        width: 100%;
-        padding: 2%;
-        
-      }
-
-      .content__picture {
-        width: 85%;
-        margin: 2% auto;
-      }
-
-      .client__need {
-        text-align: start;
-        font-size: 1.3em;
-        margin: 0.5%;
-      }
-
-      .personal__stylist__services {
-        padding-top: 14vh;
-      }
-
-      .services__list {
-        position: fixed;
-        flex: 100%;
-        top: 9vh;
-        left: 0;
-        justify-content: space-between;
-        flex-direction: row;
-        height: auto;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-      }
-
-      .service__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex: 30%;
-        max-width: 30%;
-        padding: 0.5%;
-        margin: 0.5%;
-        height: 4.5vh;
-        line-height: 1;
-        font-weight: 700;
-        font-size: 0.8em;
-        text-transform: uppercase;
-        border-radius: 5px/5px;
-      }
-
-      .service__item span {
-        font-size: 0.6em;
-      }
-
-      .service__title__container {
-        margin: 0.5%;
-        justify-content: flex-start;
-      }
-
-      .service__title__container svg {
-        right: -1%;
-        transform: scale(0.5);
-      }
-
-      .service {
-        width: 100%;
-        margin: 0;
-      }
-
-      .service__components__list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .service__components__list__title {
-        text-decoration: underline;
-        text-align: start;  
-        font-size: 1.2em;
-      }
-
-      .service__component {
-        text-align: start;
-        box-shadow:0 0 1vh  rgba(255, 255, 255, 1);
-        margin: 4% auto;
-        padding: 4%;
-        width: 100%;
-        font-size: 1em;
-      }
-
-      .question,
-      .answer {
-        width: 100%;
-      }
-
-      .answer {
-      }
-
-      .modal__btn {
-        width: 70vw;
-        font-size: 1.5em;
-      }
-      .modal__dialog {
-        width: 90vw;
-        font-size: 1.3em;
-      }
-
-      .modal__title h3 {
-        font-size: 1.3em;
-      }
-
-      .CTA__container {
-        font-size: 1em;
-        margin: 2% auto;
-        padding: 2%;
-        width: 70%;
-        border-radius: 10px/10px;
-      }
-
-      .CTA__button {
-        width: 40vw;
-        margin: 5% auto;
-      }
-
-      .up__button img {
-        transform: scale(1);
-      }
-
-      .advantages__item {
-        width: 100%;
-        margin: 2% 0;
-      }
-
-      .advantage__item svg {
-        filter: brightness(0.5);
-      }
-
-      .footer{
-        margin-top: 4%;
-        padding-top: 2%;
-      }
-    }
-
-    @media (min-width: 320px) and (max-width: 424px) and (orientation: portrait) {
-      .service__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex: 30%;
-        max-width: 30%;
-        padding: 0.5%;
-        margin: 0.5% 1%;
-        height: 4.5vh;
-        line-height: 1;
-        font-size: 0.7em;
-        font-weight: 900;
-        text-transform: uppercase;
-        border-radius: 5px/5px;
-      }
-    }
+    } 
   </style>
 
   <body>
@@ -759,7 +810,7 @@
                   непотрібних покупок і зібрати гардероб, який буде працювати на
                   всі 100%.
                 </p>
-                <img class="content__picture" src="img/al3.JPG" alt="#" />
+                <img class="content__picture" src="img/content__picture/alinka.jpg" alt="#" />
 
                 <figcaption class="descr__text">
                   <ul class="service__components__list">
@@ -828,7 +879,7 @@
                   зібраним за п’ять хвилин. Це гардероб, в якому всі і кожна річ
                   поєднуються між собою.
                 </p>
-                <img class="content__picture" src="img/al2.JPG" alt="#" />
+                <img class="content__picture" src="img/content__picture/my__photo.jpg alt="#" />
                 <figcaption class="descr__text">
                   <p class="service__aim">
                     Я з радістю допоможу вам сформувати капсульний гардероб в
@@ -1300,8 +1351,8 @@
               Процес вибору та замовлення речі
             </li>
             <li class="service__component">
-              <p class="text__block question">Як вибрати річ?</p>
-              <p class="text__block answer">
+              <p class="question">Як вибрати річ?</p>
+              <p class="answer">
                 Ви можете вибирати з того, що я показую тут або ж надсилати фото
                 бажаної речі в приватні повідомлення @alinastoliarova і я
                 постараюсь знайти її якнайшвидше для вас.
@@ -1309,8 +1360,8 @@
             </li>
 
             <li class="service__component">
-              <p class="text__block question">Як дізнатись ціну?</p>
-              <p class="text__block answer">
+              <p class="question">Як дізнатись ціну?</p>
+              <p class="answer">
                 Ви можете дізнатись ціну в моєму телеграм каналі або написавши
                 особисто. Співпраця з бутіками дає мені можливість пропонувати
                 ціни такі ж як ви бачите на офіційному сайті бренду, а інколи і
@@ -1318,21 +1369,21 @@
               </p>
             </li>
             <li class="service__component">
-              <p class="text__block question">Оплата/Передоплата</p>
-              <p class="text__block answer">
+              <p class="question">Оплата/Передоплата</p>
+              <p class="answer">
                 Річ викупляється лише зі 100% передоплатою.
               </p>
             </li>
             <li class="service__component">
-              <p class="text__block question">Комісія</p>
-              <p class="text__block answer">
+              <p class="question">Комісія</p>
+              <p class="answer">
                 На товари брендів LV, Chanel, Hermès буде додаткова комісія в
                 розмірі 10% від ціни товару.
               </p>
             </li>
             <li class="service__component">
-              <p class="text__block question">Доставка</p>
-              <p class="text__block answer">
+              <p class="question">Доставка</p>
+              <p class="answer">
                 Доставка в Україну ~ 25Є. Термін доставки з Європи в Україну
                 10-14 робочих днів. Інколи бувають довші терміни через
                 форс-мажорні обставини (наприклад, затримки на кордонах), на які
@@ -1340,8 +1391,8 @@
               </p>
             </li>
             <li class="service__component">
-              <p class="text__block question">Податок</p>
-              <p class="text__block answer">
+              <p class="question">Податок</p>
+              <p class="answer">
                 Додатково нічого оплачувати НЕ ПОТРІБНО.
               </p>
             </li>
