@@ -20,23 +20,7 @@
     <title>stylist</title>
   </head>
   <style>
-    @media (min-width: 841px) and (max-width: 1024px) {
-      .content__picture {
-        width: 44%;
-        margin: 0 3%;
-      }
-
-      .up__button img {
-        transform: scale(1);
-      }
-
-      .modal__dialog {
-        width: 50vw;
-      }
-      .modal__btn {
-        width: 30vw;
-      }
-    }
+    
     @media (min-width: 830px) and (max-width: 1024px) and (orientation: portrait) {
       .header,
       .main,
@@ -194,6 +178,8 @@
       .nav__menu__visible {
         display: flex;
         flex-direction: column;
+        align-content:space-around;
+        align-items:center;
         position: fixed;
         visibility: visible;
         top: 0;
