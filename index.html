@@ -21,29 +21,6 @@
   </head>
   <style>
     @media (min-width: 320px) and (max-width: 424px) and (orientation: portrait) {
-      .service__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex: 30%;
-        max-width: 30%;
-        padding: 0.5%;
-        margin: 0.5% 1%;
-        height: 4.5vh;
-        line-height: 1;
-        font-size: 0.7em;
-        font-weight: 900;
-        text-transform: uppercase;
-        border-radius: 5px/5px;
-      }
-    }
-
-    @media (min-width: 425px) and (max-width: 830px) and (orientation: portrait) {
-      body {
-        font-size: 180%;
-      }
-
       .header,
       .main,
       .footer {
@@ -78,9 +55,319 @@
         visibility: visible;
         top: 0;
         left: 0;
-        width: 94vw;
-        height: 1700px;
-        margin: 0 3vw;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: rgba(225, 191, 179, 0.8);
+        transition-duration: 0.1s;
+      }
+
+      .menu__item {
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.2em;
+        padding: 0.2%;
+      }
+
+      .menu__item .active {
+        font-weight: 700;
+        border-radius: 15px/15px;
+        text-transform: uppercase;
+        color: rgba(231, 161, 125, 1);
+        text-decoration: none;
+        font-size: 1.1em;
+        padding: 0.2%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      .service__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: 30%;
+        max-width: 30%;
+        padding: 0.5%;
+        margin: 0.5% 1%;
+        height: 4.5vh;
+        line-height: 1;
+        font-size: 0.7em;
+        font-weight: 900;
+        text-transform: uppercase;
+        border-radius: 5px/5px;
+      }
+
+      .section__name,
+      .section__title {
+        width: 100%;
+      }
+
+      .section__title {
+        font-size: 1.5em;
+        margin: 2% auto;
+      }
+      .section__name {
+        float: none;
+        font-size: 1em;
+        margin: 0.5%;
+      }
+
+      .descr__card {
+        width: 100%;
+        display: flex;
+        align-content:space-around;
+        align-items: center;
+        margin: 2% auto;
+        flex-direction: column;
+        padding: 0;
+        width: auto;
+        border-radius: 5px/5px;
+      }
+
+      .descr__text,
+      .text__block {
+        text-align: start;
+        flex: 100%;
+        word-wrap: break-word;
+        padding:2%;
+        margin:2% auto;
+        width: 95%;
+        font-size: 1.2em;
+      }
+
+      .text__block {
+        width: 100%;
+        padding: 2%;
+        
+      }
+
+      .content__picture {
+        flex: 100%;
+        width: 90%;
+        margin: 2% auto;
+      }
+
+      .client__need {
+        text-align: start;
+        font-size: 1.3em;
+        margin: 0.5%;
+      }
+
+      .personal__stylist__services {
+        padding-top: 14vh;
+      }
+
+      .services__list {
+        position: fixed;
+        flex: 100%;
+        top: 9vh;
+        left: 0;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 10vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .service__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: 30%;
+        max-width: 30%;
+        padding: 0.5%;
+        margin: 0.5%;
+        height: 4.5vh;
+        line-height: 1;
+        font-weight: 700;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        border-radius: 5px/5px;
+      }
+
+      .service__item span {
+        font-size: 0.6em;
+      }
+
+      .service__title__container {
+        margin: 0.5%;
+        justify-content: flex-start;
+      }
+
+      .service__title__container svg {
+        right: -1%;
+        transform: scale(0.5);
+      }
+
+      .service {
+        width: 100%;
+        margin: 0;
+      }
+
+      .service__components__list {
+        list-style: none;
+        padding: 0;
+        margin:8% 0 3% 0;
+      }
+
+      .service__components__list__title {
+        font-size: 1.8em;
+        width: auto;
+        margin: 5% 0;
+        text-align: center;  
+      }
+
+      .service__component {
+        text-align: start;
+        
+        margin: 5% auto;
+        padding: 5%;
+        width: 100%;
+      }
+
+      .question,
+      .answer {
+        display: inline-block;
+        padding: 3%;
+        font-size: 1em;
+        width: 100%;
+        border-radius: 15px/15px;
+      }
+
+      .answer {
+        padding-left: 5%;
+        font-size:1.8em;
+        line-height: 1.2;
+      }
+
+      .service__details .client__need {
+  flex: 80%;
+  width:80%;
+    display:block;
+    margin: 2% auto;
+  padding: 4%;
+  word-wrap: break-word;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-style: italic;
+  text-align: start;
+  line-height: 1.5;
+  letter-spacing: 0.1vh;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(231, 161, 125, 0.5);
+  box-shadow:0 0 1vh  rgba(255, 255, 255, 1);
+  border-radius:15px/15px;
+
+}
+
+      .shopping__tours__list {
+  display: flex;
+  align-content:flex-start;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 4% 0;
+  width: auto;
+}
+
+.shopping__tour__item {
+  flex: 100%;
+  width:100%;
+  display: block;
+  margin: 2% auto;
+  padding: 1%;
+}
+
+
+
+
+      .modal__btn {
+        width: 70vw;
+        font-size: 1.5em;
+      }
+      .modal__dialog {
+        width: 90vw;
+        font-size: 1.3em;
+      }
+
+      .modal__title h3 {
+        font-size: 1.3em;
+      }
+
+      .CTA__container {
+        font-size: 1em;
+        margin:8% auto;
+        padding: 2%;
+        width: 80%;
+        border-radius: 10px/10px;
+      }
+
+      .CTA__button {
+        width: 50vw;
+        margin: 5% auto;
+      }
+
+      .up__button img {
+        transform: scale(1);
+      }
+
+      .advantages__item {
+        width: 100%;
+        margin: 2% 0;
+      }
+
+      .advantage__item svg {
+        filter: brightness(0.5);
+      }
+
+      .footer{
+        margin-top: 4%;
+        padding-top: 2%;
+      }
+    }
+
+    @media (min-width: 425px) and (max-width: 830px) and (orientation: portrait) {
+      .header,
+      .main,
+      .footer {
+        width: 100vw;
+        margin: 0 ;
+        padding: 0;
+      }
+
+      .main {
+        box-shadow:0 0 2vh rgba(0, 0, 0, 0.);
+        padding-top:10vh;
+        margin: 0;
+      }
+
+      .tabcontent {
+        margin: 0;
+        width: 100vw;
+        padding:0 0 5vh 0  ;
+      }
+
+      .header {
+        top: 0;
+        margin-top: 1%;
+      }
+
+      .nav__menu__visible {
+        display: flex;
+        flex-direction: column;
+        align-content:space-around;
+        align-items:center;
+        position: fixed;
+        visibility: visible;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
         padding: 0;
         list-style: none;
         background-color: rgba(225, 191, 179, 0.8);
@@ -527,7 +814,7 @@
             Привіт, мене звати Аліна і я персональний стиліст.
           </h3>
           <figure class="descr__card">
-            <img class="content__picture" src="img/B.jpg" alt="#" />
+            <img class="content__picture" src="img/content__picture/  (12).jpg" alt="#" />
 
             <figcaption class="descr__text">
               <p class="text__block">
@@ -545,30 +832,7 @@
             </figcaption>
           </figure>
 
-          <!--  <figure class="descr__card">
-
-                    <figcaption class="descr__text">
-
-                        <p class="text__block">
-                            Моя місія - допомогати клієнтам сформувати такий стиль, який буде відповідати внутрішньому
-                            стану, характеру, вподобанням, темпу життя.
-                        </p>
-
-                    </figcaption>
-
-                    <img class="content__picture" src="img/alinka4.jpg" alt="#">
-                </figure>
-                
-                <figure class="descr__card ">
-                    <img class="content__picture" src="img/alinka1.jpg" alt="#">
-                    <figcaption class="descr__text">
-
-                        <p class="text__block">
-                            Вже більш ніж п’ять років я працюю стилістом та допомагаю людям з усіх куточків світу.
-                            Буду рада допомогти і вам</p>
-
-                    </figcaption>
-                </figure> -->
+      
 
           <div class="CTA__container">
             <h3 class="CTA">
@@ -595,7 +859,7 @@
           </div>
         </section>
 
-        <section class="tabcontent personal__stylist__services">
+         <section class="tabcontent personal__stylist__services">
           <h3 class="section__name">Мої послуги</h3>
 
           <h3 class="section__title left__slide">
@@ -1295,7 +1559,7 @@
           </div>
         </section>
 
-        <section class="tabcontent personal__buyer__services">
+        <!-- <section class="tabcontent personal__buyer__services">
           <h3 class="section__name">Послуги персонального шопера</h3>
 
           <h3 class="section__title right__slide">
@@ -2006,14 +2270,12 @@
               </p>
             </li>
           </ul>
-        </section>
+        </section> --> 
       </main>
 
       <footer class="footer contacts">
         <h3 class="section__name">Контакти</h3>
-        <!-- <h3 class="section__title right__slide">
-                Мої соцмережі
-            </h3> -->
+       
         <div class="contacts__top">
           <ul class="socials">
             <li>
