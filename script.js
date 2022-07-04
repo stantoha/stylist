@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     footerTab = document.querySelectorAll('.footer__menu__button'),
     footer=document.querySelector('.footer'),
         tabsContent = document.querySelectorAll('.tabcontent'),
-        tabParent = document.querySelector('.menu'),
+        tabParent = document.querySelector('.nav__menu'),
         serviceTabs = document.querySelectorAll('.service__button'),
         servicesTabsContent = document.querySelectorAll('.service'),
         servicesTabParent = document.querySelector('.services__list'),
@@ -19,8 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
         modal = document.querySelector('.modal__container'),
         modalTrigger = document.querySelectorAll('[data-modal]'),
         modalClosebtn = document.querySelector('[data-close]'),
-        navMenuButton = document.getElementById('menu__toggle'),
-        navButton=document.querySelector('.menu__btn');
+        navMenuButton = document.getElementById('nav-toggle'),
+        navButton=document.querySelector('.nav-btn');
 
      
     console.log(sectionTitles);
@@ -28,16 +28,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     function showNavMenu(){
-            tabParent.classList.remove('menu');
-            tabParent.classList.add('menu__visible');
-                navButton.classList.add('menu__btn__transform');
+            tabParent.classList.remove('nav__menu');
+            tabParent.classList.add('nav__menu__visible');
+                navButton.classList.add('nav-btn__transform');
             
     }
 
     function hideNavMenu(){
-        tabParent.classList.add('menu');
-        tabParent.classList.remove('menu__visible'); 
-        navButton.classList.remove('menu__btn__transform');
+        tabParent.classList.add('nav__menu');
+        tabParent.classList.remove('nav__menu__visible'); 
+        navButton.classList.remove('nav-btn__transform');
     }
 
     
@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if(navMenuButton.checked){
             showNavMenu();
         }
-       else {
+       else /* if(!navMenuButton.checked) */{
                 hideNavMenu();
             }
     });
@@ -240,6 +240,149 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+    let soldierContainers=document.querySelectorAll('.soldier__container'),
+    soldiers=document.querySelectorAll('.soldier');
+
+let bodySectionBlocks = document.querySelectorAll('.body__section__block'),
+    bodySections = document.querySelectorAll('.body__section'),
+    hands=document.querySelectorAll('.hand'),
+    arms=document.querySelectorAll('.arm'),
+    elbows=document.querySelectorAll('.elbow'),
+    forearms=document.querySelectorAll('.forearm'),
+    feet=document.querySelectorAll('.foot'),
+    legs=document.querySelectorAll('.leg'),
+    shins=document.querySelectorAll('.shin'),
+    thighs=document.querySelectorAll('.thigh'),
+    knees=document.querySelectorAll('.knee'),
+    head=document.querySelector('.head'),
+    neck=document.querySelector('.neck'),
+    chest=document.querySelector('.chest'),
+    stomach=document.querySelector('.stomach'),
+
+    buts = document.querySelectorAll('.but');
+
+
+
+let  soldierMove=function() {
+
+   for(let soldierContainer of soldierContainers){
+    if (!soldierContainer.classList.contains('soldier__move')) {
+        soldierContainer.classList.add('soldier__move');
+    } else {
+        soldierContainer.classList.remove('soldier__move');
+    }
+   }
+    
+};
+
+function moveLeft(item) {
+    if (!item.classList.contains('move__left')) {
+        item.classList.add('move__left');
+    } else {
+        item.classList.remove('move__left');
+    }
+}
+
+function moveRight(item) {
+    if (!item.classList.contains('move__right')) {
+        item.classList.add('move__right');
+    } else {
+        item.classList.remove('move__right');
+    }
+}
+
+function skewMoveLeft(item) {
+    if (!item.classList.contains('skew__move__left')) {
+        item.classList.add('skew__move__left');
+    } else {
+        item.classList.remove('skew__move__left');
+    }
+}
+
+function skewMoveRight(item) {
+    if (!item.classList.contains('skew__move__right')) {
+        item.classList.add('skew__move__right');
+    } else {
+        item.classList.remove('skew__move__right');
+    }
+}
+
+function skewFootLeft(item) {
+    if (!item.classList.contains('skew__foot__left')) {
+        item.classList.add('skew__foot__left');
+    } else {
+        item.classList.remove('skew__foot__left');
+    }
+}
+
+function skewFootRight(item) {
+    if (!item.classList.contains('skew__foot__right')) {
+        item.classList.add('skew__foot__right');
+    } else {
+        item.classList.remove('skew__foot__right');
+    }
+}
+
+function skewLeft(item) {
+    if (!item.classList.contains('skew__left')) {
+        item.classList.add('skew__left');
+    } else {
+        item.classList.remove('skew__left');
+    }
+}
+
+function skewRight(item) {
+    if (!item.classList.contains('skew__right')) {
+        item.classList.add('skew__right');
+    } else {
+        item.classList.remove('skew__right');
+    }
+}
+
+function skewBodyLeft(item) {
+    if (!item.classList.contains('skew__body__left')) {
+        item.classList.add('skew__body__left');
+    } else {
+        item.classList.remove('skew__body__left');
+    }
+}
+
+function skewBodyRight(item) {
+    if (!item.classList.contains('skew__body__right')) {
+        item.classList.add('skew__body__right');
+    } else {
+        item.classList.remove('skew__body__right');
+    }
+}
+
+    function goRight(){
+     for(let soldier of soldiers){
+        moveLeft(soldier.children[1]);
+        skewMoveLeft(soldier.children[1].children[2]);
+
+        moveLeft(soldier.children[4]);
+        skewMoveRight(soldier.children[4].children[2]);
+
+        moveRight(soldier.children[3]);
+        skewMoveLeft(soldier.children[3].children[2]);
+        skewFootLeft(feet[0]);
+        skewFootRight(feet[1]);
+
+        
+        skewBodyLeft(chest.children[0]);
+        skewBodyLeft(chest.children[1]);
+        skewBodyLeft(stomach.children[0]);
+        skewBodyLeft(stomach.children[1]);
+        skewBodyRight(head);
+        skewBodyRight(neck);
+        
+
+        moveRight(soldier.children[0]);
+       skewMoveRight(soldier.children[0].children[2]);
+     }
+    }
 
 
 
