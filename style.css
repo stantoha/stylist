@@ -32,6 +32,10 @@ li {
   overflow: hidden;
 }
 
+.to__the__top {
+  transform: translateY(-7vh);
+}
+
 .top__slide {
   opacity: 0;
   transform: translateY(-100%);
@@ -63,6 +67,7 @@ li {
   border-radius: 10px/10px;
   box-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.2);
+  transition-duration: 1s;
 }
 
 .header__content {
@@ -169,7 +174,7 @@ li {
   justify-content: center;
   align-items: center;
   margin: 0.2%;
-  padding: 0.2% ;
+  padding: 0.2%;
   width: auto;
   font-size: 0.9em;
   font-weight: 500;
@@ -200,9 +205,9 @@ a:hover.menu__button {
 
 .menu__item .active {
   border-radius: 5px/5px;
-  color:rgba(231, 161, 125, 1);
+  color: rgba(231, 161, 125, 1);
   text-decoration: none;
-font-size: 0.8em;
+  font-size: 0.8em;
   padding: 0.2%;
   background-color: rgba(255, 255, 255, 1);
 }
@@ -316,45 +321,44 @@ label .nav-btn {
   width: 100%;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.1);
-  padding:2% 1%;
+  padding: 2% 1%;
 }
 
 .tabcontent:nth-of-type(2n) {
-    background-color: rgba(0, 0, 0, 0.15);
-  }
+  background-color: rgba(0, 0, 0, 0.15);
+}
 
-  
 .section__name {
   font-family: "Cormorant Garamond", serif;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255,1);
-  background-color:rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.1);
   font-weight: 700;
   text-align: center;
   width: 10%;
-  margin:0;
+  margin: 0;
   left: 7%;
-  padding: 0.5% ;
-  font-size:1.1em;
+  padding: 0.5%;
+  font-size: 1.1em;
   line-height: 1;
-  position: fixed;
+
   transition: all 1s;
   border-top: 2px solid rgba(255, 255, 255, 0.5);
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .section__title {
-  color: rgba(170, 115, 84,1);
+  color: rgba(170, 115, 84, 1);
   width: 60%;
-  padding: 0.5% ;
+  padding: 0.5%;
   text-align: center;
   font-size: 1.5em;
   font-family: "Comfortaa";
   letter-spacing: 1px;
-  margin: 1% auto ;
+  margin: 4% auto;
   transition: all 1s;
-  border-radius: 5px/5px;
-  box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
+  /*   border-radius: 5px/5px;
+  box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); */
   font-weight: 500;
 }
 
@@ -363,9 +367,9 @@ label .nav-btn {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin:  1%;
+  margin: 1%;
   padding: 1%;
-  width:auto;
+  width: auto;
   border-radius: 5px/5px;
 }
 
@@ -381,11 +385,11 @@ label .nav-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content:space-between;
+  align-content: space-between;
   width: 62%;
   height: auto;
   margin: 0 auto;
-  padding:0;
+  padding: 0;
 }
 
 .text__block {
@@ -397,27 +401,27 @@ label .nav-btn {
   text-align: justify;
   color: rgba(170, 115, 84, 1);
   background-color: rgba(225, 191, 179, 0.3);
- font-weight: 400;
+  font-weight: 400;
 }
 
 .client__need {
- flex: 100%;
-    display:inline-block;
-    margin: 1% 5% 2% 5%;
-  padding: 1% 5%;
+  flex: 100%;
+  display: inline-block;
+  margin:  2% 5%;
+  padding: 2% 5%;
   word-wrap: break-word;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.7em;
-  font-weight: 600;
+  font-family: "Comfortaa";
+  font-size: 2em;
+  font-style: italic;
+  font-weight: 400;
   text-align: center;
   line-height: 1.5;
-  letter-spacing: 0.1vh;
+  letter-spacing:2px;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(231, 161, 125, 0.5);
-  box-shadow:0 0 1px  rgba(255, 255, 255, 1);
-  border-radius:15px/15px;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 1);
+  border-radius: 15px/15px;
 }
-
 
 /* SERVICES */
 
@@ -425,12 +429,11 @@ label .nav-btn {
   position: relative;
 }
 
-.personal__stylist__services .section__title{
-    float: right;
-    margin: 0.5%;
-    width: auto;
-  }
-
+.personal__stylist__services .section__title {
+  float: right;
+  margin: 0.5%;
+  width: auto;
+}
 
 .service__title__container {
   display: flex;
@@ -447,12 +450,11 @@ label .nav-btn {
   margin: 0.5%;
 }
 
-
 .service__title {
   display: inline-block;
-  color:rgba(255, 255, 255, 1);
-  font-family: "Comfortaa";
-  font-size: 1.3em;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2em;
   letter-spacing: 0.1vh;
   font-weight: 400;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
@@ -460,7 +462,6 @@ label .nav-btn {
   margin: 0.5% auto;
   padding: 0;
 }
-
 
 .services__container {
   display: flex;
@@ -492,8 +493,8 @@ label .nav-btn {
   margin: 0;
   padding: 1%;
   transition-duration: 0.25s;
-  background-color:rgba(0, 0, 0, 0.1);
-  box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px/5px;
 }
 
@@ -501,7 +502,7 @@ label .nav-btn {
   flex: 100%;
   display: flex;
   margin: 0.5% auto;
-  padding:0.5%;
+  padding: 0.5%;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -513,12 +514,11 @@ label .nav-btn {
 }
 
 .service__item .descr__card {
-    justify-content: space-around;
-    align-items: baseline;
-    margin: 0 auto;
-    padding: 0;
-  }
-  
+  justify-content: space-around;
+  align-items: baseline;
+  margin: 0 auto;
+  padding: 0;
+}
 
 a.service__button {
   text-decoration: none;
@@ -536,18 +536,18 @@ a.service__button {
   box-shadow: 0 0px 10px rgba(255, 255, 255, 0.5);
 }
 
-.service__item:hover .service__button{
+.service__item:hover .service__button {
   color: rgba(255, 255, 255, 0.9);
 }
 
 .active__service {
-    background-color: rgba(231, 161, 125, 1);
-    font-weight: 600;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
-    transform: scale(1.1);
-  }
+  background-color: rgba(231, 161, 125, 1);
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
 
-.active__service .service__button{
+.active__service .service__button {
   font-size: 110%;
   color: rgba(255, 255, 255, 1);
 }
@@ -557,61 +557,55 @@ a.service__button {
   transform: scale(0.9);
 }
 
-
-
 .service__components__list {
   display: flex;
   width: 90%;
   flex-direction: column;
-  align-content:space-between;
-  margin:0 auto;
-  padding:0;
+  align-content: space-between;
+  margin: 0 auto;
+  padding: 0;
   list-style: none;
- /*  border: 1px solid rgba(170, 115, 84, 1); */
-  background-color: rgba(255, 255, 255,0.1);
+  /*  border: 1px solid rgba(170, 115, 84, 1); */
+  background-color: rgba(255, 255, 255, 0.1);
   /* box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.5); */
 }
 
-
 .service__component {
- width: 100%;
+  width: 100%;
   margin: 2% auto;
-  padding: 3%;
+  padding: 3% 0;
   font-size: 1.6em;
-  color: rgba(0, 0, 0,0.5);
+  color: rgba(0, 0, 0, 0.5);
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   letter-spacing: 1px;
 
-  background-color:rgba(0, 0, 0, 0.1);
- }
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
- .service__component:nth-of-type(2n) {
-  background-color:rgba(0, 0, 0, 0.2);
-  
- }
-
- 
+.service__component:nth-of-type(2n) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
 .service__components__list__title {
   list-style: none;
-    text-align: center;
-    width: 100%;
-    color: rgba(0, 0, 0, 0.5);
-    font-family: "Comfortaa", cursive;
-    font-size: 1.6em;
-    letter-spacing: 1px;
-    font-weight: 900;
-    text-transform: uppercase;
-    background-color:rgba(225, 191, 179, 1);
-    text-shadow: 1px 0 0.5vh rgba(255, 255, 255,1);
-    transition: all 1s;
-    margin:0  auto; 
-    margin-bottom: 3%;
-    padding: 3%;
-  }
+  text-align: center;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Comfortaa", cursive;
+  font-size: 1.6em;
+  letter-spacing: 1px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: rgba(225, 191, 179, 1);
+  text-shadow: 1px 0 0.5vh rgba(255, 255, 255, 1);
+  transition: all 1s;
+  margin: 0 auto;
+  margin-bottom: 3%;
+  padding: 3%;
+}
 
- .service__details {
+.service__details {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -620,11 +614,11 @@ a.service__button {
   margin: 1%;
 }
 
-.service__details .text__block{
-  flex: 100%;
+.service__details .text__block {
+  flex: 90%;
   margin: 2% auto;
   padding: 2%;
-  font-size: 1.7em;
+  font-size: 2em;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -634,8 +628,9 @@ a.service__button {
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin: 2%;
   padding: 2%;
-/*   text-align: center;
- */}
+  /*   text-align: center;
+ */
+}
 
 .service__duration td,
 .service__online__possibility td {
@@ -656,16 +651,12 @@ a.service__button {
   margin: 2%;
 }
 
-
 /* PERSONAL__BUYER */
 
-
-
- .personal__buyer__services {
+.personal__buyer__services {
   list-style: circle;
   margin: 0 auto;
 }
-
 
 .question {
   display: inline-block;
@@ -673,7 +664,7 @@ a.service__button {
   padding: 1%;
   font-size: 1.2em;
   font-family: "Comfortaa", cursive;
-  color: rgba(0,0,0,0.5);
+  color: rgba(0, 0, 0, 0.5);
   text-align: start;
 }
 
@@ -683,7 +674,7 @@ a.service__button {
   line-height: 1.6;
   text-align: start;
   font-weight: 500;
-  color:rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .aditional__services__list {
@@ -707,11 +698,6 @@ a.service__button {
   color: rgba(231, 161, 125, 0.5);
 }
 
-
-
-
-
-
 /* SHOPPING-TOURS */
 
 .shopping__tours__list {
@@ -725,7 +711,7 @@ a.service__button {
 }
 
 .shopping__tour__item {
-  flex: 40%;
+  align-self: center;
   display: block;
   margin: 2%;
   padding: 2%;
@@ -735,7 +721,7 @@ a.service__button {
   color: white;
   padding: 2%;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 2em;
   background-color: rgba(225, 191, 179, 1);
   margin: 2%;
 }
@@ -743,17 +729,20 @@ a.service__button {
 .shopping__tour__item .text__block {
   background-color: rgba(255, 255, 255, 1);
   text-align: start;
+  font-size: 1.5em;
   margin: 2% auto;
   padding: 2%;
+  width: 80%;
 }
 
 .shopping__tour__item .content__picture {
-    width: 90%;
-    margin: 2% auto;
+  width: 80%;
+  margin: 2% auto;
 }
 
 .day__descr__item {
   display: block;
+  width: 80%;
   margin: 2% auto;
   color: rgba(255, 255, 255, 1);
   padding: 2%;
@@ -761,7 +750,8 @@ a.service__button {
 }
 
 .shopping__tour__program {
-  padding: 0;
+  padding: 2%;
+  margin: 2% auto;
 }
 
 .tour__price {
@@ -793,10 +783,6 @@ a.service__button {
   text-align: center;
 }
 
-
-
-
-
 /* GIFT */
 
 .gift__card__container {
@@ -812,8 +798,8 @@ a.service__button {
 .advantages__list {
   display: flex;
   flex-direction: column;
-  align-content:center;
- align-items:flex-start;
+  align-content: center;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   list-style: circle;
@@ -830,29 +816,27 @@ a.service__button {
   margin: 2% auto;
   padding: 1%;
   border-radius: 15px/15px;
-  border:1px solid rgba(255, 255, 255,1);
+  border: 1px solid rgba(255, 255, 255, 1);
 }
 
-.advantage__icon svg{
+.advantage__icon svg {
   width: 100px;
   height: 100px;
-   margin: 2%;
+  margin: 2%;
   /*  padding: 2%; */
 }
 
-
 .advantages__item .text__block {
-  background-color:rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 
-    display: flex;
-  justify-content:center;
- align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 75%;
   height: 15vh;
   margin: 2%;
 }
-
 
 /* REVIEWS */
 
@@ -869,10 +853,10 @@ a.service__button {
 }
 
 .review__item {
-    flex: 48%;
+  flex: 48%;
   display: flex;
   flex-direction: column;
-  align-content:space-between;
+  align-content: space-between;
   margin: 1%;
   border: 1px solid rgba(231, 161, 125, 1);
   border-radius: 15px/15px;
@@ -880,11 +864,11 @@ a.service__button {
 }
 
 .review__item .descr__card {
-    flex: 45%;
+  flex: 45%;
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
-  align-items:flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
   margin: 0 auto;
   padding: 1%;
 }
@@ -896,36 +880,36 @@ a.service__button {
 }
 
 .review__item .descr__card .content__picture {
-    flex: 40%;
+  flex: 40%;
 }
 
-.review__item .descr__card figcaption.descr__text{
-    flex: 20%;
+.review__item .descr__card figcaption.descr__text {
+  flex: 20%;
 }
 
-.review__item .text__block{
+.review__item .text__block {
   flex: 45%;
 }
 
-.review__item .descr__card figcaption.descr__text table{
-    align-self:baseline;
+.review__item .descr__card figcaption.descr__text table {
+  align-self: baseline;
 }
 
 .client__review__details {
-    width: 90%;
-    margin: 1% auto;
+  width: 90%;
+  margin: 1% auto;
 }
 
 /*CONTACTS*/
 
 .footer {
-  width:90vw;
+  width: 90vw;
   margin: 0 5vw;
 }
 
 .contacts {
   display: block;
-/*   margin: 2% auto; */
+  /*   margin: 2% auto; */
   padding: 2%;
   margin-bottom: 0;
   text-align: center;
@@ -1264,7 +1248,7 @@ h3.CTA {
   background-color: rgba(225, 191, 179, 1);
   padding: 2%;
   font-size: 1.3em;
-  letter-spacing:0.1vh;
+  letter-spacing: 0.1vh;
   font-family: "Comfortaa";
   text-align: center;
   font-weight: 400;
@@ -1311,20 +1295,19 @@ h3.CTA {
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 0.1vh;
-  width: 50%;
+  width: 60%;
   color: rgba(255, 255, 255, 1);
-  margin:1% auto;
-  padding:1%;
+  margin: 1% auto;
+  padding: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255,1);
-  box-shadow: 0 0 1vh 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8);
   background-color: rgba(231, 161, 125, 1);
   border-radius: 10px/10px;
   font-size: 1.5em;
   font-weight: 600;
-  
 }
 
 label,
@@ -1354,34 +1337,6 @@ textarea {
   background-color: rgba(0, 0, 0, 0.3);
   margin: 2% auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .soldier__item {
   border: 1px solid black;

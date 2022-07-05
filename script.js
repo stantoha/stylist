@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     footerTab = document.querySelectorAll('.footer__menu__button'),
     footer=document.querySelector('.footer'),
         tabsContent = document.querySelectorAll('.tabcontent'),
+        header = document.querySelector('.header'),
         tabParent = document.querySelector('.nav__menu'),
         serviceTabs = document.querySelectorAll('.service__button'),
         servicesTabsContent = document.querySelectorAll('.service'),
@@ -166,13 +167,18 @@ window.addEventListener('DOMContentLoaded', () => {
         if (window.pageYOffset > 300) {
             subTitleLink.classList.remove('show', 'fade');
             subTitleLink.classList.add('hide');
+            servicesTabParent.classList.add('to__the__top');
             titleLink.classList.add('top__slide');
+            header.classList.add('top__slide');
             upButton.classList.remove('hide');
             upButton.classList.add('show', 'fade');
         } else {
             subTitleLink.classList.add('show', 'fade');
             subTitleLink.classList.remove('hide');
+            servicesTabParent.classList.remove('to__the__top');
+
             titleLink.classList.remove('top__slide');
+            header.classList.remove('top__slide');
             upButton.classList.add('hide');
             upButton.classList.remove('show', 'fade');
         }

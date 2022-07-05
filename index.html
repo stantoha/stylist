@@ -327,7 +327,7 @@
       }
     }
 
-    @media (min-width: 425px) and (max-width: 830px) and (orientation: portrait) {
+    @media (min-width: 425px) and (max-width: 828px) and (orientation: portrait) {
       .header,
       .main,
       .footer {
@@ -336,9 +336,20 @@
         padding: 0;
       }
 
+      .header {
+        margin-top: 1%;
+      }
+
+      .title{
+        font-size: 3em;
+      }
+
+      .sub__title{
+        font-size: 1.5em;
+      }
+
       .main {
-        box-shadow:0 0 2vh rgba(0, 0, 0, 0.);
-        padding-top:10vh;
+        padding-top:7vh;
         margin: 0;
       }
 
@@ -348,10 +359,7 @@
         padding:0 0 5vh 0  ;
       }
 
-      .header {
-        top: 0;
-        margin-top: 1%;
-      }
+      
 
       .nav__menu__visible {
         display: flex;
@@ -374,7 +382,7 @@
       .menu__item {
         font-weight: 500;
         color: rgba(255, 255, 255, 1);
-        font-size: 1.2em;
+        font-size: 2.5em;
         padding: 0.2%;
       }
 
@@ -395,13 +403,12 @@
       }
 
       .section__title {
-        font-size: 1.5em;
+        font-size: 2em;
         margin: 2% auto;
       }
       .section__name {
-        float: none;
-        font-size: 1em;
-        margin: 0.5%;
+        font-size: 1.5em;
+        margin: 2% auto;
       }
 
       .descr__card {
@@ -423,14 +430,12 @@
         word-wrap: break-word;
         padding:2%;
         margin:2% auto;
-        width: 95%;
-        font-size: 1.2em;
+        width: 100%;
+        font-size: 1.5em;
       }
 
       .text__block {
-        width: 100%;
-        padding: 2%;
-        
+        width: 90%;
       }
 
       .content__picture {
@@ -441,22 +446,27 @@
 
       .client__need {
         text-align: start;
-        font-size: 1.3em;
+        font-size: 2.5em;
         margin: 0.5%;
       }
 
       .personal__stylist__services {
-        padding-top: 14vh;
+        padding:0;
+        padding-top: 22%;
+      }
+
+      .personal__stylist__services .section__title{
+        display: none;
       }
 
       .services__list {
         position: fixed;
         flex: 100%;
-        top: 9vh;
+        top: 7vh;
         left: 0;
         justify-content: space-between;
         flex-direction: row;
-        height: 10vh;
+        height: 8vh;
         width: 100%;
         padding: 0;
         margin: 0;
@@ -471,10 +481,10 @@
         max-width: 30%;
         padding: 0.5%;
         margin: 0.5%;
-        height: 4.5vh;
+        height: 3vh;
         line-height: 1;
         font-weight: 700;
-        font-size: 0.8em;
+        font-size: 1.3em;
         text-transform: uppercase;
         border-radius: 5px/5px;
       }
@@ -485,12 +495,13 @@
 
       .service__title__container {
         margin: 0.5%;
+        font-size: 1.2em;
         justify-content: flex-start;
       }
 
       .service__title__container svg {
         right: -1%;
-        transform: scale(0.5);
+        transform: scale(0.7);
       }
 
       .service {
@@ -513,11 +524,17 @@
 
       .service__component {
         text-align: start;
-        
-        margin: 5% auto;
-        padding: 5%;
-        width: 100%;
+        margin: 3% auto ;
+        padding: 3%;
+        width: 90%;
       }
+
+    /*   .service__component:nth-of-type(2n) {
+        text-align: start;
+        margin: 5% 0 5% auto;
+        padding: 5%;
+        width: 90%;
+      } */
 
       .question,
       .answer {
@@ -534,11 +551,11 @@
         line-height: 1.2;
       }
 
-      .service__details .client__need {
+/*       .service__details .text__block {
   flex: 80%;
   width:80%;
     display:block;
-    margin: 2% auto;
+    margin:4%;
   padding: 4%;
   word-wrap: break-word;
   font-size: 1.2em;
@@ -552,7 +569,7 @@
   box-shadow:0 0 1vh  rgba(255, 255, 255, 1);
   border-radius:15px/15px;
 
-}
+} */
 
       .shopping__tours__list {
   display: flex;
@@ -578,22 +595,22 @@
 
       .modal__btn {
         width: 70vw;
-        font-size: 1.5em;
+        font-size: 2em;
       }
       .modal__dialog {
         width: 90vw;
-        font-size: 1.3em;
+        font-size: 1.8em;
       }
 
       .modal__title h3 {
-        font-size: 1.3em;
+        font-size: 1.8em;
       }
 
       .CTA__container {
-        font-size: 1em;
+        font-size: 1.5em;
         margin:8% auto;
         padding: 2%;
-        width: 80%;
+        width: 90%;
         border-radius: 10px/10px;
       }
 
@@ -621,7 +638,7 @@
       }
     }
 
-     @media (min-width: 831px) and (max-width: 1024px) and (orientation: portrait) {
+     @media (min-width: 829px) and (max-width: 1024px) and (orientation: portrait) {
       .header,
       .main,
       .footer {
