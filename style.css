@@ -131,7 +131,6 @@ li {
 
 .sub__title {
   font-family: "Comfortaa";
-  /* text-transform: uppercase; */
   color: rgba(255, 255, 255, 1);
   text-shadow: 0 0 1vh rgba(0, 0, 0, 0.8);
   letter-spacing: 1px;
@@ -565,9 +564,7 @@ a.service__button {
   margin: 0 auto;
   padding: 0;
   list-style: none;
-  /*  border: 1px solid rgba(170, 115, 84, 1); */
   background-color: rgba(255, 255, 255, 0.1);
-  /* box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.5); */
 }
 
 .service__component {
@@ -579,7 +576,6 @@ a.service__button {
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   letter-spacing: 1px;
-
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -628,8 +624,6 @@ a.service__button {
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin: 2%;
   padding: 2%;
-  /*   text-align: center;
- */
 }
 
 .service__duration td,
@@ -823,12 +817,10 @@ a.service__button {
   width: 100px;
   height: 100px;
   margin: 2%;
-  /*  padding: 2%; */
 }
 
 .advantages__item .text__block {
   background-color: rgba(255, 255, 255, 0.2);
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -909,7 +901,6 @@ a.service__button {
 
 .contacts {
   display: block;
-  /*   margin: 2% auto; */
   padding: 2%;
   margin-bottom: 0;
   text-align: center;
